@@ -3,7 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Box
+  - Pen
+  - BoxCheck
+  - Line
+  - Car
+  - Wheel
+  - Barrier
+  - Truck
+  - Wood
+  - Level
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -13,7 +24,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - CantDrawOver
   - 
   - 
   - 
