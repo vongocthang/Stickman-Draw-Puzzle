@@ -4,18 +4,26 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+//Điều khiển chế độ Basic
 public class BasicModeGC : MonoBehaviour
 {
-    public Target target;
+    Target target;
     public GameObject winGame;
     public TMP_Text countTime;
 
-    public float threeSecond = 0;
+    float threeSecond = 0;
+
+    //Điều khiển xe di chuyển trái phải
+    public bool moveLeft, moveRight;
+    //Điều khiển thanh nâng của xe
+    public bool up, down;
+
+    public UIControl uiControl;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        target = GameObject.Find("Target").GetComponent<Target>();
     }
 
     // Update is called once per frame
@@ -29,6 +37,19 @@ public class BasicModeGC : MonoBehaviour
     {
         if (threeSecond >= 3)
         {
+            int a = PlayerPrefs.GetInt("SceneUnlockedBM");
+            if (a < SceneManager.GetActiveScene().buildIndex + 1)
+            {
+                PlayerPrefs.SetInt("SceneUnlockedBM", SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            
+            int b = PlayerPrefs.GetInt("StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString());
+            if (b < uiControl.countStar)
+            {
+                PlayerPrefs.SetInt("StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString(), uiControl.countStar);
+            }
+            
+
             StartCoroutine(DisabledCountTime());
         }
 
@@ -62,5 +83,39 @@ public class BasicModeGC : MonoBehaviour
 
         winGame.SetActive(true);
         target.beginCountTime = false;
+    }
+
+    //Điều khiển xe
+    public void MoveLeft()
+    {
+        moveLeft = true;
+    }
+
+    public void MoveRight()
+    {
+        moveRight = true;
+    }
+
+    public void NotMove()
+    {
+        moveLeft = false;
+        moveRight = false;
+    }
+
+    //Điều khiển nâng
+    public void ElevateUp()
+    {
+        up = true;
+    }
+
+    public void ElevateDown()
+    {
+        down = true;
+    }
+
+    public void NotElevate()
+    {
+        up = false;
+        down = false;
     }
 }

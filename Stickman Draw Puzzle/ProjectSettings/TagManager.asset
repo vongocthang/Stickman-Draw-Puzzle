@@ -15,6 +15,8 @@ TagManager:
   - Wood
   - Level
   - Wall
+  - Tilemap
+  - Target
   layers:
   - Default
   - TransparentFX

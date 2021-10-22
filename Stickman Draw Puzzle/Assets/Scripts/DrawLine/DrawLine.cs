@@ -18,7 +18,7 @@ public class DrawLine : MonoBehaviour
     Camera cam;
 
     //public GameObject pen;
-    public float penMoveSpeed;
+    public float penMoveSpeed = 15f;
     public Vector2 penPosition;
     public Vector2 mousePosition;
     //Đối tượng con-dùng dể xác định va chạm với các đối tượng không đc vẽ xuyên qua
@@ -26,19 +26,22 @@ public class DrawLine : MonoBehaviour
     public float distance;//Khoảng cách giữa Pen và Mouse
 
     public LayerMask blockLayer;//Dùng khi bắt đầu vẽ
-    int blockLayerIndex;
     public bool drawing;//Đang vẽ
     public bool blocked;
 
-    public GameObject renderMiniCamera;
+    GameObject renderMiniCamera;
 
+    UIControl uiControl;
 
 
     // Start is called before the first frame update
     void Start()
     {
         cam = Camera.main;
-        
+        renderMiniCamera = GameObject.Find("RenderMiniCamera");
+        renderMiniCamera.SetActive(false);
+
+        uiControl = GameObject.Find("MainUI").GetComponent<UIControl>();
     }
 
     // Update is called once per frame
@@ -71,7 +74,7 @@ public class DrawLine : MonoBehaviour
         RaycastHit2D hit = Physics2D.CircleCast(mousePosition, lineWidth / 2f, Vector2.zero, 1f, blockLayer);
         if (hit)
         {
-            Debug.Log("Layer này không thể vẽ lên");
+            //Debug.Log("Layer này không thể vẽ lên");
         }
         else
         {
@@ -127,6 +130,9 @@ public class DrawLine : MonoBehaviour
             line = null;
 
             penSprite.SetActive(false);
+
+            //Cập nhật hiển thị số nét vẽ còn lại cho mốc sao
+            uiControl.tempCount--;
         }
 
         blocked = false;

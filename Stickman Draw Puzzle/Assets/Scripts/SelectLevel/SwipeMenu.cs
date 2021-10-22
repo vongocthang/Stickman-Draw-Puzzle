@@ -19,9 +19,6 @@ public class SwipeMenu : MonoBehaviour
         {
             pos[i] = distance * i;
         }
-
-        //scrollbar.value = Mathf.MoveTowards(scrollbar.value, 1f/3f, 0.1f);
-        //scrollbar.value = 1f / 3f;
     }
 
     // Update is called once per frame

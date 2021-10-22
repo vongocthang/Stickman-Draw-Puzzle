@@ -25,9 +25,9 @@ public class Wheel : MonoBehaviour
 
     public void WheelRotate()
     {
-        float hForce = carControl.tempMoveSpeed;
+        float carSpeed = carControl.tempMoveSpeed;
 
-        motor.motorSpeed = hForce * speed;
+        motor.motorSpeed = carSpeed * speed;
         wheel.motor = motor;
     }
 }

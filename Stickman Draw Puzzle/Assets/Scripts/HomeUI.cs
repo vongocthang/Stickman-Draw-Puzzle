@@ -12,15 +12,17 @@ public class HomeUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.GetInt("SceneUnlocked") == 0)
+        //PlayerPrefs.SetInt("SceneUnlockedBM", 0);
+
+        if (PlayerPrefs.GetInt("SceneUnlockedBM") == 0)
         {
-            PlayerPrefs.SetInt("SceneUnlocked", 3);
+            PlayerPrefs.SetInt("SceneUnlockedBM", 1);
         }
-        if (PlayerPrefs.GetInt("SceneComplete") == 0)
+        if (PlayerPrefs.GetInt("SceneCompleteBM") == 0)
         {
-            PlayerPrefs.SetInt("SceneComplete", 0);
+            PlayerPrefs.SetInt("SceneCompleteNM", 0);
         }
-        
+        Debug.Log(PlayerPrefs.GetInt("SceneUnlockedBM"));
     }
 
     // Update is called once per frame

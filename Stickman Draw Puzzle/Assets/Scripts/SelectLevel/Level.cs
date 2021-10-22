@@ -20,17 +20,11 @@ public class Level : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void SetUp()
     {
         int level = int.Parse(this.name.Substring(7, 2));
 
-        int scenceUnlocked = PlayerPrefs.GetInt("SceneUnlocked");
+        int scenceUnlocked = PlayerPrefs.GetInt("SceneUnlockedBM");
         if (scenceUnlocked >= level)
         {
             unlocked = true;
@@ -40,7 +34,7 @@ public class Level : MonoBehaviour
         {
             return;
         }
-
+        //PlayerPrefs.SetInt("StarLevel" + level.ToString(), 0);
         int star = PlayerPrefs.GetInt("StarLevel" + level.ToString());
         starNumber.text = star.ToString();
     }
