@@ -115,15 +115,6 @@ public class DrawLine : MonoBehaviour
     {
         if (line != null)
         {
-            if (line.pointsCount < 2)
-            {
-                
-            }
-            else
-            {
-                
-            }
-
             line.gameObject.tag = "Line";
             line.UsePhysics(true);
             countLine++;

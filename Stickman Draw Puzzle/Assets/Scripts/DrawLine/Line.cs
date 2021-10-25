@@ -14,6 +14,9 @@ public class Line : MonoBehaviour
 
     public float pointsMinDistance;
 
+    //
+    public bool blocked;
+
     public void AddPoint(Vector2 newPoint)
     {
         if (pointsCount >= 2 && Vector2.Distance(newPoint, GetLastPoint()) < pointsMinDistance)
@@ -31,6 +34,7 @@ public class Line : MonoBehaviour
         {
             edgeCollider.points = points.ToArray();
         }
+
         CircleCollider2D circleCollider = this.gameObject.AddComponent<CircleCollider2D>();
         circleCollider.offset = newPoint;
         circleCollider.radius = circleColliderRadius;
@@ -41,14 +45,13 @@ public class Line : MonoBehaviour
         return lineRenderer.GetPosition(pointsCount - 1);
     }
 
-    public void SetLineColor(Gradient colorGradient)
+    public void SetLineColor(Gradient color)
     {
-        lineRenderer.colorGradient = colorGradient;
+        lineRenderer.colorGradient = color;
     }
 
     public void UsePhysics(bool usePhysics)
     {
-        //Debug.Log("Tat rigidbody");
         rb.simulated = usePhysics;
     }
 
@@ -64,5 +67,35 @@ public class Line : MonoBehaviour
 
         edgeCollider.edgeRadius = width / 2f;
         circleColliderRadius = width / 2f;
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Wall" || collision.tag == "Line" || collision.tag == "Barrier" || 
+            collision.tag == "Wheel" || collision.tag == "Box" || collision.tag == "Wood")
+        {
+            Debug.Log("Va chạm với: " + collision.tag);
+            blocked = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Wall" || collision.tag == "Barrier" || collision.tag == "Wheel" || 
+            collision.tag == "Box" || collision.tag == "Wood")
+        {
+            Debug.Log("Thoát khỏi: " + collision.tag);
+            blocked = false;
+
+        }
+        if (collision.tag == "Line")
+        {
+            Debug.Log("Thoát khỏi Line");
+            if (collision.GetType() == edgeCollider.GetType())
+            {
+                Debug.Log("Thoát khỏi: " + collision.GetType() + " của Line");
+                blocked = false;
+            }
+        }
     }
 }

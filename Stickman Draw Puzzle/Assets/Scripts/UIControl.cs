@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 
 //Điều khiển các tác vụ sử dụng đồng thời cho cả 2 chế độ Basic và Collect Wood
-//PlayerPrefs (SceneUnlocked)(
+//PlayerPrefs (SceneUnlocked)(StarLevel+x)(
 
 public class UIControl : MonoBehaviour
 {
@@ -20,11 +20,11 @@ public class UIControl : MonoBehaviour
     
     public TMP_Text countLine;//Hiển thị số Line còn lại đc phép vẽ cho mốc sao hiện tại
 
-    DrawLine drawLine;
+    //DrawLine drawLine;
 
     private void Start()
     {
-        drawLine = GameObject.Find("Pen").GetComponent<DrawLine>();
+        //drawLine = GameObject.Find("Pen").GetComponent<DrawLine>();
         countStar = 3;
         tempCount = setupStar[countStar - 1];
         

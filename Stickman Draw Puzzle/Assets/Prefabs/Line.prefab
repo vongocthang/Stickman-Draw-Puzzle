@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -7350555842370741221}
   - component: {fileID: 7992725398627063363}
   - component: {fileID: 8299349462476651819}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -53,6 +53,7 @@ MonoBehaviour:
   pointsCount: 0
   points: []
   pointsMinDistance: 0
+  blocked: 0
 --- !u!210 &2890800114956009133
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -79,9 +80,7 @@ EdgeCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0.25
-  m_Points:
-  - {x: -0.25, y: 0}
-  - {x: 0.25, y: 0}
+  m_Points: []
 --- !u!50 &7992725398627063363
 Rigidbody2D:
   serializedVersion: 4
@@ -121,7 +120,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ee7ab42b3fdcbf44caab5d366747c90f, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -142,9 +141,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
+  m_Positions: []
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.5
@@ -165,7 +162,7 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 1, g: 0, b: 0, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -192,7 +189,7 @@ LineRenderer:
       m_Mode: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
+    numCornerVertices: 5
     numCapVertices: 5
     alignment: 0
     textureMode: 0
