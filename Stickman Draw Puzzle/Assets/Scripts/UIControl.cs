@@ -20,6 +20,10 @@ public class UIControl : MonoBehaviour
     
     public TMP_Text countLine;//Hiển thị số Line còn lại đc phép vẽ cho mốc sao hiện tại
 
+    public TempDrawLine drawLine;
+
+
+
     //DrawLine drawLine;
 
     private void Start()
@@ -29,7 +33,13 @@ public class UIControl : MonoBehaviour
         tempCount = setupStar[countStar - 1];
         
         countLine.text = tempCount.ToString();
+
+        drawLine = GameObject.Find("Draw Line").GetComponent<TempDrawLine>();
+
+
     }
+
+    
 
     private void Update()
     {
@@ -72,6 +82,15 @@ public class UIControl : MonoBehaviour
         }
     }
 
+    public void PauseDrawLine()
+    {
+        drawLine.enabled = false;
+    }
+
+    public void ResumeDrawLine()
+    {
+        drawLine.enabled = true;
+    }
 
 
     public void Reset()
@@ -81,6 +100,16 @@ public class UIControl : MonoBehaviour
 
     public void GoHome()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(51);
+    }
+
+    public void SellectLevelBasicMode()
+    {
+        SceneManager.LoadScene(52);
+    }
+
+    public void NextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

@@ -24,15 +24,29 @@ public class TempDrawLine : MonoBehaviour
     public Gradient tempLineColor;
     public List<Vector2> points = new List<Vector2>();
 
+    public GameObject tempPen;
+
+    public UIControl uiControl;
+
+    //Phải tắt tác dụng lực khi vẽ
+    public Rigidbody2D conLac;
+
     void Start()
     {
         cam = Camera.main;
+        tempPen = GameObject.Find("TempPen");
+        uiControl = GameObject.Find("MainUI").GetComponent<UIControl>();
+
+        conLac = GameObject.Find("ConLac").GetComponent<Rigidbody2D>();
+
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        StopPhysics();
+
         CheckBlockLayer();
 
         if (Input.GetMouseButtonDown(0))
@@ -152,6 +166,8 @@ public class TempDrawLine : MonoBehaviour
             line.gameObject.layer = 8;
             line.UsePhysics(true);
             line = null;
+
+            uiControl.tempCount--;
         }
         if (tempLine != null)
         {
@@ -165,5 +181,23 @@ public class TempDrawLine : MonoBehaviour
     {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         hit = Physics2D.CircleCast(mousePos, lineWidth, Vector2.zero, 1f, blockLayer);
+
+        //this.transform.position = mousePos;
+        tempPen.transform.position = mousePos;
+    }
+
+    public void StopPhysics()
+    {
+        if (conLac != null)
+        {
+            if (line != null)
+            {
+                conLac.bodyType = RigidbodyType2D.Static;
+            }
+            else
+            {
+                conLac.bodyType = RigidbodyType2D.Dynamic;
+            }
+        }
     }
 }

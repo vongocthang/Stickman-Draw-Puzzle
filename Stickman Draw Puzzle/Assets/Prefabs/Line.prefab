@@ -17,7 +17,7 @@ GameObject:
   m_Layer: 0
   m_Name: Line
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -54,6 +54,7 @@ MonoBehaviour:
   points: []
   pointsMinDistance: 0
   blocked: 0
+  countCollision: 0
 --- !u!210 &2890800114956009133
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -64,7 +65,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 10
 --- !u!68 &-7350555842370741221
 EdgeCollider2D:
   m_ObjectHideFlags: 0

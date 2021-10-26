@@ -16,6 +16,7 @@ public class Line : MonoBehaviour
 
     //
     public bool blocked;
+    public int countCollision;
 
     public void AddPoint(Vector2 newPoint)
     {
@@ -69,31 +70,114 @@ public class Line : MonoBehaviour
         circleColliderRadius = width / 2f;
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Wall" || collision.tag == "Line" || collision.tag == "Barrier" || 
-            collision.tag == "Wheel" || collision.tag == "Box" || collision.tag == "Wood")
+        if (collision.tag == "Wall")
         {
             Debug.Log("Va chạm với: " + collision.tag);
+            countCollision++;
+            blocked = true;
+        }
+        if (collision.tag == "Line")
+        {
+            Debug.Log("Va chạm với: " + collision.tag);
+            countCollision++;
+            blocked = true;
+        }
+        if (collision.tag == "Barrier")
+        {
+            Debug.Log("Va chạm với: " + collision.tag);
+            countCollision++;
+            blocked = true;
+        }
+        if (collision.tag == "Wheel")
+        {
+            Debug.Log("Va chạm với: " + collision.tag);
+            countCollision++;
+            blocked = true;
+        }
+        if (collision.tag == "Box")
+        {
+            Debug.Log("Va chạm với: " + collision.tag);
+            countCollision++;
+            blocked = true;
+        }
+        if (collision.tag == "Wood")
+        {
+            Debug.Log("Va chạm với: " + collision.tag);
+            countCollision++;
+            blocked = true;
+        }
+        if (collision.tag == "Car")
+        {
+            Debug.Log("Va chạm với: " + collision.tag);
+            countCollision++;
             blocked = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Wall" || collision.tag == "Barrier" || collision.tag == "Wheel" || 
-            collision.tag == "Box" || collision.tag == "Wood")
+        if (collision.tag == "Wall")
         {
             Debug.Log("Thoát khỏi: " + collision.tag);
-            blocked = false;
-
+            countCollision--;
+            if (countCollision == 0)
+            {
+                blocked = false;
+            }
         }
         if (collision.tag == "Line")
         {
-            Debug.Log("Thoát khỏi Line");
-            if (collision.GetType() == edgeCollider.GetType())
+            Debug.Log("Thoát khỏi: " + collision.tag);
+            countCollision--;
+            if (countCollision == 0)
             {
-                Debug.Log("Thoát khỏi: " + collision.GetType() + " của Line");
+                blocked = false;
+            }
+        }
+        if (collision.tag == "Barrier")
+        {
+            Debug.Log("Thoát khỏi: " + collision.tag);
+            countCollision--;
+            if (countCollision == 0)
+            {
+                blocked = false;
+            }
+        }
+        if (collision.tag == "Wheel")
+        {
+            Debug.Log("Thoát khỏi: " + collision.tag);
+            countCollision--;
+            if (countCollision == 0)
+            {
+                blocked = false;
+            }
+        }
+        if (collision.tag == "Box")
+        {
+            Debug.Log("Thoát khỏi: " + collision.tag);
+            countCollision--;
+            if (countCollision == 0)
+            {
+                blocked = false;
+            }
+        }
+        if (collision.tag == "Wood")
+        {
+            Debug.Log("Thoát khỏi: " + collision.tag);
+            countCollision--;
+            if (countCollision == 0)
+            {
+                blocked = false;
+            }
+        }
+        if (collision.tag == "Car")
+        {
+            Debug.Log("Thoát khỏi: " + collision.tag);
+            countCollision--;
+            if (countCollision == 0)
+            {
                 blocked = false;
             }
         }

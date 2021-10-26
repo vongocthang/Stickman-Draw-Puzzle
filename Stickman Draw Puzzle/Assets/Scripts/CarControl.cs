@@ -45,7 +45,7 @@ public class CarControl : MonoBehaviour
             }
             else
             {
-                Debug.Log("Tác dụng lực Veloctiy");
+                Debug.Log("Lên dốc trái");
                 rb2D.velocity = new Vector2(tempMoveSpeed * Time.deltaTime, 0f);
             }
         }
@@ -63,7 +63,7 @@ public class CarControl : MonoBehaviour
             }
             else
             {
-                Debug.Log("Tác dụng lực Veloctiy");
+                Debug.Log("Lên dốc phải");
                 rb2D.velocity = new Vector2(tempMoveSpeed * Time.deltaTime, 0f);
             }
         }
