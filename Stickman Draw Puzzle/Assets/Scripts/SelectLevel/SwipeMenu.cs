@@ -24,31 +24,50 @@ public class SwipeMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
+        ChangePage();
+        ChangeScale();
     }
 
     public void NextPage()
     {
-        //scrollbar.value = Mathf.Lerp(scrollbar.value, pos[pageNumber - 1], 0.1f * Time.deltaTime);
-        
         if (pageNumber < 4)
         {
-            
             pageNumber++;
-            scrollbar.value = pos[pageNumber - 1];
         }
     }
 
     public void BackPage()
     {
-        //scrollbar.value = Mathf.Lerp(scrollbar.value, pos[pageNumber - 1], 0.01f * Time.deltaTime);
-        
         if (pageNumber > 1)
         {
-            
             pageNumber--;
-            scrollbar.value = pos[pageNumber - 1];
         }
+    }
+
+    public void ChangePage()
+    {
+        if (scrollbar.value != pos[pageNumber - 1])
+        {
+            scrollbar.value = Mathf.Lerp(scrollbar.value, pos[pageNumber - 1], 0.1f);
+
+            this.transform.GetChild(pageNumber - 1).localScale =
+                    Vector2.Lerp(this.transform.GetChild(pageNumber - 1).localScale, new Vector2(1f, 1f), 0.1f);
+        }
+    }
+
+    public void ChangeScale()
+    {
+        if (scrollbar.value < pos[pageNumber - 1] && scrollbar.value >= 0)
+        {
+            this.transform.GetChild(pageNumber - 2).localScale =
+                Vector2.Lerp(this.transform.GetChild(pageNumber - 2).localScale, new Vector2(0.8f, 0.8f), 0.2f);
+        }
+
+        if (scrollbar.value > pos[pageNumber - 1] && scrollbar.value <= 1)
+        {
+            this.transform.GetChild(pageNumber).localScale =
+                Vector2.Lerp(this.transform.GetChild(pageNumber).localScale, new Vector2(0.8f, 0.8f), 0.2f);
+        }
+        
     }
 }
