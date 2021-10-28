@@ -128,6 +128,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8318827147418516280, guid: 0c184046e3e092f4788236a3bd7e5ae5,
+        type: 3}
+      propertyPath: conLac.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8318827147418516281, guid: 0c184046e3e092f4788236a3bd7e5ae5,
         type: 3}
       propertyPath: m_RootOrder
@@ -782,11 +787,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1794562007}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.26, y: 1.62, z: 0}
-  m_LocalScale: {x: 4.418423, y: 4.418423, z: 0}
+  m_LocalPosition: {x: -0.2904, y: 0.108, z: 0}
+  m_LocalScale: {x: 0.17673692, y: 0.29456156, z: 0}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 6397286995560587832}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1979945770
 PrefabInstance:
@@ -1679,6 +1684,7 @@ Transform:
   - {fileID: 5496349637014459041}
   - {fileID: 6397286994698399704}
   - {fileID: 5792284238681899437}
+  - {fileID: 1794562011}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1764,7 +1770,7 @@ GameObject:
   - component: {fileID: 6441877364449194253}
   m_Layer: 8
   m_Name: ConLac
-  m_TagString: ConLac
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1975,7 +1981,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6441877364472958373}
   - component: {fileID: 6441877364472958372}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ConLacQuanh1Diem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2085,7 +2091,7 @@ GameObject:
   - component: {fileID: 6441877364965719974}
   m_Layer: 8
   m_Name: New Sprite (1)
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

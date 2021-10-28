@@ -715,7 +715,7 @@ GameObject:
   - component: {fileID: 1314446961488348266}
   m_Layer: 8
   m_Name: New Sprite (1)
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -820,7 +820,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1314446961947555433}
   - component: {fileID: 1314446961947555432}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ConLacQuanh1Diem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -954,7 +954,7 @@ GameObject:
   - component: {fileID: 1314446961971841729}
   m_Layer: 8
   m_Name: ConLacDungIm
-  m_TagString: ConLac
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

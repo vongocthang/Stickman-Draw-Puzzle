@@ -60,14 +60,13 @@ public class SwipeMenu : MonoBehaviour
         if (scrollbar.value < pos[pageNumber - 1] && scrollbar.value >= 0)
         {
             this.transform.GetChild(pageNumber - 2).localScale =
-                Vector2.Lerp(this.transform.GetChild(pageNumber - 2).localScale, new Vector2(0.8f, 0.8f), 0.2f);
+                Vector2.Lerp(this.transform.GetChild(pageNumber - 2).localScale, new Vector2(0.8f, 0.8f), 0.1f);
         }
 
         if (scrollbar.value > pos[pageNumber - 1] && scrollbar.value <= 1)
         {
             this.transform.GetChild(pageNumber).localScale =
-                Vector2.Lerp(this.transform.GetChild(pageNumber).localScale, new Vector2(0.8f, 0.8f), 0.2f);
+                Vector2.Lerp(this.transform.GetChild(pageNumber).localScale, new Vector2(0.8f, 0.8f), 0.1f);
         }
-        
     }
 }

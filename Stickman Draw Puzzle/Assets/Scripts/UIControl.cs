@@ -39,8 +39,6 @@ public class UIControl : MonoBehaviour
 
     }
 
-    
-
     private void Update()
     {
         CountLine();
@@ -49,10 +47,6 @@ public class UIControl : MonoBehaviour
 
     public void CountLine()
     {
-        if (countStar == 3)
-        {
-            
-        }
         if (tempCount == 0)
         {
             countStar--;

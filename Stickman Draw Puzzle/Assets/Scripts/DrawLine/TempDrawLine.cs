@@ -5,7 +5,7 @@ using UnityEngine;
 public class TempDrawLine : MonoBehaviour
 {
     Camera cam;
-    Line line;
+    public Line line;
     public GameObject linePrefab;
     public Gradient lineColor;
     public float linePointsMinDistance;
@@ -29,7 +29,11 @@ public class TempDrawLine : MonoBehaviour
     public UIControl uiControl;
 
     //Phải tắt tác dụng lực khi vẽ
-    public Rigidbody2D conLac;
+    public GameObject[] conLac;
+    public GameObject[] bapBenh;
+
+    public int countLine = 0;
+
 
     void Start()
     {
@@ -37,9 +41,19 @@ public class TempDrawLine : MonoBehaviour
         tempPen = GameObject.Find("TempPen");
         uiControl = GameObject.Find("MainUI").GetComponent<UIControl>();
 
-        conLac = GameObject.Find("ConLac").GetComponent<Rigidbody2D>();
-
-        
+        if (conLac.Length == 1)
+        {
+            conLac[0] = GameObject.Find("ConLac");
+        }
+        if(bapBenh.Length == 1)
+        {
+            bapBenh[0] = GameObject.Find("BapBenh");
+        }
+        else if (bapBenh.Length == 2)
+        {
+            bapBenh[0] = GameObject.Find("BapBenh");
+            bapBenh[1] = GameObject.Find("BapBenh (1)");
+        }
     }
 
     // Update is called once per frame
@@ -168,6 +182,7 @@ public class TempDrawLine : MonoBehaviour
             line = null;
 
             uiControl.tempCount--;
+            countLine++;
         }
         if (tempLine != null)
         {
@@ -182,22 +197,48 @@ public class TempDrawLine : MonoBehaviour
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         hit = Physics2D.CircleCast(mousePos, lineWidth, Vector2.zero, 1f, blockLayer);
 
-        //this.transform.position = mousePos;
         tempPen.transform.position = mousePos;
     }
 
     public void StopPhysics()
     {
-        if (conLac != null)
+        if (conLac.Length > 0)
         {
             if (line != null)
             {
-                conLac.bodyType = RigidbodyType2D.Static;
+                for (int i = 0; i < conLac.Length; i++)
+                {
+                    conLac[i].GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+                }
             }
             else
             {
-                conLac.bodyType = RigidbodyType2D.Dynamic;
+                for (int i = 0; i < conLac.Length; i++)
+                {
+                    conLac[i].GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+                }
+            }
+        }
+
+
+        if (bapBenh.Length > 0)
+        {
+            if (line != null)
+            {
+                for (int i = 0; i < bapBenh.Length; i++)
+                {
+                    bapBenh[i].GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+                }
+            }
+            else
+            {
+                for (int i = 0; i < bapBenh.Length; i++)
+                {
+                    bapBenh[i].GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+                }
             }
         }
     }
+
+
 }

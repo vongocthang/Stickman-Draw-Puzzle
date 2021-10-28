@@ -10,6 +10,8 @@ public class SetupAudio : MonoBehaviour
 
     public GameObject musicON;
     public GameObject audioEffectsON;
+    public GameObject musicOFF;
+    public GameObject audioEffectsOFF;
 
     // Start is called before the first frame update
     void Start()
@@ -19,25 +21,31 @@ public class SetupAudio : MonoBehaviour
 
     public void SetupAmThanh()
     {
+        //Mặc định 0 mở 1 tắt
         if (PlayerPrefs.GetInt("AudioEffects") == 0)
         {
             audioEffects.SetActive(true);
             audioEffectsON.SetActive(true);
+            audioEffectsOFF.SetActive(false);
         }
         else
         {
             audioEffects.SetActive(false);
             audioEffectsON.SetActive(false);
+            audioEffectsOFF.SetActive(true);
         }
+
         if (PlayerPrefs.GetInt("Music") == 0)
         {
             music.SetActive(true);
             musicON.SetActive(true);
+            musicOFF.SetActive(false);
         }
         else
         {
             music.SetActive(false);
             musicON.SetActive(false);
+            musicOFF.SetActive(true);
         }
     }
 

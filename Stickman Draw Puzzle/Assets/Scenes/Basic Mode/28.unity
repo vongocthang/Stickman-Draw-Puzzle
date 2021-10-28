@@ -607,6 +607,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8318827147418516280, guid: 0c184046e3e092f4788236a3bd7e5ae5,
+        type: 3}
+      propertyPath: conLac.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8318827147418516281, guid: 0c184046e3e092f4788236a3bd7e5ae5,
         type: 3}
       propertyPath: m_RootOrder
@@ -1523,7 +1528,7 @@ GameObject:
   - component: {fileID: 3956511059476112789}
   m_Layer: 8
   m_Name: New Sprite (1)
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1627,7 +1632,7 @@ GameObject:
   - component: {fileID: 3956511060014197566}
   m_Layer: 8
   m_Name: ConLac
-  m_TagString: ConLac
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1754,7 +1759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3956511060056938390}
   - component: {fileID: 3956511060056938391}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ConLacQuanh1Diem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
