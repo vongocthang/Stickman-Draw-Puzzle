@@ -20,10 +20,13 @@ public class BasicModeGC : MonoBehaviour
 
     public UIControl uiControl;
 
+    TempDrawLine drawLine;
+
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.Find("Target").GetComponent<Target>();
+        drawLine = GameObject.Find("Draw Line").GetComponent<TempDrawLine>();
     }
 
     // Update is called once per frame
@@ -37,17 +40,21 @@ public class BasicModeGC : MonoBehaviour
     {
         if (threeSecond >= 3)
         {
+            //Tắt vẽ Line
+            drawLine.enabled = false;
+
             int a = PlayerPrefs.GetInt("SceneUnlockedBM");
             if (a < SceneManager.GetActiveScene().buildIndex + 1)
             {
                 PlayerPrefs.SetInt("SceneUnlockedBM", SceneManager.GetActiveScene().buildIndex + 1);
             }
             
-            int b = PlayerPrefs.GetInt("StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString());
-            if (b < uiControl.countStar)
-            {
-                PlayerPrefs.SetInt("StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString(), uiControl.countStar);
-            }
+            //int b = PlayerPrefs.GetInt("StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString());
+            //if (b < uiControl.countStar)
+            //{
+            //    PlayerPrefs.SetInt("StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString(), uiControl.countStar);
+            //    //Debug.Log("Sao dat dc= " + PlayerPrefs.GetInt("StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString()));
+            //}
             
 
             StartCoroutine(DisabledCountTime());

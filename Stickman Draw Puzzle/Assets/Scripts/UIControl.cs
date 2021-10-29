@@ -47,7 +47,7 @@ public class UIControl : MonoBehaviour
 
     public void CountLine()
     {
-        if (tempCount == 0)
+        if (tempCount == 0 && countStar >= 1)
         {
             countStar--;
             if (countStar >= 1)
@@ -64,14 +64,17 @@ public class UIControl : MonoBehaviour
         if (countStar == 2)
         {
             star3.SetActive(false);
-            
         }
         if (countStar == 1)
         {
+
+
             star2.SetActive(false);
         }
         if (countStar == 0)
         {
+
+
             star1.SetActive(false);
         }
     }

@@ -10,6 +10,12 @@ public class SwipeMenu : MonoBehaviour
     public float distance;
     public int pageNumber = 1;
 
+    public GameObject page1;
+    public GameObject page2;
+    public GameObject page3;
+    public GameObject page4;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +32,7 @@ public class SwipeMenu : MonoBehaviour
     {
         ChangePage();
         ChangeScale();
+        WhatPage();
     }
 
     public void NextPage()
@@ -67,6 +74,38 @@ public class SwipeMenu : MonoBehaviour
         {
             this.transform.GetChild(pageNumber).localScale =
                 Vector2.Lerp(this.transform.GetChild(pageNumber).localScale, new Vector2(0.8f, 0.8f), 0.1f);
+        }
+    }
+
+    public void WhatPage()
+    {
+        if (pageNumber == 1)
+        {
+            page1.SetActive(false);
+            page2.SetActive(true);
+            page3.SetActive(true);
+            page4.SetActive(true);
+        }
+        if (pageNumber == 2)
+        {
+            page1.SetActive(true);
+            page2.SetActive(false);
+            page3.SetActive(true);
+            page4.SetActive(true);
+        }
+        if (pageNumber == 3)
+        {
+            page1.SetActive(true);
+            page2.SetActive(true);
+            page3.SetActive(false);
+            page4.SetActive(true);
+        }
+        if (pageNumber == 4)
+        {
+            page1.SetActive(true);
+            page2.SetActive(true);
+            page3.SetActive(true);
+            page4.SetActive(false);
         }
     }
 }

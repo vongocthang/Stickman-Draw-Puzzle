@@ -13,30 +13,43 @@ public class HomeUI : MonoBehaviour
     public GameObject audioEffectsON;
 
     public TMP_Text showCoin;
+    //Hiển thị tổng số sao của tất cả các Level
+    public TMP_Text showSumStar;
 
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.SetInt("SceneUnlockedBM", 55);
-
         //if (PlayerPrefs.GetInt("SceneUnlockedBM") == 0)
         //{
         //    PlayerPrefs.SetInt("SceneUnlockedBM", 1);
         //}
-        //if (PlayerPrefs.GetInt("SceneCompleteBM") == 0)
-        //{
-        //    PlayerPrefs.SetInt("SceneCompleteNM", 0);
-        //}
-        //Debug.Log(PlayerPrefs.GetInt("SceneUnlockedBM"));
 
-        SetupAmThanh();
-        ShowCoin();
+        //for (int i = 1; i <= 5; i++)
+        //{
+        //    PlayerPrefs.SetInt("Pen" + i.ToString(), 0);
+        //}
+
+        //PlayerPrefs.SetInt("Pen", 0);
+        ////PlayerPrefs.SetInt("Pen2", 0);
+
+        //PlayerPrefs.SetInt("SceneUnlockedBM", 1);
+
+        //for (int i = 1; i <= 50; i++)
+        //{
+        //    PlayerPrefs.SetInt("StarLevel" + i.ToString(), 0);
+        //}
+
+        //PlayerPrefs.SetInt("Coin", 0);
+
+        //PlayerPrefs.SetInt("ClaimPen", 1);
+        //PlayerPrefs.SetFloat("PenLoad", 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        ShowCoin();
+        ShowSumStar();
     }
 
     public void LoadHome()
@@ -54,48 +67,24 @@ public class HomeUI : MonoBehaviour
 
     }
 
-    public void SetupAmThanh()
-    {
-        if (PlayerPrefs.GetInt("AudioEffects") == 0)
-        {
-            audioEffectsON.SetActive(true);
-        }
-        else
-        {
-            audioEffectsON.SetActive(false);
-        }
-        if (PlayerPrefs.GetInt("Music") == 0)
-        {
-            musicON.SetActive(true);
-        }
-        else
-        {
-            musicON.SetActive(false);
-        }
-    }
-
-    public void MusicON()
-    {
-        PlayerPrefs.SetInt("Music", 0);
-    }
-
-    public void MusicOFF()
-    {
-        PlayerPrefs.SetInt("Music", 1);
-    }
-
-    public void AudioEffectsON()
-    {
-        PlayerPrefs.SetInt("AudioEffects", 0);
-    }
-
-    public void AudioEffectsOFF()
-    {
-        PlayerPrefs.SetInt("AudioEffects", 1);
-    }
-
     public void ShowCoin()
     {
         showCoin.text = PlayerPrefs.GetInt("Coin").ToString();
+    }
+
+    public void ShowSumStar()
+    {
+        int sumStar = 0;
+        for(int i=1; i<=50; i++)
+        {
+            int a = PlayerPrefs.GetInt("StarLevel" + i.ToString());
+            sumStar += a;
+            showSumStar.text = sumStar.ToString();
+        }
+    }
+
+    public void GoShop()
+    {
+        SceneManager.LoadScene(53);
     }
 }
