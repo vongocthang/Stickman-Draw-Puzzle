@@ -7,10 +7,12 @@ using TMPro;
 public class LoadPenClaim : MonoBehaviour
 {
     public Slider slider;
+    public int sliderPos;
     public TMP_Text claim;
     public int penNumber;
-    public float load1;
-    public float load2;
+    public int load1;
+    public int load2;
+    public int tempLoad;
     public GameObject claimButton;
 
     UIControl uiControl;
@@ -22,50 +24,90 @@ public class LoadPenClaim : MonoBehaviour
         penNumber = int.Parse(this.name.Substring(5, 2));
         if (penNumber == 1 || penNumber == 2)
         {
-            load1 = 0.2f;
-            load2 = 0.1f;
+            load1 = 20;
+            load2 = 10;
         }
         else if (penNumber == 3 || penNumber == 4)
         {
-            load1 = 0.1f;
-            load2 = 0.05f;
+            load1 = 10;
+            load2 = 5;
         }
         else
         {
-            load1 = 0.05f;
-            load2 = 0.02f;
+            load1 = 5;
+            load2 = 2;
         }
+        slider.value = PlayerPrefs.GetInt("PenLoad");
+        tempLoad = PlayerPrefs.GetInt("PenLoad");
+        sliderPos = PlayerPrefs.GetInt("PenLoad");
 
-        
+        Debug.Log(PlayerPrefs.GetInt("PenLoad"));
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (slider.value == 1)
-        {
-            claim.text = "CLAIM";
-        }
-
         LoadPen();
+
+        if (slider.value == 100)
+        {
+            claimButton.SetActive(true);
+        }  
     }
 
     public void LoadPen()
     {
-        slider.value = PlayerPrefs.GetFloat("PenLoad");
-        float a = slider.value;
+        
         if (uiControl.countStar == 3)
         {
-            slider.value = Mathf.Lerp(a, a + load1, 10 * Time.deltaTime);
+            if (slider.value != sliderPos + load1)
+            {
+                Debug.Log("Loading 3 star");
+                slider.value = Mathf.MoveTowards(slider.value, sliderPos + load1, 0.2f); 
+            }
+            if (slider.value > tempLoad)
+            {
+                Debug.Log("Tang %");
+                tempLoad++;
+                claim.text = tempLoad.ToString() + "%";
+            }
+            if (slider.value == sliderPos + load1)
+            {
+                Debug.Log("Ket thuc load");
+                PlayerPrefs.SetInt("PenLoad", sliderPos + load1);
+            }
         }
         else
         {
-            slider.value = Mathf.Lerp(a, a + load2, 10 * Time.deltaTime);
+            float b = sliderPos + load2;
+            if (slider.value != sliderPos + load2)
+            {
+                Debug.Log("Loading < 3 star");
+                slider.value = Mathf.MoveTowards(slider.value, sliderPos + load2, 0.2f);
+            }
+            if (slider.value > tempLoad)
+            {
+                Debug.Log("Tang %");
+                tempLoad++;
+                claim.text = tempLoad.ToString() + "%";
+            }
+            if (slider.value == sliderPos + load2)
+            {
+                Debug.Log("Ket thuc load");
+                PlayerPrefs.SetInt("PenLoad", sliderPos + load2);
+            }
         }
     }
 
     public void ClaimPen()
     {
-
+        PlayerPrefs.SetInt("Pen" + penNumber.ToString(), 1);
+        PlayerPrefs.SetInt("Pen", penNumber);
+        PlayerPrefs.SetInt("PenLoad", 0);
+        if (penNumber < 5)
+        {
+            PlayerPrefs.SetInt("ClaimPen", PlayerPrefs.GetInt("ClaimPen") + 1);
+        }
+        Destroy(this.transform.gameObject);
     }
 }

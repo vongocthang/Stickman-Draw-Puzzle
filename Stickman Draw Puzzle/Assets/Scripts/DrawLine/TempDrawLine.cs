@@ -24,8 +24,6 @@ public class TempDrawLine : MonoBehaviour
     public Gradient tempLineColor;
     public List<Vector2> points = new List<Vector2>();
 
-    public GameObject tempPen;
-
     public UIControl uiControl;
 
     //Phải tắt tác dụng lực khi vẽ
@@ -38,12 +36,12 @@ public class TempDrawLine : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
-        tempPen = GameObject.Find("TempPen");
+
         uiControl = GameObject.Find("MainUI").GetComponent<UIControl>();
 
         if (conLac.Length == 1)
         {
-            conLac[0] = GameObject.Find("ConLac");
+            conLac[0] = GameObject.Find("Pendulum");
         }
         if(bapBenh.Length == 1)
         {
@@ -196,8 +194,6 @@ public class TempDrawLine : MonoBehaviour
     {
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         hit = Physics2D.CircleCast(mousePos, lineWidth, Vector2.zero, 1f, blockLayer);
-
-        tempPen.transform.position = mousePos;
     }
 
     public void StopPhysics()

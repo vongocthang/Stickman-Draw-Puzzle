@@ -13,7 +13,7 @@ public class PenShop : MonoBehaviour
     public float[] pos;//Tập vị trí của các đối tượng trên thanh cuộn
     public float distance;//Khoảng cách giữa 2 đối tượng trên thanh cuộn
     public float scrollbarPos;//Vị trí ngay khi thả chuột-kết thúc cuộn
-    public int penNumber = 1;//Pen số mấy đang hiển thị
+    public int penNumber = 0;//Pen số mấy đang hiển thị
 
     public GameObject unlockPen;//Giao diện xem video để mở khóa Pen
     public GameObject usingPen;//Dấu hiệu bút này đang đc sử dụng
@@ -52,8 +52,9 @@ public class PenShop : MonoBehaviour
             {
                 if (scrollbarPos < pos[i] + (distance / 2) && scrollbarPos > pos[i] - (distance / 2))
                 {
+                    Debug.Log("Doi pen hien thi");
                     scrollbar.value = Mathf.Lerp(scrollbar.value, pos[i], 0.05f);
-                    penNumber = i + 1;
+                    penNumber = i;
                 }
             }
         }

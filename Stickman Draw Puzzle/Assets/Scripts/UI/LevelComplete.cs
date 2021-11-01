@@ -39,6 +39,10 @@ public class LevelComplete : MonoBehaviour
         ShowStar();
         ShowCoin();
         LoadClaimPen();
+
+
+        Debug.Log(PlayerPrefs.GetInt("Pen"));
+        Debug.Log(PlayerPrefs.GetInt("ClaimPen"));
     }
 
     // Update is called once per frame
@@ -175,22 +179,31 @@ public class LevelComplete : MonoBehaviour
         }
         if (PlayerPrefs.GetInt("ClaimPen") == 2)
         {
+            claimPen1.SetActive(false);
             claimPen3.SetActive(false);
             claimPen4.SetActive(false);
             claimPen5.SetActive(false);
         }
         if (PlayerPrefs.GetInt("ClaimPen") == 3)
         {
+            claimPen1.SetActive(false);
+            claimPen2.SetActive(false);
             claimPen4.SetActive(false);
             claimPen5.SetActive(false);
         }
         if (PlayerPrefs.GetInt("ClaimPen") == 4)
         {
+            claimPen1.SetActive(false);
+            claimPen2.SetActive(false);
+            claimPen3.SetActive(false);
             claimPen5.SetActive(false);
         }
         if (PlayerPrefs.GetInt("ClaimPen") == 5)
         {
-
+            claimPen1.SetActive(false);
+            claimPen2.SetActive(false);
+            claimPen3.SetActive(false);
+            claimPen4.SetActive(false);
         }
     }
 }
