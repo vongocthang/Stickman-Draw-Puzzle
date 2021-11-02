@@ -30,4 +30,19 @@ public class ShopControl : MonoBehaviour
     {
         SceneManager.LoadScene(51);
     }
+
+    public void BuyCoin1()
+    {
+        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 1000);
+    }
+
+    public void BuyCoin2()
+    {
+        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 2000);
+    }
+
+    public void BuyCoin3()
+    {
+        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 5000);
+    }
 }

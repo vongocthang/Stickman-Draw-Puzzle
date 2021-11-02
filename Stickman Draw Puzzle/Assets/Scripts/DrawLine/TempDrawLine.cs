@@ -14,7 +14,7 @@ public class TempDrawLine : MonoBehaviour
     public Vector2 mousePos;
     public Vector2 lastPoint;
     public LayerMask blockLayer;
-    
+
     public bool blocked = false;
     public bool drawing = false;
     RaycastHit2D hit;
@@ -29,6 +29,10 @@ public class TempDrawLine : MonoBehaviour
     //Phải tắt tác dụng lực khi vẽ
     public GameObject[] conLac;
     public GameObject[] bapBenh;
+    public GameObject car;
+    public GameObject box;
+    public GameObject[] lineDrew;
+    public GameObject[] gaiXoay;
 
     public int countLine = 0;
 
@@ -43,15 +47,28 @@ public class TempDrawLine : MonoBehaviour
         {
             conLac[0] = GameObject.Find("Pendulum");
         }
-        if(bapBenh.Length == 1)
+
+        if (bapBenh.Length == 1)
         {
-            bapBenh[0] = GameObject.Find("BapBenh");
+            bapBenh[0] = GameObject.Find("Seesaw (1)");
         }
         else if (bapBenh.Length == 2)
         {
-            bapBenh[0] = GameObject.Find("BapBenh");
-            bapBenh[1] = GameObject.Find("BapBenh (1)");
+            bapBenh[0] = GameObject.Find("Seesaw (1)");
+            bapBenh[1] = GameObject.Find("Seesaw (2)");
         }
+
+        if (GameObject.Find("CarLeft") != null)
+        {
+            car = GameObject.Find("CarLeft");
+        }
+        if (GameObject.Find("CarRight") != null)
+        {
+            car = GameObject.Find("CarRight");
+        }
+
+        box = GameObject.Find("Box");
+        gaiXoay = GameObject.FindGameObjectsWithTag("GaiXoay");
     }
 
     // Update is called once per frame
@@ -178,8 +195,11 @@ public class TempDrawLine : MonoBehaviour
             line.gameObject.layer = 8;
             line.UsePhysics(true);
             line = null;
+            if (uiControl.countStar >= 1)
+            {
+                uiControl.tempCount--;
+            }
 
-            uiControl.tempCount--;
             countLine++;
         }
         if (tempLine != null)
@@ -234,7 +254,45 @@ public class TempDrawLine : MonoBehaviour
                 }
             }
         }
+
+        if (line != null)
+        {
+            car.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            box.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+
+            for (int i = 0; i < gaiXoay.Length; i++)
+            {
+                gaiXoay[i].GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            }
+        }
+        else
+        {
+            car.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            box.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+
+            for (int i = 0; i < gaiXoay.Length; i++)
+            {
+                gaiXoay[i].GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            }
+        }
+
+        lineDrew = GameObject.FindGameObjectsWithTag("Line");
+        if (lineDrew.Length > 0)
+        {
+            if (line != null)
+            {
+                for (int i = 0; i < lineDrew.Length; i++)
+                {
+                    lineDrew[i].GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+                }
+            }
+            else
+            {
+                for (int i = 0; i < lineDrew.Length; i++)
+                {
+                    lineDrew[i].GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+                }
+            }
+        }
     }
-
-
 }

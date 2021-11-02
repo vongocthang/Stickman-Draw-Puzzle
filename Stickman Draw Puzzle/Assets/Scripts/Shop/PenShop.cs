@@ -110,10 +110,9 @@ public class PenShop : MonoBehaviour
         {
             PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") - 3000);
             PlayerPrefs.SetInt("Pen" + penNumber.ToString(), 1);
+           
             unlockPen.SetActive(false);
             usingPen.SetActive(false);
-
-            
         }
     }
 }

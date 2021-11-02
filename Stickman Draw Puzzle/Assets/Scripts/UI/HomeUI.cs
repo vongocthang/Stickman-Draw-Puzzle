@@ -20,17 +20,19 @@ public class HomeUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //if (PlayerPrefs.GetInt("SceneUnlockedBM") == 0)
-        //{
-        //    PlayerPrefs.SetInt("SceneUnlockedBM", 1);
-        //}
+        if (PlayerPrefs.GetInt("SceneUnlockedBM") == 0)
+        {
+            PlayerPrefs.SetInt("SceneUnlockedBM", 50);
+        }
+        if (PlayerPrefs.GetInt("ClaimPen") == 0)
+        {
+            PlayerPrefs.SetInt("ClaimPen", 1);
+        }
 
         //for (int i = 1; i <= 5; i++)
         //{
         //    PlayerPrefs.SetInt("Pen" + i.ToString(), 0);
         //}
-
-        //PlayerPrefs.SetInt("SceneUnlockedBM", 1);
 
         //for (int i = 1; i <= 50; i++)
         //{
@@ -39,10 +41,13 @@ public class HomeUI : MonoBehaviour
 
         //PlayerPrefs.SetInt("Coin", 0);
 
-        //PlayerPrefs.SetInt("ClaimPen", 1);
+        //PlayerPrefs.SetInt("ClaimPen", 0);
         //PlayerPrefs.SetInt("PenLoad", 0);
         //PlayerPrefs.SetInt("Pen", 0);
-        //PlayerPrefs.SetInt("Pen0", 1);
+
+        //PlayerPrefs.SetInt("SceneUnlockedBM", 0);
+
+        PlayerPrefs.SetInt("Pen0", 1);
     }
 
     // Update is called once per frame

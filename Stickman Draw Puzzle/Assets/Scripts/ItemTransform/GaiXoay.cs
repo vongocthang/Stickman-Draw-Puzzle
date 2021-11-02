@@ -5,6 +5,7 @@ using UnityEngine;
 public class GaiXoay : MonoBehaviour
 {
     public TempDrawLine drawLine;
+    public bool huongXoay;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,14 @@ public class GaiXoay : MonoBehaviour
     {
         if (drawLine.line == null)
         {
-            this.transform.Rotate(Vector3.back * 30 * Time.deltaTime);
+            if (huongXoay == false)
+            {
+                this.transform.Rotate(Vector3.back * 50 * Time.deltaTime);
+            }
+            else
+            {
+                this.transform.Rotate(Vector3.forward * 50 * Time.deltaTime);
+            }
         }
     }
 }

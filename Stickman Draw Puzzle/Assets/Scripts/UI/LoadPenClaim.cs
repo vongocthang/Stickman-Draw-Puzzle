@@ -60,6 +60,7 @@ public class LoadPenClaim : MonoBehaviour
         
         if (uiControl.countStar == 3)
         {
+            PlayerPrefs.SetInt("PenLoad", sliderPos + load1);
             if (slider.value != sliderPos + load1)
             {
                 Debug.Log("Loading 3 star");
@@ -74,12 +75,12 @@ public class LoadPenClaim : MonoBehaviour
             if (slider.value == sliderPos + load1)
             {
                 Debug.Log("Ket thuc load");
-                PlayerPrefs.SetInt("PenLoad", sliderPos + load1);
+                
             }
         }
         else
         {
-            float b = sliderPos + load2;
+            PlayerPrefs.SetInt("PenLoad", sliderPos + load2);
             if (slider.value != sliderPos + load2)
             {
                 Debug.Log("Loading < 3 star");

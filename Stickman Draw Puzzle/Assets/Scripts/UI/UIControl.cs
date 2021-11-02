@@ -36,7 +36,7 @@ public class UIControl : MonoBehaviour
 
         drawLine = GameObject.Find("Draw Line").GetComponent<TempDrawLine>();
 
-
+        SetPenLoad();
     }
 
     private void Update()
@@ -53,6 +53,7 @@ public class UIControl : MonoBehaviour
             if (countStar >= 1)
             {
                 tempCount = setupStar[countStar - 1];
+                
             }
         }
 
@@ -76,6 +77,19 @@ public class UIControl : MonoBehaviour
 
 
             star1.SetActive(false);
+        }
+    }
+
+    //Xác định Pen để load % bỏ qua các Pen đã mở khóa sở hữu
+    public void SetPenLoad()
+    {
+        for(int i=0; i<=5; i++)
+        {
+            if (PlayerPrefs.GetInt("Pen" + i.ToString()) == 0)
+            {
+                PlayerPrefs.SetInt("ClaimPen", i);
+                return;
+            }
         }
     }
 
