@@ -22,7 +22,8 @@ public class UIControl : MonoBehaviour
 
     public TempDrawLine drawLine;
 
-
+    //Điều khiển xe di chuyển trái phải
+    public bool moveLeft, moveRight;
 
     //DrawLine drawLine;
 
@@ -91,6 +92,23 @@ public class UIControl : MonoBehaviour
                 return;
             }
         }
+    }
+
+    //Điều khiển xe
+    public void MoveLeft()
+    {
+        moveLeft = true;
+    }
+
+    public void MoveRight()
+    {
+        moveRight = true;
+    }
+
+    public void NotMove()
+    {
+        moveLeft = false;
+        moveRight = false;
     }
 
     public void PauseDrawLine()

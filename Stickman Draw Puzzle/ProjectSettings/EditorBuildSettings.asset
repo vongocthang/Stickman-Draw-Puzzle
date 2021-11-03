@@ -167,4 +167,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Shop.unity
     guid: 49c880a4196950c419f4855a750cc8a4
+  - enabled: 1
+    path: Assets/Scenes/Collect Wood/CW01.unity
+    guid: 3398b397d4a48fc4fab431134a38eeb7
   m_configObjects: {}

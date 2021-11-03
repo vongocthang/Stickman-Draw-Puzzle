@@ -98,10 +98,30 @@ public class TempDrawLine : MonoBehaviour
             EndDraw();
         }
 
-        if (tempLine != null)
-        {
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    if (hit)
+        //    {
+        //        blocked = true;
+        //    }
+        //    else
+        //    {
+        //        BeginDraw();
+        //    }
+        //}
+        //if (Input.touchCount == 1)
+        //{
+        //    Draw();
+        //}
+        //if (Input.GetMouseButtonUp(0))
+        //{
+        //    EndDraw();
+        //}
 
-        }
+        //if (tempLine != null)
+        //{
+
+        //}
     }
 
     public void BeginDraw()
@@ -212,6 +232,7 @@ public class TempDrawLine : MonoBehaviour
 
     public void CheckBlockLayer()
     {
+        //mousePos = cam.ScreenToWorldPoint(Input.GetTouch(0).position);
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         hit = Physics2D.CircleCast(mousePos, lineWidth, Vector2.zero, 1f, blockLayer);
     }
@@ -258,7 +279,10 @@ public class TempDrawLine : MonoBehaviour
         if (line != null)
         {
             car.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
-            box.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            if (box != null)
+            {
+                box.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            }
 
             for (int i = 0; i < gaiXoay.Length; i++)
             {
@@ -268,7 +292,11 @@ public class TempDrawLine : MonoBehaviour
         else
         {
             car.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            box.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            if (box != null)
+            {
+                box.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            }
+            
 
             for (int i = 0; i < gaiXoay.Length; i++)
             {

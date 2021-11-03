@@ -13,8 +13,6 @@ public class BasicModeGC : MonoBehaviour
 
     float threeSecond = 0;
 
-    //Điều khiển xe di chuyển trái phải
-    public bool moveLeft, moveRight;
     //Điều khiển thanh nâng của xe
     public bool up, down;
 
@@ -90,23 +88,6 @@ public class BasicModeGC : MonoBehaviour
 
         winGame.SetActive(true);
         target.beginCountTime = false;
-    }
-
-    //Điều khiển xe
-    public void MoveLeft()
-    {
-        moveLeft = true;
-    }
-
-    public void MoveRight()
-    {
-        moveRight = true;
-    }
-
-    public void NotMove()
-    {
-        moveLeft = false;
-        moveRight = false;
     }
 
     //Điều khiển nâng

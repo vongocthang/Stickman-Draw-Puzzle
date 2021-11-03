@@ -26,7 +26,7 @@ public class PenSprite : MonoBehaviour
     {
         Vector3 a = drawLine.mousePos;
         a.z = -10;
-        this.transform.position = a;
+        this.transform.position = a;  
     }
 
     public void SetupPenSprite()

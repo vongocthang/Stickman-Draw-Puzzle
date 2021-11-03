@@ -12,13 +12,13 @@ public class CarControl : MonoBehaviour
     //Từ đó xác định di chuyển trái/phải là xuống dốc
     public float zRotation;
 
-    BasicModeGC basicModeGC;
+    UIControl uiControl;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        basicModeGC = GameObject.Find("MainUI").GetComponent<BasicModeGC>();
+        uiControl = GameObject.Find("MainUI").GetComponent<UIControl>();
     }
 
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class CarControl : MonoBehaviour
     {
         zRotation = this.transform.rotation.z;
 
-        if (basicModeGC.moveLeft == true)
+        if (uiControl.moveLeft == true)
         {
             //Tốc độ tăng dần
             if (Mathf.Abs(tempMoveSpeed) < moveSpeed)
@@ -41,16 +41,16 @@ public class CarControl : MonoBehaviour
             }
             if (zRotation > 0.02)
             {
-                Debug.Log("Xuống dốc phải");
+                //Debug.Log("Xuống dốc phải");
             }
             else
             {
-                Debug.Log("Lên dốc trái");
+                //Debug.Log("Lên dốc trái");
                 rb2D.velocity = new Vector2(tempMoveSpeed * Time.deltaTime, 0f);
             }
         }
 
-        if (basicModeGC.moveRight == true)
+        if (uiControl.moveRight == true)
         {
             //Tốc độ tăng dần
             if (Mathf.Abs(tempMoveSpeed) < moveSpeed)
@@ -59,16 +59,16 @@ public class CarControl : MonoBehaviour
             }
             if (zRotation < -0.02)
             {
-                Debug.Log("Xuống dốc trái");
+                //Debug.Log("Xuống dốc trái");
             }
             else
             {
-                Debug.Log("Lên dốc phải");
+                //Debug.Log("Lên dốc phải");
                 rb2D.velocity = new Vector2(tempMoveSpeed * Time.deltaTime, 0f);
             }
         }
 
-        if(basicModeGC.moveLeft==false && basicModeGC.moveRight == false)
+        if(uiControl.moveLeft==false && uiControl.moveRight == false)
         {
             tempMoveSpeed = 0;
         }

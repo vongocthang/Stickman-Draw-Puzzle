@@ -38,7 +38,10 @@ public class Level : MonoBehaviour
 
     public void LoadScene()
     {
-        SceneManager.LoadScene(level);
+        if (locked.activeSelf == false)
+        {
+            SceneManager.LoadScene(level);
+        }
     }
 
     public void ShowStar()
@@ -60,4 +63,5 @@ public class Level : MonoBehaviour
             star1.SetActive(false);
         }
     }
+
 }

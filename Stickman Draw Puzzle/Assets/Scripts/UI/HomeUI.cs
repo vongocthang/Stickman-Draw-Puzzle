@@ -62,6 +62,11 @@ public class HomeUI : MonoBehaviour
         SceneManager.LoadScene(51);
     }
 
+    public void LoadStartGame()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public void LoadSellectLevelBasicMode()
     {
         SceneManager.LoadScene(52);

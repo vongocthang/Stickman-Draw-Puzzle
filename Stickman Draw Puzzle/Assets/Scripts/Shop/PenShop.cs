@@ -16,7 +16,8 @@ public class PenShop : MonoBehaviour
     public int penNumber = 0;//Pen số mấy đang hiển thị
 
     public GameObject unlockPen;//Giao diện xem video để mở khóa Pen
-    public GameObject usingPen;//Dấu hiệu bút này đang đc sử dụng
+    public GameObject selectedPen;//Dấu hiệu bút này đang đc sử dụng
+    public GameObject selectPen;//Có thể chọn bút để sử dụng
 
     // Start is called before the first frame update
     void Start()
@@ -82,26 +83,36 @@ public class PenShop : MonoBehaviour
         if (PlayerPrefs.GetInt("Pen" + penNumber.ToString()) == 1)
         {
             unlockPen.SetActive(false);
+            selectPen.SetActive(true);
+            selectedPen.SetActive(false);
+
             if (penNumber == PlayerPrefs.GetInt("Pen"))
             {
-                usingPen.SetActive(true);
+                unlockPen.SetActive(false);
+                selectPen.SetActive(false);
+                selectedPen.SetActive(true);
             }
             else
             {
-                usingPen.SetActive(false);
+                unlockPen.SetActive(false);
+                selectPen.SetActive(true);
+                selectedPen.SetActive(false);
             }
         }
         else
         {
             unlockPen.SetActive(true);
+            selectPen.SetActive(false);
+            selectedPen.SetActive(false);
         }
     }
 
     public void SelectPen()
     {
         PlayerPrefs.SetInt("Pen", penNumber);
-        usingPen.SetActive(true);
         unlockPen.SetActive(false);
+        selectPen.SetActive(false);
+        selectedPen.SetActive(true);
     }
 
     public void UnlockPen()
@@ -110,9 +121,11 @@ public class PenShop : MonoBehaviour
         {
             PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") - 3000);
             PlayerPrefs.SetInt("Pen" + penNumber.ToString(), 1);
-           
+            PlayerPrefs.SetInt("PenLoad", 0);
+
             unlockPen.SetActive(false);
-            usingPen.SetActive(false);
+            selectPen.SetActive(true);
+            selectedPen.SetActive(false);
         }
     }
 }

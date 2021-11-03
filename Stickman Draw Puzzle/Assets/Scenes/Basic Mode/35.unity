@@ -121,6 +121,104 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &52646793 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7902447860010710084, guid: 0e0a6713f61b5a84996e2a174f6aa516,
+    type: 3}
+  m_PrefabInstance: {fileID: 880722858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &52646794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52646793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 514875957}
+          m_MethodName: PauseDrawLine
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 514875957}
+          m_MethodName: ResumeDrawLine
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!1 &89267052 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2738631636588866642, guid: 0e0a6713f61b5a84996e2a174f6aa516,
+    type: 3}
+  m_PrefabInstance: {fileID: 880722858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &89267057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89267052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 514875957}
+          m_MethodName: PauseDrawLine
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 514875957}
+          m_MethodName: ResumeDrawLine
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &241435214
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,6 +487,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d4333df9a4d0d5459c39ab81a8b64e4, type: 3}
+--- !u!114 &514875957 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7902447859575459250, guid: 0e0a6713f61b5a84996e2a174f6aa516,
+    type: 3}
+  m_PrefabInstance: {fileID: 880722858}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d875565508c9ce40a83c500ec257268, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &880722858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -500,6 +610,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2738631636999246485, guid: 0e0a6713f61b5a84996e2a174f6aa516,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2738631636999246486, guid: 0e0a6713f61b5a84996e2a174f6aa516,
+        type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2738631636999246568, guid: 0e0a6713f61b5a84996e2a174f6aa516,
         type: 3}
@@ -661,6 +781,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c184046e3e092f4788236a3bd7e5ae5, type: 3}
+--- !u!1 &1517507538 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8026259996949280917, guid: 0e0a6713f61b5a84996e2a174f6aa516,
+    type: 3}
+  m_PrefabInstance: {fileID: 880722858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1517507539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517507538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 514875957}
+          m_MethodName: PauseDrawLine
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 514875957}
+          m_MethodName: ResumeDrawLine
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &1687971413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -750,12 +919,12 @@ PrefabInstance:
     - target: {fileID: 4279732185105916431, guid: 124bb06bb6512d84e80dd3cab2b84905,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.14999998
+      value: 0.731
       objectReference: {fileID: 0}
     - target: {fileID: 4279732185105916431, guid: 124bb06bb6512d84e80dd3cab2b84905,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.07
+      value: -0.012
       objectReference: {fileID: 0}
     - target: {fileID: 4279732185105916431, guid: 124bb06bb6512d84e80dd3cab2b84905,
         type: 3}
