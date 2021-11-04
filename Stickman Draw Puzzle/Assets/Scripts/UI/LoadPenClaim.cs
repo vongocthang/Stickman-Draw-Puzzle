@@ -17,9 +17,13 @@ public class LoadPenClaim : MonoBehaviour
 
     UIControl uiControl;
 
+    public Transform center;
+
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.SetInt("PenLoad", 99);
+
         uiControl = GameObject.Find("MainUI").GetComponent<UIControl>();
         penNumber = int.Parse(this.name.Substring(5, 2));
         if (penNumber == 1 || penNumber == 2)
@@ -41,7 +45,7 @@ public class LoadPenClaim : MonoBehaviour
         tempLoad = PlayerPrefs.GetInt("PenLoad");
         sliderPos = PlayerPrefs.GetInt("PenLoad");
 
-        Debug.Log(PlayerPrefs.GetInt("PenLoad"));
+        //Debug.Log(PlayerPrefs.GetInt("PenLoad"));
     }
 
     // Update is called once per frame
@@ -52,7 +56,16 @@ public class LoadPenClaim : MonoBehaviour
         if (slider.value == 100)
         {
             claimButton.SetActive(true);
-        }  
+            this.transform.position = Vector2.MoveTowards(this.transform.position, center.position, 31.5f);
+
+            float x = this.transform.localScale.x;
+            float y = this.transform.localScale.y;
+            x = Mathf.MoveTowards(x, 1.7f, 2f * Time.deltaTime);
+            y = Mathf.MoveTowards(y, 1.7f, 2f * Time.deltaTime);
+
+            this.transform.localScale = new Vector2(x, y);
+        }
+        
     }
 
     public void LoadPen()

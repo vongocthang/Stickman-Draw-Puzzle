@@ -21,9 +21,12 @@ public class UIControl : MonoBehaviour
     public TMP_Text countLine;//Hiển thị số Line còn lại đc phép vẽ cho mốc sao hiện tại
 
     public TempDrawLine drawLine;
+    public bool stopDrawLine;
 
     //Điều khiển xe di chuyển trái phải
     public bool moveLeft, moveRight;
+    //Điều khiển xe di chuyển lên xuống - chỉ chế độ không trọng lực
+    public bool moveUp, moveDown;
 
     //DrawLine drawLine;
 
@@ -94,7 +97,7 @@ public class UIControl : MonoBehaviour
         }
     }
 
-    //Điều khiển xe
+    //Điều khiển xe di chuyển trái phải - 3 Mode đầu
     public void MoveLeft()
     {
         moveLeft = true;
@@ -109,16 +112,29 @@ public class UIControl : MonoBehaviour
     {
         moveLeft = false;
         moveRight = false;
+        moveUp = false;
+        moveDown = false;
+    }
+
+    //Điều khiển xe di chuyển lên xuống - chỉ Mode không trọng lực
+    public void MoveUp()
+    {
+        moveUp = true;
+    }
+
+    public void MoveDown()
+    {
+        moveDown = true;
     }
 
     public void PauseDrawLine()
     {
-        drawLine.enabled = false;
+        stopDrawLine = true;
     }
 
     public void ResumeDrawLine()
     {
-        drawLine.enabled = true;
+        stopDrawLine = false;
     }
 
 
