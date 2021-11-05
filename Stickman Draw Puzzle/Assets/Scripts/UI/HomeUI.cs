@@ -15,7 +15,10 @@ public class HomeUI : MonoBehaviour
 
     public TMP_Text showCoin;
     //Hiển thị tổng số sao của tất cả các Level
-    public TMP_Text showSumStar;
+    public TMP_Text showSumStarM1;
+    public TMP_Text showSumStarM2;
+    public TMP_Text showSumStarM3;
+    public TMP_Text showSumStarM4;
 
     // Start is called before the first frame update
     void Start()
@@ -24,10 +27,24 @@ public class HomeUI : MonoBehaviour
         {
             PlayerPrefs.SetInt("SceneUnlockedBM", 50);
         }
+        if (PlayerPrefs.GetInt("SceneUnlockedCW") == 0)
+        {
+            PlayerPrefs.SetInt("SceneUnlockedCW", 20);
+        }
+        if (PlayerPrefs.GetInt("SceneUnlockedWM") == 0)
+        {
+            PlayerPrefs.SetInt("SceneUnlockedWM", 50);
+        }
+        if (PlayerPrefs.GetInt("SceneUnlockedSM") == 0)
+        {
+            PlayerPrefs.SetInt("SceneUnlockedSM", 50);
+        }
+
         if (PlayerPrefs.GetInt("ClaimPen") == 0)
         {
             PlayerPrefs.SetInt("ClaimPen", 1);
         }
+
 
         //for (int i = 1; i <= 5; i++)
         //{
@@ -36,7 +53,21 @@ public class HomeUI : MonoBehaviour
 
         //for (int i = 1; i <= 50; i++)
         //{
-        //    PlayerPrefs.SetInt("StarLevel" + i.ToString(), 0);
+        //    PlayerPrefs.SetInt("M1StarLevel" + i.ToString(), 0);
+        //}
+
+        //for (int i = 1; i <= 20; i++)
+        //{
+        //    PlayerPrefs.SetInt("M2StarLevel" + i.ToString(), 0);
+        //}
+
+        //for (int i = 1; i <= 20; i++)
+        //{
+        //    PlayerPrefs.SetInt("M3StarLevel" + i.ToString(), 0);
+        //}
+        //for (int i = 1; i <= 20; i++)
+        //{
+        //    PlayerPrefs.SetInt("M4StarLevel" + i.ToString(), 0);
         //}
 
         //PlayerPrefs.SetInt("Coin", 0);
@@ -46,20 +77,29 @@ public class HomeUI : MonoBehaviour
         //PlayerPrefs.SetInt("Pen", 0);
 
         //PlayerPrefs.SetInt("SceneUnlockedBM", 0);
+        //PlayerPrefs.SetInt("SceneUnlockedCW", 0);
+        //PlayerPrefs.SetInt("SceneUnlockedWM", 0);
+        //PlayerPrefs.SetInt("SceneUnlockedSM", 0);
+
 
         PlayerPrefs.SetInt("Pen0", 1);
+
+        ShowSumStarM1();
+        ShowSumStarM2();
+        ShowSumStarM3();
+        ShowSumStarM4();
     }
 
     // Update is called once per frame
     void Update()
     {
         ShowCoin();
-        ShowSumStar();
+        
     }
 
     public void LoadHome()
     {
-        SceneManager.LoadScene(51);
+        SceneManager.LoadSceneAsync("Home");
     }
 
     public void LoadStartGame()
@@ -69,12 +109,22 @@ public class HomeUI : MonoBehaviour
 
     public void LoadSellectLevelBasicMode()
     {
-        SceneManager.LoadScene(52);
+        SceneManager.LoadSceneAsync("Basic Mode");
     }
 
     public void LoadSellectLevelCollectWood()
     {
+        SceneManager.LoadSceneAsync("Collect Wood");
+    }
 
+    public void LoadSellectLevelWaterMode()
+    {
+        SceneManager.LoadSceneAsync("Water Mode");
+    }
+
+    public void LoadSellectLevelSpaceMode()
+    {
+        SceneManager.LoadSceneAsync("Space Mode");
     }
 
     public void ShowCoin()
@@ -82,19 +132,52 @@ public class HomeUI : MonoBehaviour
         showCoin.text = PlayerPrefs.GetInt("Coin").ToString();
     }
 
-    public void ShowSumStar()
+    public void ShowSumStarM1()
     {
         int sumStar = 0;
         for(int i=1; i<=50; i++)
         {
-            int a = PlayerPrefs.GetInt("StarLevel" + i.ToString());
+            int a = PlayerPrefs.GetInt("M1StarLevel" + i.ToString());
             sumStar += a;
-            showSumStar.text = sumStar.ToString();
+            showSumStarM1.text = sumStar.ToString();
+        }
+    }
+
+    public void ShowSumStarM2()
+    {
+        int sumStar = 0;
+        for (int i = 1; i <= 50; i++)
+        {
+            int a = PlayerPrefs.GetInt("M2StarLevel" + i.ToString());
+            sumStar += a;
+            showSumStarM2.text = sumStar.ToString();
+        }
+    }
+
+    public void ShowSumStarM3()
+    {
+        int sumStar = 0;
+        for (int i = 1; i <= 50; i++)
+        {
+            int a = PlayerPrefs.GetInt("M3StarLevel" + i.ToString());
+            sumStar += a;
+            showSumStarM3.text = sumStar.ToString();
+        }
+    }
+
+    public void ShowSumStarM4()
+    {
+        int sumStar = 0;
+        for (int i = 1; i <= 50; i++)
+        {
+            int a = PlayerPrefs.GetInt("M4StarLevel" + i.ToString());
+            sumStar += a;
+            showSumStarM4.text = sumStar.ToString();
         }
     }
 
     public void GoShop()
     {
-        SceneManager.LoadScene(53);
+        SceneManager.LoadSceneAsync("Shop");
     }
 }

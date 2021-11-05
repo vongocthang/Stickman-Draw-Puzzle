@@ -41,8 +41,8 @@ public class LevelComplete : MonoBehaviour
         LoadClaimPen();
 
 
-        Debug.Log(PlayerPrefs.GetInt("Pen"));
-        Debug.Log(PlayerPrefs.GetInt("ClaimPen"));
+        //Debug.Log(PlayerPrefs.GetInt("Pen"));
+        //Debug.Log(PlayerPrefs.GetInt("ClaimPen"));
     }
 
     // Update is called once per frame
@@ -80,80 +80,328 @@ public class LevelComplete : MonoBehaviour
     {
         if(uiControl.countStar == 3)
         {
-            int a = PlayerPrefs.GetInt("StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString());
-            Debug.Log("So sao da dat dc truoc do= " + a);
-            if (uiControl.countStar > a)
+            //Chế độ 1
+            if (SceneManager.GetActiveScene().buildIndex <= 80)
             {
-                if (uiControl.countStar - a == 1)
+                int a = PlayerPrefs.GetInt("M1StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString());
+                Debug.Log("So sao da dat dc truoc do= " + a);
+                if (uiControl.countStar > a)
                 {
-                    showCoin.text = "+" + (100).ToString();
-                    tempCoin = 100;
-                    PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 100);
+                    if (uiControl.countStar - a == 1)
+                    {
+                        showCoin.text = "+" + (100).ToString();
+                        tempCoin = 100;
+                        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 100);
+                    }
+                    if (uiControl.countStar - a == 2)
+                    {
+                        showCoin.text = "+" + (150).ToString();
+                        tempCoin = 150;
+                        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 150);
+                    }
+                    if (uiControl.countStar - a == 3)
+                    {
+                        showCoin.text = "+" + (200).ToString();
+                        tempCoin = 200;
+                        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 200);
+                    }
+                    PlayerPrefs.SetInt("M1StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString(), uiControl.countStar);
                 }
-                if (uiControl.countStar - a == 2)
+                else
                 {
-                    showCoin.text = "+" + (150).ToString();
-                    tempCoin = 150;
-                    PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 150);
+                    showCoin.text = "+" + (0).ToString();
                 }
-                if (uiControl.countStar - a == 3)
-                {
-                    showCoin.text = "+" + (200).ToString();
-                    tempCoin = 200;
-                    PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 200);
-                }
-                PlayerPrefs.SetInt("StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString(), uiControl.countStar);
             }
-            else
+            //Chế độ 2
+            if (SceneManager.GetActiveScene().buildIndex > 80 && SceneManager.GetActiveScene().buildIndex <= 100)
             {
-                showCoin.text = "+" + (0).ToString();
+                int a = PlayerPrefs.GetInt("M2StarLevel" + (SceneManager.GetActiveScene().buildIndex - 80).ToString());
+                Debug.Log("So sao da dat dc truoc do= " + a);
+                if (uiControl.countStar > a)
+                {
+                    if (uiControl.countStar - a == 1)
+                    {
+                        showCoin.text = "+" + (100).ToString();
+                        tempCoin = 100;
+                        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 100);
+                    }
+                    if (uiControl.countStar - a == 2)
+                    {
+                        showCoin.text = "+" + (150).ToString();
+                        tempCoin = 150;
+                        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 150);
+                    }
+                    if (uiControl.countStar - a == 3)
+                    {
+                        showCoin.text = "+" + (200).ToString();
+                        tempCoin = 200;
+                        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 200);
+                    }
+                    PlayerPrefs.SetInt("M2StarLevel" + (SceneManager.GetActiveScene().buildIndex - 80).ToString(), uiControl.countStar);
+                }
+                else
+                {
+                    showCoin.text = "+" + (0).ToString();
+                }
+            }
+            //Chế độ 3
+            if (SceneManager.GetActiveScene().buildIndex > 100 && SceneManager.GetActiveScene().buildIndex <= 120)
+            {
+                int a = PlayerPrefs.GetInt("M3StarLevel" + (SceneManager.GetActiveScene().buildIndex - 100).ToString());
+                Debug.Log("So sao da dat dc truoc do= " + a);
+                if (uiControl.countStar > a)
+                {
+                    if (uiControl.countStar - a == 1)
+                    {
+                        showCoin.text = "+" + (100).ToString();
+                        tempCoin = 100;
+                        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 100);
+                    }
+                    if (uiControl.countStar - a == 2)
+                    {
+                        showCoin.text = "+" + (150).ToString();
+                        tempCoin = 150;
+                        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 150);
+                    }
+                    if (uiControl.countStar - a == 3)
+                    {
+                        showCoin.text = "+" + (200).ToString();
+                        tempCoin = 200;
+                        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 200);
+                    }
+                    PlayerPrefs.SetInt("M3StarLevel" + (SceneManager.GetActiveScene().buildIndex - 100).ToString(), uiControl.countStar);
+                }
+                else
+                {
+                    showCoin.text = "+" + (0).ToString();
+                }
+            }
+            //Chế độ 4
+            if (SceneManager.GetActiveScene().buildIndex > 120 && SceneManager.GetActiveScene().buildIndex <= 140)
+            {
+                int a = PlayerPrefs.GetInt("M4StarLevel" + (SceneManager.GetActiveScene().buildIndex - 120).ToString());
+                Debug.Log("So sao da dat dc truoc do= " + a);
+                if (uiControl.countStar > a)
+                {
+                    if (uiControl.countStar - a == 1)
+                    {
+                        showCoin.text = "+" + (100).ToString();
+                        tempCoin = 100;
+                        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 100);
+                    }
+                    if (uiControl.countStar - a == 2)
+                    {
+                        showCoin.text = "+" + (150).ToString();
+                        tempCoin = 150;
+                        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 150);
+                    }
+                    if (uiControl.countStar - a == 3)
+                    {
+                        showCoin.text = "+" + (200).ToString();
+                        tempCoin = 200;
+                        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 200);
+                    }
+                    PlayerPrefs.SetInt("M4StarLevel" + (SceneManager.GetActiveScene().buildIndex - 120).ToString(), uiControl.countStar);
+                }
+                else
+                {
+                    showCoin.text = "+" + (0).ToString();
+                }
             }
         }
+        /////////////////////////////
         if (uiControl.countStar == 2)
         {
-            int a = PlayerPrefs.GetInt("StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString());
-            Debug.Log("So sao da dat dc truoc do= " + a);
-            if (uiControl.countStar > a)
+            //Chế độ 1
+            if(SceneManager.GetActiveScene().buildIndex <= 80)
             {
-                if (uiControl.countStar - a == 1)
+                int a = PlayerPrefs.GetInt("M1StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString());
+                Debug.Log("So sao da dat dc truoc do= " + a);
+                if (uiControl.countStar > a)
                 {
-                    showCoin.text = "+" + (50).ToString();
-                    tempCoin = 50;
-                    PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 50);
+                    if (uiControl.countStar - a == 1)
+                    {
+                        showCoin.text = "+" + (50).ToString();
+                        tempCoin = 50;
+                        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 50);
+                    }
+                    if (uiControl.countStar - a == 2)
+                    {
+                        showCoin.text = "+" + (100).ToString();
+                        tempCoin = 100;
+                        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 100);
+                    }
+                    PlayerPrefs.SetInt("M1StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString(), uiControl.countStar);
                 }
-                if (uiControl.countStar - a == 2)
+                else
                 {
-                    showCoin.text = "+" + (100).ToString();
-                    tempCoin = 100;
-                    PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 100);
+                    showCoin.text = "+" + (0).ToString();
                 }
-                PlayerPrefs.SetInt("StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString(), uiControl.countStar);
             }
-            else
+            //Chế độ 2
+            if (SceneManager.GetActiveScene().buildIndex > 80 && SceneManager.GetActiveScene().buildIndex <= 100)
             {
-                showCoin.text = "+" + (0).ToString();
+                int a = PlayerPrefs.GetInt("M2StarLevel" + (SceneManager.GetActiveScene().buildIndex - 80).ToString());
+                Debug.Log("So sao da dat dc truoc do= " + a);
+                if (uiControl.countStar > a)
+                {
+                    if (uiControl.countStar - a == 1)
+                    {
+                        showCoin.text = "+" + (50).ToString();
+                        tempCoin = 50;
+                        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 50);
+                    }
+                    if (uiControl.countStar - a == 2)
+                    {
+                        showCoin.text = "+" + (100).ToString();
+                        tempCoin = 100;
+                        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 100);
+                    }
+                    PlayerPrefs.SetInt("M2StarLevel" + (SceneManager.GetActiveScene().buildIndex - 80).ToString(), uiControl.countStar);
+                }
+                else
+                {
+                    showCoin.text = "+" + (0).ToString();
+                }
             }
+            //Chế độ 3
+            if (SceneManager.GetActiveScene().buildIndex > 100 && SceneManager.GetActiveScene().buildIndex <= 120)
+            {
+                int a = PlayerPrefs.GetInt("M3StarLevel" + (SceneManager.GetActiveScene().buildIndex - 100).ToString());
+                Debug.Log("So sao da dat dc truoc do= " + a);
+                if (uiControl.countStar > a)
+                {
+                    if (uiControl.countStar - a == 1)
+                    {
+                        showCoin.text = "+" + (50).ToString();
+                        tempCoin = 50;
+                        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 50);
+                    }
+                    if (uiControl.countStar - a == 2)
+                    {
+                        showCoin.text = "+" + (100).ToString();
+                        tempCoin = 100;
+                        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 100);
+                    }
+                    PlayerPrefs.SetInt("M3StarLevel" + (SceneManager.GetActiveScene().buildIndex - 100).ToString(), uiControl.countStar);
+                }
+                else
+                {
+                    showCoin.text = "+" + (0).ToString();
+                }
+            }
+            //Chế độ 4
+            if (SceneManager.GetActiveScene().buildIndex > 120 && SceneManager.GetActiveScene().buildIndex <= 140)
+            {
+                int a = PlayerPrefs.GetInt("M4StarLevel" + (SceneManager.GetActiveScene().buildIndex - 120).ToString());
+                Debug.Log("So sao da dat dc truoc do= " + a);
+                if (uiControl.countStar > a)
+                {
+                    if (uiControl.countStar - a == 1)
+                    {
+                        showCoin.text = "+" + (50).ToString();
+                        tempCoin = 50;
+                        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 50);
+                    }
+                    if (uiControl.countStar - a == 2)
+                    {
+                        showCoin.text = "+" + (100).ToString();
+                        tempCoin = 100;
+                        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 100);
+                    }
+                    PlayerPrefs.SetInt("M4StarLevel" + (SceneManager.GetActiveScene().buildIndex - 120).ToString(), uiControl.countStar);
+                }
+                else
+                {
+                    showCoin.text = "+" + (0).ToString();
+                }
+            }
+            
         }
+        /////////////////////////////
         if (uiControl.countStar == 1)
         {
-            int a = PlayerPrefs.GetInt("StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString());
-            Debug.Log("So sao da dat dc truoc do= " + a);
-            if (uiControl.countStar > a)
+            if (SceneManager.GetActiveScene().buildIndex <= 80)
             {
-                if (uiControl.countStar - a == 1)
+                int a = PlayerPrefs.GetInt("M1StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString());
+                Debug.Log("So sao da dat dc truoc do= " + a);
+                if (uiControl.countStar > a)
                 {
-                    showCoin.text = "+" + (50).ToString();
-                    tempCoin = 50;
-                    PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 50);
+                    if (uiControl.countStar - a == 1)
+                    {
+                        showCoin.text = "+" + (50).ToString();
+                        tempCoin = 50;
+                        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 50);
+                    }
+                    PlayerPrefs.SetInt("M1StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString(), uiControl.countStar);
                 }
-                PlayerPrefs.SetInt("StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString(), uiControl.countStar);
+                else
+                {
+                    showCoin.text = "+" + (0).ToString();
+                }
             }
-            else
+            //Chế độ 2
+            if (SceneManager.GetActiveScene().buildIndex > 80 && SceneManager.GetActiveScene().buildIndex <= 100)
             {
-                showCoin.text = "+" + (0).ToString();
-                tempCoin = 0;
+                int a = PlayerPrefs.GetInt("M2StarLevel" + (SceneManager.GetActiveScene().buildIndex - 80).ToString());
+                Debug.Log("So sao da dat dc truoc do= " + a);
+                if (uiControl.countStar > a)
+                {
+                    if (uiControl.countStar - a == 1)
+                    {
+                        showCoin.text = "+" + (50).ToString();
+                        tempCoin = 50;
+                        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 50);
+                    }
+                    PlayerPrefs.SetInt("M2StarLevel" + (SceneManager.GetActiveScene().buildIndex - 80).ToString(), uiControl.countStar);
+                }
+                else
+                {
+                    showCoin.text = "+" + (0).ToString();
+                }
+            }
+            //Chế độ 3
+            if (SceneManager.GetActiveScene().buildIndex > 100 && SceneManager.GetActiveScene().buildIndex <= 120)
+            {
+                int a = PlayerPrefs.GetInt("M3StarLevel" + (SceneManager.GetActiveScene().buildIndex - 100).ToString());
+                Debug.Log("So sao da dat dc truoc do= " + a);
+                if (uiControl.countStar > a)
+                {
+                    if (uiControl.countStar - a == 1)
+                    {
+                        showCoin.text = "+" + (50).ToString();
+                        tempCoin = 50;
+                        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 50);
+                    }
+                    PlayerPrefs.SetInt("M3StarLevel" + (SceneManager.GetActiveScene().buildIndex - 100).ToString(), uiControl.countStar);
+                }
+                else
+                {
+                    showCoin.text = "+" + (0).ToString();
+                }
+            }
+            //Chế độ 4
+            if (SceneManager.GetActiveScene().buildIndex > 120 && SceneManager.GetActiveScene().buildIndex <= 140)
+            {
+                int a = PlayerPrefs.GetInt("M4StarLevel" + (SceneManager.GetActiveScene().buildIndex - 120).ToString());
+                Debug.Log("So sao da dat dc truoc do= " + a);
+                if (uiControl.countStar > a)
+                {
+                    if (uiControl.countStar - a == 1)
+                    {
+                        showCoin.text = "+" + (50).ToString();
+                        tempCoin = 50;
+                        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 50);
+                    }
+                    PlayerPrefs.SetInt("M4StarLevel" + (SceneManager.GetActiveScene().buildIndex - 120).ToString(), uiControl.countStar);
+                }
+                else
+                {
+                    showCoin.text = "+" + (0).ToString();
+                }
             }
         }
+        /////////////////////////////
         if (uiControl.countStar == 0)
         {
             showCoin.text = "+" + (0).ToString();

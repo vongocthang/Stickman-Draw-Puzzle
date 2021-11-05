@@ -12,6 +12,7 @@ public class Level : MonoBehaviour
     public TMP_Text  levelNumber;
     public GameObject locked;
     public int level;
+    public int mode = 1;//Xác định để load từ Scene nào
 
     public GameObject star1;
     public GameObject star2;
@@ -24,15 +25,47 @@ public class Level : MonoBehaviour
 
         SetUp();
         ShowStar();
+
     }
 
     public void SetUp()
     {
-        int scenceUnlocked = PlayerPrefs.GetInt("SceneUnlockedBM");
-        if (scenceUnlocked >= level)
+        
+        if (mode == 1)
         {
-            locked.SetActive(false);
-            levelNumber.text = level.ToString();
+            int scenceUnlocked = PlayerPrefs.GetInt("SceneUnlockedBM");
+            if (scenceUnlocked >= level)
+            {
+                locked.SetActive(false);
+                levelNumber.text = level.ToString();
+            }
+        }
+        if (mode == 2)
+        {
+            int scenceUnlocked = PlayerPrefs.GetInt("SceneUnlockedCW");
+            if (scenceUnlocked >= level)
+            {
+                locked.SetActive(false);
+                levelNumber.text = level.ToString();
+            }
+        }
+        if (mode == 3)
+        {
+            int scenceUnlocked = PlayerPrefs.GetInt("SceneUnlockedWM");
+            if (scenceUnlocked >= level)
+            {
+                locked.SetActive(false);
+                levelNumber.text = level.ToString();
+            }
+        }
+        if (mode == 4)
+        {
+            int scenceUnlocked = PlayerPrefs.GetInt("SceneUnlockedSM");
+            if (scenceUnlocked >= level)
+            {
+                locked.SetActive(false);
+                levelNumber.text = level.ToString();
+            }
         }
     }
 
@@ -40,28 +73,107 @@ public class Level : MonoBehaviour
     {
         if (locked.activeSelf == false)
         {
-            SceneManager.LoadScene(level);
+            if (mode == 1)
+            {
+                SceneManager.LoadScene(level);
+            }
+            if (mode == 2)
+            {
+                SceneManager.LoadScene(level + 80);
+            }
+            if (mode == 3)
+            {
+                SceneManager.LoadScene(level + 100);
+            }
+            if (mode == 4)
+            {
+                SceneManager.LoadScene(level + 120);
+            }
         }
+
+        
     }
 
     public void ShowStar()
     {
-        int star = PlayerPrefs.GetInt("StarLevel" + level.ToString());
-        if (star == 2)
+        if (mode == 1)
         {
-            star3.SetActive(false);
+            int star = PlayerPrefs.GetInt("M1StarLevel" + level.ToString());
+            if (star == 2)
+            {
+                star3.SetActive(false);
+            }
+            if (star == 1)
+            {
+                star3.SetActive(false);
+                star2.SetActive(false);
+            }
+            if (star == 0)
+            {
+                star3.SetActive(false);
+                star2.SetActive(false);
+                star1.SetActive(false);
+            }
         }
-        if (star == 1)
+        if (mode == 2)
         {
-            star3.SetActive(false);
-            star2.SetActive(false);
+            int star = PlayerPrefs.GetInt("M2StarLevel" + level.ToString());
+            if (star == 2)
+            {
+                star3.SetActive(false);
+            }
+            if (star == 1)
+            {
+                star3.SetActive(false);
+                star2.SetActive(false);
+            }
+            if (star == 0)
+            {
+                star3.SetActive(false);
+                star2.SetActive(false);
+                star1.SetActive(false);
+            }
         }
-        if (star == 0)
+        if (mode == 3)
         {
-            star3.SetActive(false);
-            star2.SetActive(false);
-            star1.SetActive(false);
+            int star = PlayerPrefs.GetInt("M3StarLevel" + level.ToString());
+            if (star == 2)
+            {
+                star3.SetActive(false);
+            }
+            if (star == 1)
+            {
+                star3.SetActive(false);
+                star2.SetActive(false);
+            }
+            if (star == 0)
+            {
+                star3.SetActive(false);
+                star2.SetActive(false);
+                star1.SetActive(false);
+            }
         }
+        if (mode == 4)
+        {
+            int star = PlayerPrefs.GetInt("M4StarLevel" + level.ToString());
+            if (star == 2)
+            {
+                star3.SetActive(false);
+            }
+            if (star == 1)
+            {
+                star3.SetActive(false);
+                star2.SetActive(false);
+            }
+            if (star == 0)
+            {
+                star3.SetActive(false);
+                star2.SetActive(false);
+                star1.SetActive(false);
+            }
+        } 
     }
+
+    
 
 }

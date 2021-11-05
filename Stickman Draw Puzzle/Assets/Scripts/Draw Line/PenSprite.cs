@@ -8,11 +8,14 @@ public class PenSprite : MonoBehaviour
 
     public GameObject penSprite;
 
+    UIControl uiControl;
+
     // Start is called before the first frame update
     void Start()
     {
         SetupPenSprite();
         drawLine = GameObject.Find("Draw Line").GetComponent<TempDrawLine>();
+        uiControl = GameObject.Find("MainUI").GetComponent<UIControl>();
     }
 
     // Update is called once per frame
@@ -37,7 +40,7 @@ public class PenSprite : MonoBehaviour
 
     public void ShowPenSpriteWhenDrawLine()
     {
-        if (drawLine.line != null)
+        if (drawLine.line != null && uiControl.stopDrawLine == false)
         {
             penSprite.SetActive(true);
         }

@@ -114,6 +114,24 @@ public class Line : MonoBehaviour
             countCollision++;
             blocked = true;
         }
+        if (collision.tag == "BapBenh")
+        {
+            Debug.Log("Va chạm với: " + collision.tag);
+            countCollision++;
+            blocked = true;
+        }
+        if (collision.tag == "ConLac")
+        {
+            Debug.Log("Va chạm với: " + collision.tag);
+            countCollision++;
+            blocked = true;
+        }
+        if (collision.tag == "GaiXoay")
+        {
+            Debug.Log("Va chạm với: " + collision.tag);
+            countCollision++;
+            blocked = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -173,6 +191,33 @@ public class Line : MonoBehaviour
             }
         }
         if (collision.tag == "Car")
+        {
+            Debug.Log("Thoát khỏi: " + collision.tag);
+            countCollision--;
+            if (countCollision == 0)
+            {
+                blocked = false;
+            }
+        }
+        if (collision.tag == "BapBenh")
+        {
+            Debug.Log("Thoát khỏi: " + collision.tag);
+            countCollision--;
+            if (countCollision == 0)
+            {
+                blocked = false;
+            }
+        }
+        if (collision.tag == "ConLac")
+        {
+            Debug.Log("Thoát khỏi: " + collision.tag);
+            countCollision--;
+            if (countCollision == 0)
+            {
+                blocked = false;
+            }
+        }
+        if (collision.tag == "GaiXoay")
         {
             Debug.Log("Thoát khỏi: " + collision.tag);
             countCollision--;

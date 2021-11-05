@@ -22,7 +22,7 @@ public class LoadPenClaim : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.SetInt("PenLoad", 99);
+        //PlayerPrefs.SetInt("PenLoad", 0);
 
         uiControl = GameObject.Find("MainUI").GetComponent<UIControl>();
         penNumber = int.Parse(this.name.Substring(5, 2));
@@ -64,6 +64,8 @@ public class LoadPenClaim : MonoBehaviour
             y = Mathf.MoveTowards(y, 1.7f, 2f * Time.deltaTime);
 
             this.transform.localScale = new Vector2(x, y);
+
+            slider.gameObject.SetActive(false);
         }
         
     }

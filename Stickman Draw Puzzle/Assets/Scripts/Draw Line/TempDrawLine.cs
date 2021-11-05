@@ -43,20 +43,9 @@ public class TempDrawLine : MonoBehaviour
 
         uiControl = GameObject.Find("MainUI").GetComponent<UIControl>();
 
-        if (conLac.Length == 1)
-        {
-            conLac[0] = GameObject.Find("Pendulum");
-        }
+        conLac = GameObject.FindGameObjectsWithTag("ConLac");
 
-        if (bapBenh.Length == 1)
-        {
-            bapBenh[0] = GameObject.Find("Seesaw (1)");
-        }
-        else if (bapBenh.Length == 2)
-        {
-            bapBenh[0] = GameObject.Find("Seesaw (1)");
-            bapBenh[1] = GameObject.Find("Seesaw (2)");
-        }
+        bapBenh = GameObject.FindGameObjectsWithTag("BapBenh");
 
         if (GameObject.Find("CarLeft") != null)
         {
@@ -237,7 +226,7 @@ public class TempDrawLine : MonoBehaviour
     {
         //mousePos = cam.ScreenToWorldPoint(Input.GetTouch(0).position);
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        hit = Physics2D.CircleCast(mousePos, lineWidth, Vector2.zero, 1f, blockLayer);
+        hit = Physics2D.CircleCast(mousePos, lineWidth, Vector2.zero, 0.1f, blockLayer);
     }
 
     public void StopPhysics()

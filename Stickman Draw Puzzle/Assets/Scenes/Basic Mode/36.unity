@@ -820,7 +820,7 @@ GameObject:
   - component: {fileID: 1736491288}
   m_Layer: 8
   m_Name: Seesaw (1)
-  m_TagString: Wall
+  m_TagString: BapBenh
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -929,7 +929,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!257 &1736491288
 TargetJoint2D:
@@ -1005,7 +1005,7 @@ Transform:
   - {fileID: 6897389584251299929}
   - {fileID: 599109682}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1343205418135827299
 SpriteRenderer:

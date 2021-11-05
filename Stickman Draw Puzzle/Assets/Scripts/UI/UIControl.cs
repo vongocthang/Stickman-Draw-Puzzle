@@ -145,13 +145,33 @@ public class UIControl : MonoBehaviour
 
     public void GoHome()
     {
-        SceneManager.LoadScene(51);
+        SceneManager.LoadSceneAsync("Home");
     }
 
-    public void SellectLevelBasicMode()
+    public void SellectLevel()
     {
-        SceneManager.LoadScene(52);
+        //Chế độ 1
+        if (SceneManager.GetActiveScene().buildIndex <= 80)
+        {
+            SceneManager.LoadSceneAsync("Basic Mode");
+        }
+        //Chế độ 2
+        if (SceneManager.GetActiveScene().buildIndex > 80 && SceneManager.GetActiveScene().buildIndex <= 100)
+        {
+            SceneManager.LoadSceneAsync("Collect Wood");
+        }
+        //Chế độ 3
+        if (SceneManager.GetActiveScene().buildIndex > 100 && SceneManager.GetActiveScene().buildIndex <= 120)
+        {
+            SceneManager.LoadSceneAsync("Water Mode");
+        }
+        //Chế độ 4
+        if (SceneManager.GetActiveScene().buildIndex > 120 && SceneManager.GetActiveScene().buildIndex <= 140)
+        {
+            SceneManager.LoadSceneAsync("Space Mode");
+        }
     }
+
 
     public void NextScene()
     {

@@ -9,12 +9,9 @@ public class SwipeMenu : MonoBehaviour
     public float[] pos;
     public float distance;
     public int pageNumber = 1;
+    public int maxPage;
 
-    public GameObject page1;
-    public GameObject page2;
-    public GameObject page3;
-    public GameObject page4;
-
+    public GameObject[] page;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +34,7 @@ public class SwipeMenu : MonoBehaviour
 
     public void NextPage()
     {
-        if (pageNumber < 4)
+        if (pageNumber < maxPage)
         {
             pageNumber++;
         }
@@ -81,31 +78,69 @@ public class SwipeMenu : MonoBehaviour
     {
         if (pageNumber == 1)
         {
-            page1.SetActive(false);
-            page2.SetActive(true);
-            page3.SetActive(true);
-            page4.SetActive(true);
+            page[1-1].SetActive(false);
+            for(int i=0; i<page.Length; i++)
+            {
+                if (i + 1 != pageNumber)
+                {
+                    page[i].SetActive(true);
+                }
+            }
         }
         if (pageNumber == 2)
         {
-            page1.SetActive(true);
-            page2.SetActive(false);
-            page3.SetActive(true);
-            page4.SetActive(true);
+            page[2 - 1].SetActive(false);
+            for (int i = 0; i < page.Length; i++)
+            {
+                if (i + 1 != pageNumber)
+                {
+                    page[i].SetActive(true);
+                }
+            }
         }
         if (pageNumber == 3)
         {
-            page1.SetActive(true);
-            page2.SetActive(true);
-            page3.SetActive(false);
-            page4.SetActive(true);
+            page[3 - 1].SetActive(false);
+            for (int i = 0; i < page.Length; i++)
+            {
+                if (i + 1 != pageNumber)
+                {
+                    page[i].SetActive(true);
+                }
+            }
         }
         if (pageNumber == 4)
         {
-            page1.SetActive(true);
-            page2.SetActive(true);
-            page3.SetActive(true);
-            page4.SetActive(false);
+            page[4 - 1].SetActive(false);
+            for (int i = 0; i < page.Length; i++)
+            {
+                if (i + 1 != pageNumber)
+                {
+                    page[i].SetActive(true);
+                }
+            }
+        }
+        if (pageNumber == 5)
+        {
+            page[5 - 1].SetActive(false);
+            for (int i = 0; i < page.Length; i++)
+            {
+                if (i + 1 != pageNumber)
+                {
+                    page[i].SetActive(true);
+                }
+            }
+        }
+        if (pageNumber == 6)
+        {
+            page[6 - 1].SetActive(false);
+            for (int i = 0; i < page.Length; i++)
+            {
+                if (i + 1 != pageNumber)
+                {
+                    page[i].SetActive(true);
+                }
+            }
         }
     }
 }

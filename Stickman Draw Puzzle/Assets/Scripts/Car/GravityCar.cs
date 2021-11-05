@@ -26,7 +26,7 @@ public class GravityCar : MonoBehaviour
 
     public void Move()
     {
-        if (uiControl.moveLeft == true || Input.GetKey(KeyCode.LeftArrow))
+        if (uiControl.moveLeft == true)
         {
             targetJoint.enabled = false;
 
@@ -34,11 +34,11 @@ public class GravityCar : MonoBehaviour
             if (Mathf.Abs(tempMoveSpeed) < moveSpeed)
             {
                 tempMoveSpeed -= 3;
-                thisRb.velocity = new Vector2(-moveSpeed * Time.deltaTime, 0f);
+                thisRb.velocity = new Vector2(tempMoveSpeed * Time.deltaTime, 0f);
             }
         }
 
-        if (uiControl.moveRight == true || Input.GetKey(KeyCode.RightArrow))
+        if (uiControl.moveRight == true)
         {
             targetJoint.enabled = false;
 
@@ -46,11 +46,11 @@ public class GravityCar : MonoBehaviour
             if (Mathf.Abs(tempMoveSpeed) < moveSpeed)
             {
                 tempMoveSpeed += 3;
-                thisRb.velocity = new Vector2(moveSpeed * Time.deltaTime, 0f);
+                thisRb.velocity = new Vector2(tempMoveSpeed * Time.deltaTime, 0f);
             }
         }
 
-        if (uiControl.moveUp == true || Input.GetKey(KeyCode.UpArrow))
+        if (uiControl.moveUp == true)
         {
             targetJoint.enabled = false;
 
@@ -58,11 +58,11 @@ public class GravityCar : MonoBehaviour
             if (Mathf.Abs(tempMoveSpeed) < moveSpeed)
             {
                 tempMoveSpeed += 3;
-                thisRb.velocity = new Vector2(0f, moveSpeed * Time.deltaTime);
+                thisRb.velocity = new Vector2(0f, tempMoveSpeed * Time.deltaTime);
             }
         }
 
-        if (uiControl.moveDown == true || Input.GetKey(KeyCode.DownArrow))
+        if (uiControl.moveDown == true)
         {
             targetJoint.enabled = false;
 
@@ -70,17 +70,15 @@ public class GravityCar : MonoBehaviour
             if (Mathf.Abs(tempMoveSpeed) < moveSpeed)
             {
                 tempMoveSpeed -= 3;
-                thisRb.velocity = new Vector2(0f, -moveSpeed * Time.deltaTime);
+                thisRb.velocity = new Vector2(0f, tempMoveSpeed * Time.deltaTime);
             }
         }
 
         if (uiControl.moveLeft == false && uiControl.moveRight == false && uiControl.moveUp == false &&
             uiControl.moveDown == false)
         {
-            //targetJoint.enabled = true;
+            targetJoint.enabled = true;
             tempMoveSpeed = 0;
         }
-
-        
     }
 }

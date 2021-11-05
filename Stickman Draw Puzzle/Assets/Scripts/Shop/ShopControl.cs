@@ -28,7 +28,7 @@ public class ShopControl : MonoBehaviour
 
     public void GoHome()
     {
-        SceneManager.LoadScene(51);
+        SceneManager.LoadSceneAsync("Home");
     }
 
     public void BuyCoin1()
