@@ -643,7 +643,7 @@ WheelJoint2D:
     m_DampingRatio: 0.7
     m_Frequency: 20
     m_Angle: 90
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
@@ -803,7 +803,7 @@ WheelJoint2D:
     m_DampingRatio: 0.7
     m_Frequency: 20
     m_Angle: 90
-  m_UseMotor: 0
+  m_UseMotor: 1
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000

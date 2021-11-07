@@ -45,6 +45,7 @@ public class HomeUI : MonoBehaviour
             PlayerPrefs.SetInt("ClaimPen", 1);
         }
 
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         //for (int i = 1; i <= 5; i++)
         //{
@@ -81,6 +82,7 @@ public class HomeUI : MonoBehaviour
         //PlayerPrefs.SetInt("SceneUnlockedWM", 0);
         //PlayerPrefs.SetInt("SceneUnlockedSM", 0);
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////
 
         PlayerPrefs.SetInt("Pen0", 1);
 
