@@ -580,6 +580,7 @@ MonoBehaviour:
   levelNumber: {fileID: 631239576}
   locked: {fileID: 598092021}
   level: 0
+  mode: 1
   star1: {fileID: 2054684620}
   star2: {fileID: 1074837992}
   star3: {fileID: 1035388232}
@@ -1119,6 +1120,7 @@ MonoBehaviour:
   levelNumber: {fileID: 131317390}
   locked: {fileID: 2079647420}
   level: 0
+  mode: 1
   star1: {fileID: 245412164}
   star2: {fileID: 2064751322}
   star3: {fileID: 882794813}
@@ -1284,6 +1286,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1424873354}
   locked: {fileID: 1322704825}
   level: 0
+  mode: 1
   star1: {fileID: 1260188137}
   star2: {fileID: 146583229}
   star3: {fileID: 1574955437}
@@ -1523,6 +1526,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1713722384}
   locked: {fileID: 353893712}
   level: 0
+  mode: 1
   star1: {fileID: 2118139280}
   star2: {fileID: 1331437805}
   star3: {fileID: 1617687264}
@@ -2268,6 +2272,7 @@ MonoBehaviour:
   levelNumber: {fileID: 849719675}
   locked: {fileID: 798551175}
   level: 0
+  mode: 1
   star1: {fileID: 1190988301}
   star2: {fileID: 614175731}
   star3: {fileID: 1972721811}
@@ -3986,6 +3991,7 @@ MonoBehaviour:
   levelNumber: {fileID: 536099730}
   locked: {fileID: 87522055}
   level: 0
+  mode: 1
   star1: {fileID: 1831652030}
   star2: {fileID: 99495141}
   star3: {fileID: 1523116471}
@@ -4921,6 +4927,7 @@ MonoBehaviour:
   levelNumber: {fileID: 56625269}
   locked: {fileID: 146150720}
   level: 0
+  mode: 1
   star1: {fileID: 751169737}
   star2: {fileID: 1164144385}
   star3: {fileID: 1366072880}
@@ -5221,6 +5228,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1575291783}
   locked: {fileID: 323357435}
   level: 0
+  mode: 1
   star1: {fileID: 1626832823}
   star2: {fileID: 31831204}
   star3: {fileID: 1251370830}
@@ -5460,6 +5468,7 @@ MonoBehaviour:
   levelNumber: {fileID: 2106474550}
   locked: {fileID: 1598330044}
   level: 0
+  mode: 1
   star1: {fileID: 1538603766}
   star2: {fileID: 1150780340}
   star3: {fileID: 1630774468}
@@ -6243,6 +6252,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1485066907}
   locked: {fileID: 749161468}
   level: 0
+  mode: 1
   star1: {fileID: 1957651814}
   star2: {fileID: 1995821485}
   star3: {fileID: 1430834859}
@@ -6950,6 +6960,7 @@ MonoBehaviour:
   levelNumber: {fileID: 908252457}
   locked: {fileID: 1740555615}
   level: 0
+  mode: 1
   star1: {fileID: 1338127874}
   star2: {fileID: 340629609}
   star3: {fileID: 980234004}
@@ -7115,6 +7126,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1619290771}
   locked: {fileID: 411298795}
   level: 0
+  mode: 1
   star1: {fileID: 1504414322}
   star2: {fileID: 278255835}
   star3: {fileID: 1241281087}
@@ -7840,6 +7852,7 @@ MonoBehaviour:
   levelNumber: {fileID: 916312149}
   locked: {fileID: 1129601349}
   level: 0
+  mode: 1
   star1: {fileID: 816166283}
   star2: {fileID: 1984148880}
   star3: {fileID: 1858292812}
@@ -8229,6 +8242,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1152224906}
   locked: {fileID: 56654779}
   level: 0
+  mode: 1
   star1: {fileID: 1820106114}
   star2: {fileID: 253053713}
   star3: {fileID: 1483854737}
@@ -8656,6 +8670,7 @@ MonoBehaviour:
   levelNumber: {fileID: 2082091547}
   locked: {fileID: 482034456}
   level: 0
+  mode: 1
   star1: {fileID: 1295700871}
   star2: {fileID: 149713178}
   star3: {fileID: 656550136}
@@ -10713,6 +10728,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1002902938}
   locked: {fileID: 1310149150}
   level: 0
+  mode: 1
   star1: {fileID: 122135032}
   star2: {fileID: 1767337665}
   star3: {fileID: 280149757}
@@ -11796,6 +11812,7 @@ MonoBehaviour:
   levelNumber: {fileID: 123716900}
   locked: {fileID: 1669995975}
   level: 0
+  mode: 1
   star1: {fileID: 459417470}
   star2: {fileID: 794572776}
   star3: {fileID: 3952802}
@@ -12334,6 +12351,7 @@ MonoBehaviour:
   levelNumber: {fileID: 980191368}
   locked: {fileID: 643080358}
   level: 0
+  mode: 1
   star1: {fileID: 228381174}
   star2: {fileID: 1714586304}
   star3: {fileID: 302170929}
@@ -12939,6 +12957,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1334305794}
   locked: {fileID: 496349028}
   level: 0
+  mode: 1
   star1: {fileID: 946643516}
   star2: {fileID: 866395123}
   star3: {fileID: 1159195004}
@@ -13894,6 +13913,7 @@ MonoBehaviour:
   levelNumber: {fileID: 952067320}
   locked: {fileID: 1059568704}
   level: 0
+  mode: 1
   star1: {fileID: 570363648}
   star2: {fileID: 1977600188}
   star3: {fileID: 2114594217}
@@ -14356,6 +14376,7 @@ MonoBehaviour:
   levelNumber: {fileID: 230804434}
   locked: {fileID: 1688026982}
   level: 0
+  mode: 1
   star1: {fileID: 2033833338}
   star2: {fileID: 220418691}
   star3: {fileID: 435289647}
@@ -15068,6 +15089,7 @@ MonoBehaviour:
   levelNumber: {fileID: 920342318}
   locked: {fileID: 2076956195}
   level: 0
+  mode: 1
   star1: {fileID: 1510583047}
   star2: {fileID: 310418776}
   star3: {fileID: 940587929}
@@ -15495,6 +15517,7 @@ MonoBehaviour:
   levelNumber: {fileID: 353217146}
   locked: {fileID: 1007435732}
   level: 0
+  mode: 1
   star1: {fileID: 981162228}
   star2: {fileID: 39610850}
   star3: {fileID: 1973151480}
@@ -16017,6 +16040,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1164799411}
   locked: {fileID: 609826066}
   level: 0
+  mode: 1
   star1: {fileID: 1594079318}
   star2: {fileID: 1300202647}
   star3: {fileID: 1117495439}
@@ -16331,6 +16355,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1298923020}
   locked: {fileID: 1100894140}
   level: 0
+  mode: 1
   star1: {fileID: 1122454336}
   star2: {fileID: 1679648921}
   star3: {fileID: 1775541855}
@@ -16496,6 +16521,7 @@ MonoBehaviour:
   levelNumber: {fileID: 2046939041}
   locked: {fileID: 1884232957}
   level: 0
+  mode: 1
   star1: {fileID: 1184977693}
   star2: {fileID: 1744977601}
   star3: {fileID: 869787586}
@@ -16661,6 +16687,7 @@ MonoBehaviour:
   levelNumber: {fileID: 252628216}
   locked: {fileID: 1229857390}
   level: 0
+  mode: 1
   star1: {fileID: 1166998798}
   star2: {fileID: 1549805224}
   star3: {fileID: 167081034}
@@ -17183,6 +17210,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1522424746}
   locked: {fileID: 1252340283}
   level: 0
+  mode: 1
   star1: {fileID: 906606754}
   star2: {fileID: 1520734823}
   star3: {fileID: 1333363605}
@@ -17423,6 +17451,7 @@ MonoBehaviour:
   levelNumber: {fileID: 2030221151}
   locked: {fileID: 1629923855}
   level: 0
+  mode: 1
   star1: {fileID: 515221379}
   star2: {fileID: 423406525}
   star3: {fileID: 2135370279}
@@ -17736,6 +17765,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1274652395}
   locked: {fileID: 654194204}
   level: 0
+  mode: 1
   star1: {fileID: 2049051108}
   star2: {fileID: 188772142}
   star3: {fileID: 1156510931}
@@ -20733,6 +20763,139 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 574428814}
   m_CullTransparentMesh: 0
+--- !u!1 &575883328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 575883329}
+  - component: {fileID: 575883330}
+  - component: {fileID: 575883331}
+  m_Layer: 5
+  m_Name: Text (TMP) (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &575883329
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575883328}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1425897530}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 1126}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &575883330
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575883328}
+  m_CullTransparentMesh: 0
+--- !u!114 &575883331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575883328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &589894132
 GameObject:
   m_ObjectHideFlags: 0
@@ -21044,6 +21207,7 @@ MonoBehaviour:
   levelNumber: {fileID: 154583717}
   locked: {fileID: 1987726456}
   level: 0
+  mode: 1
   star1: {fileID: 668049772}
   star2: {fileID: 2016108496}
   star3: {fileID: 2064915146}
@@ -21247,6 +21411,7 @@ MonoBehaviour:
   levelNumber: {fileID: 976817756}
   locked: {fileID: 1929709032}
   level: 0
+  mode: 1
   star1: {fileID: 555534345}
   star2: {fileID: 2140614043}
   star3: {fileID: 2132413992}
@@ -22081,6 +22246,7 @@ MonoBehaviour:
   levelNumber: {fileID: 2144473061}
   locked: {fileID: 900138657}
   level: 0
+  mode: 1
   star1: {fileID: 1044369311}
   star2: {fileID: 1290392630}
   star3: {fileID: 589894132}
@@ -24030,6 +24196,7 @@ MonoBehaviour:
   levelNumber: {fileID: 812440166}
   locked: {fileID: 615873192}
   level: 0
+  mode: 1
   star1: {fileID: 1066449386}
   star2: {fileID: 1564317914}
   star3: {fileID: 191967276}
@@ -25240,6 +25407,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1686906594}
   locked: {fileID: 213532609}
   level: 0
+  mode: 1
   star1: {fileID: 1761228735}
   star2: {fileID: 926905131}
   star3: {fileID: 1925813030}
@@ -25628,6 +25796,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1070330879}
   locked: {fileID: 1639625430}
   level: 0
+  mode: 1
   star1: {fileID: 625660095}
   star2: {fileID: 1678362428}
   star3: {fileID: 1604377218}
@@ -26016,6 +26185,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1973963704}
   locked: {fileID: 908475538}
   level: 0
+  mode: 1
   star1: {fileID: 934244387}
   star2: {fileID: 1602577603}
   star3: {fileID: 60243539}
@@ -26502,6 +26672,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1585711498}
   locked: {fileID: 243569606}
   level: 0
+  mode: 1
   star1: {fileID: 1055961182}
   star2: {fileID: 574428814}
   star3: {fileID: 33512873}
@@ -28939,6 +29110,7 @@ MonoBehaviour:
   levelNumber: {fileID: 268656644}
   locked: {fileID: 1177552761}
   level: 0
+  mode: 1
   star1: {fileID: 857628281}
   star2: {fileID: 1373972034}
   star3: {fileID: 451293740}
@@ -29607,12 +29779,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876454320}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8043836195495561854}
-  m_RootOrder: 6
+  m_Father: {fileID: 1425897530}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -31684,6 +31856,7 @@ MonoBehaviour:
   levelNumber: {fileID: 386004261}
   locked: {fileID: 737251519}
   level: 0
+  mode: 1
   star1: {fileID: 725122358}
   star2: {fileID: 38245799}
   star3: {fileID: 458337522}
@@ -32879,6 +33052,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1387135447}
   locked: {fileID: 567347786}
   level: 0
+  mode: 1
   star1: {fileID: 1949831913}
   star2: {fileID: 598129734}
   star3: {fileID: 291855765}
@@ -34419,6 +34593,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1566611392}
   locked: {fileID: 347939866}
   level: 0
+  mode: 1
   star1: {fileID: 565745085}
   star2: {fileID: 1750562705}
   star3: {fileID: 1180093380}
@@ -34980,6 +35155,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1110679539}
   locked: {fileID: 259025697}
   level: 0
+  mode: 1
   star1: {fileID: 2077873337}
   star2: {fileID: 729194324}
   star3: {fileID: 1431772472}
@@ -35295,6 +35471,7 @@ MonoBehaviour:
   levelNumber: {fileID: 610756608}
   locked: {fileID: 1374743917}
   level: 0
+  mode: 1
   star1: {fileID: 373982321}
   star2: {fileID: 247503935}
   star3: {fileID: 653994997}
@@ -35609,6 +35786,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1931867508}
   locked: {fileID: 1767342680}
   level: 0
+  mode: 1
   star1: {fileID: 158109362}
   star2: {fileID: 2101814788}
   star3: {fileID: 1403957011}
@@ -35848,6 +36026,7 @@ MonoBehaviour:
   levelNumber: {fileID: 278642231}
   locked: {fileID: 1597409316}
   level: 0
+  mode: 1
   star1: {fileID: 1497481524}
   star2: {fileID: 781066378}
   star3: {fileID: 567078330}
@@ -35925,6 +36104,139 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049929501}
   m_CullTransparentMesh: 0
+--- !u!1 &1051536252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1051536253}
+  - component: {fileID: 1051536254}
+  - component: {fileID: 1051536255}
+  m_Layer: 5
+  m_Name: Text (TMP) (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1051536253
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051536252}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1425897530}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 1126}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1051536254
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051536252}
+  m_CullTransparentMesh: 0
+--- !u!114 &1051536255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051536252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1054135859
 GameObject:
   m_ObjectHideFlags: 0
@@ -36535,6 +36847,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1344049490}
   locked: {fileID: 940854941}
   level: 0
+  mode: 1
   star1: {fileID: 981954932}
   star2: {fileID: 1925691127}
   star3: {fileID: 2014765072}
@@ -37170,6 +37483,7 @@ MonoBehaviour:
   levelNumber: {fileID: 354974385}
   locked: {fileID: 1772386455}
   level: 0
+  mode: 1
   star1: {fileID: 907014332}
   star2: {fileID: 1007861256}
   star3: {fileID: 2010971532}
@@ -37448,6 +37762,7 @@ MonoBehaviour:
   levelNumber: {fileID: 2007922732}
   locked: {fileID: 1241554475}
   level: 0
+  mode: 1
   star1: {fileID: 446528666}
   star2: {fileID: 716661239}
   star3: {fileID: 803902922}
@@ -37613,6 +37928,7 @@ MonoBehaviour:
   levelNumber: {fileID: 451770514}
   locked: {fileID: 1255901331}
   level: 0
+  mode: 1
   star1: {fileID: 253964188}
   star2: {fileID: 956215462}
   star3: {fileID: 1892074157}
@@ -38660,6 +38976,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1543862717}
   locked: {fileID: 1430404077}
   level: 0
+  mode: 1
   star1: {fileID: 2002108552}
   star2: {fileID: 204528133}
   star3: {fileID: 4414103}
@@ -42463,6 +42780,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1269954139}
   locked: {fileID: 14143414}
   level: 0
+  mode: 1
   star1: {fileID: 813826257}
   star2: {fileID: 139089384}
   star3: {fileID: 1161692469}
@@ -42628,6 +42946,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1694909979}
   locked: {fileID: 909041115}
   level: 0
+  mode: 1
   star1: {fileID: 548995884}
   star2: {fileID: 39829421}
   star3: {fileID: 1570241705}
@@ -42868,6 +43187,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1966863775}
   locked: {fileID: 2060829666}
   level: 0
+  mode: 1
   star1: {fileID: 1475793288}
   star2: {fileID: 322820732}
   star3: {fileID: 1254553351}
@@ -44826,6 +45146,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1797737373}
   locked: {fileID: 2111545688}
   level: 0
+  mode: 1
   star1: {fileID: 621326355}
   star2: {fileID: 1473496083}
   star3: {fileID: 601684336}
@@ -45498,6 +45819,7 @@ MonoBehaviour:
   levelNumber: {fileID: 95657388}
   locked: {fileID: 2006110773}
   level: 0
+  mode: 1
   star1: {fileID: 880046342}
   star2: {fileID: 1266463374}
   star3: {fileID: 697977833}
@@ -46751,6 +47073,7 @@ MonoBehaviour:
   levelNumber: {fileID: 47065104}
   locked: {fileID: 1776381213}
   level: 0
+  mode: 1
   star1: {fileID: 400595832}
   star2: {fileID: 1938659851}
   star3: {fileID: 1481624281}
@@ -47773,6 +48096,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424873352}
   m_CullTransparentMesh: 0
+--- !u!1 &1425897529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1425897530}
+  m_Layer: 5
+  m_Name: DontTouch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1425897530
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425897529}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 876454323}
+  - {fileID: 1051536253}
+  - {fileID: 575883329}
+  - {fileID: 1639420850}
+  m_Father: {fileID: 8043836195495561854}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1429431850
 GameObject:
   m_ObjectHideFlags: 0
@@ -48568,6 +48930,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1577994328}
   locked: {fileID: 2041746991}
   level: 0
+  mode: 1
   star1: {fileID: 58883611}
   star2: {fileID: 2113916191}
   star3: {fileID: 978956191}
@@ -49315,6 +49678,7 @@ MonoBehaviour:
   levelNumber: {fileID: 801021445}
   locked: {fileID: 1388286608}
   level: 0
+  mode: 1
   star1: {fileID: 892178493}
   star2: {fileID: 367441083}
   star3: {fileID: 266774009}
@@ -49630,6 +49994,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1303174405}
   locked: {fileID: 54509594}
   level: 0
+  mode: 1
   star1: {fileID: 117899691}
   star2: {fileID: 12223909}
   star3: {fileID: 1972687387}
@@ -49982,6 +50347,7 @@ MonoBehaviour:
   levelNumber: {fileID: 91843865}
   locked: {fileID: 795327321}
   level: 0
+  mode: 1
   star1: {fileID: 802138001}
   star2: {fileID: 418486142}
   star3: {fileID: 109033987}
@@ -50855,6 +51221,7 @@ MonoBehaviour:
   levelNumber: {fileID: 918847017}
   locked: {fileID: 849648477}
   level: 0
+  mode: 1
   star1: {fileID: 1596832400}
   star2: {fileID: 1355257687}
   star3: {fileID: 783847044}
@@ -51020,6 +51387,7 @@ MonoBehaviour:
   levelNumber: {fileID: 888906591}
   locked: {fileID: 2098957467}
   level: 0
+  mode: 1
   star1: {fileID: 1595310503}
   star2: {fileID: 1582175643}
   star3: {fileID: 2031732295}
@@ -51469,6 +51837,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1785686108}
   locked: {fileID: 1307065547}
   level: 0
+  mode: 1
   star1: {fileID: 161803581}
   star2: {fileID: 1754089726}
   star3: {fileID: 229046400}
@@ -52141,6 +52510,7 @@ MonoBehaviour:
   levelNumber: {fileID: 500586838}
   locked: {fileID: 1109390957}
   level: 0
+  mode: 1
   star1: {fileID: 1508602922}
   star2: {fileID: 300099818}
   star3: {fileID: 1880029897}
@@ -52382,6 +52752,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1988997588}
   locked: {fileID: 1738917438}
   level: 0
+  mode: 1
   star1: {fileID: 1534066858}
   star2: {fileID: 693947392}
   star3: {fileID: 95076166}
@@ -52622,6 +52993,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1269054219}
   locked: {fileID: 1239192950}
   level: 0
+  mode: 1
   star1: {fileID: 211708821}
   star2: {fileID: 1485136067}
   star3: {fileID: 512458885}
@@ -54741,6 +55113,7 @@ MonoBehaviour:
   levelNumber: {fileID: 2145322840}
   locked: {fileID: 1268935212}
   level: 0
+  mode: 1
   star1: {fileID: 1869316}
   star2: {fileID: 689997010}
   star3: {fileID: 1143209170}
@@ -54906,6 +55279,7 @@ MonoBehaviour:
   levelNumber: {fileID: 53157124}
   locked: {fileID: 2088389204}
   level: 0
+  mode: 1
   star1: {fileID: 332601506}
   star2: {fileID: 608999367}
   star3: {fileID: 1907350675}
@@ -55318,6 +55692,7 @@ MonoBehaviour:
   levelNumber: {fileID: 56247373}
   locked: {fileID: 1583504976}
   level: 0
+  mode: 1
   star1: {fileID: 1513477237}
   star2: {fileID: 1764462164}
   star3: {fileID: 614919326}
@@ -55842,6 +56217,139 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639005564}
   m_CullTransparentMesh: 0
+--- !u!1 &1639420847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1639420850}
+  - component: {fileID: 1639420849}
+  - component: {fileID: 1639420848}
+  m_Layer: 5
+  m_Name: Text (TMP) (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1639420848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639420847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1639420849
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639420847}
+  m_CullTransparentMesh: 0
+--- !u!224 &1639420850
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639420847}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1425897530}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 1126}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1639625430
 GameObject:
   m_ObjectHideFlags: 0
@@ -59767,6 +60275,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1238248714}
   locked: {fileID: 2109042142}
   level: 0
+  mode: 1
   star1: {fileID: 485828165}
   star2: {fileID: 474042490}
   star3: {fileID: 450177768}
@@ -60067,6 +60576,7 @@ MonoBehaviour:
   levelNumber: {fileID: 741560751}
   locked: {fileID: 166971976}
   level: 0
+  mode: 1
   star1: {fileID: 738552129}
   star2: {fileID: 228292884}
   star3: {fileID: 975517317}
@@ -60782,6 +61292,7 @@ MonoBehaviour:
   levelNumber: {fileID: 783292825}
   locked: {fileID: 1340061116}
   level: 0
+  mode: 1
   star1: {fileID: 499190734}
   star2: {fileID: 604544597}
   star3: {fileID: 1853079523}
@@ -61021,6 +61532,7 @@ MonoBehaviour:
   levelNumber: {fileID: 407568883}
   locked: {fileID: 2098053205}
   level: 0
+  mode: 1
   star1: {fileID: 1893640864}
   star2: {fileID: 226464627}
   star3: {fileID: 1210843155}
@@ -62702,6 +63214,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1366672526}
   locked: {fileID: 284668669}
   level: 0
+  mode: 1
   star1: {fileID: 880451707}
   star2: {fileID: 164696834}
   star3: {fileID: 1408850830}
@@ -62905,6 +63418,7 @@ MonoBehaviour:
   levelNumber: {fileID: 86737490}
   locked: {fileID: 367006062}
   level: 0
+  mode: 1
   star1: {fileID: 2114746269}
   star2: {fileID: 1073717835}
   star3: {fileID: 1049929501}
@@ -64473,6 +64987,7 @@ MonoBehaviour:
   levelNumber: {fileID: 626979570}
   locked: {fileID: 1882277102}
   level: 0
+  mode: 1
   star1: {fileID: 558980786}
   star2: {fileID: 1638407585}
   star3: {fileID: 1252077117}
@@ -68224,6 +68739,7 @@ MonoBehaviour:
   levelNumber: {fileID: 1844679660}
   locked: {fileID: 661850390}
   level: 0
+  mode: 1
   star1: {fileID: 230205804}
   star2: {fileID: 565521840}
   star3: {fileID: 345875391}
@@ -69268,6 +69784,7 @@ MonoBehaviour:
   levelNumber: {fileID: 970212431}
   locked: {fileID: 27600945}
   level: 0
+  mode: 1
   star1: {fileID: 537753835}
   star2: {fileID: 2135340435}
   star3: {fileID: 680558948}
@@ -71925,7 +72442,10 @@ MonoBehaviour:
   musicON: {fileID: 1644314397}
   audioEffectsON: {fileID: 1247423672}
   showCoin: {fileID: 1266677374971270141}
-  showSumStar: {fileID: 876454321}
+  showSumStarM1: {fileID: 876454321}
+  showSumStarM2: {fileID: 1051536255}
+  showSumStarM3: {fileID: 575883331}
+  showSumStarM4: {fileID: 1639420848}
 --- !u!224 &8043836195495561854
 RectTransform:
   m_ObjectHideFlags: 0
@@ -71943,7 +72463,7 @@ RectTransform:
   - {fileID: 1193717516517975995}
   - {fileID: 6477080921861772814}
   - {fileID: 165105463}
-  - {fileID: 876454323}
+  - {fileID: 1425897530}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -72707,6 +73227,7 @@ MonoBehaviour:
   levelNumber: {fileID: 8276626169632840384}
   locked: {fileID: 669182450}
   level: 0
+  mode: 1
   star1: {fileID: 2109904392}
   star2: {fileID: 1370518809}
   star3: {fileID: 953295410}

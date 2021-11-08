@@ -33,6 +33,8 @@ public class TempDrawLine : MonoBehaviour
     public GameObject box;
     public GameObject[] lineDrew;
     public GameObject[] gaiXoay;
+    //
+    public GameObject[] wood;
 
     public int countLine = 0;
 
@@ -58,6 +60,8 @@ public class TempDrawLine : MonoBehaviour
 
         box = GameObject.Find("Box");
         gaiXoay = GameObject.FindGameObjectsWithTag("GaiXoay");
+
+        wood = GameObject.FindGameObjectsWithTag("Wood");
     }
 
     // Update is called once per frame
@@ -67,30 +71,7 @@ public class TempDrawLine : MonoBehaviour
 
         CheckBlockLayer();
 
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    if (hit)
-        //    {
-        //        blocked = true;
-        //    }
-        //    else
-        //    {
-        //        BeginDraw();
-        //    }
-        //}
-        //if (Input.GetMouseButton(0))
-        //{
-        //    if (uiControl.stopDrawLine == false)
-        //    {
-        //        Draw();
-        //    }
-        //}
-        //if (Input.GetMouseButtonUp(0))
-        //{
-        //    EndDraw();
-        //}
-
-        ////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -103,19 +84,44 @@ public class TempDrawLine : MonoBehaviour
                 BeginDraw();
             }
         }
-        if (Input.touchCount == 1)
+        if (Input.GetMouseButton(0))
         {
-            Draw();
+            if (uiControl.stopDrawLine == false)
+            {
+                Draw();
+            }
         }
         if (Input.GetMouseButtonUp(0))
         {
             EndDraw();
         }
 
-        if (tempLine != null)
-        {
+        ////////////////////////////////////////////////////////////////////////////////
 
-        }
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    if (hit)
+        //    {
+        //        blocked = true;
+        //    }
+        //    else
+        //    {
+        //        BeginDraw();
+        //    }
+        //}
+        //if (Input.touchCount == 1)
+        //{
+        //    Draw();
+        //}
+        //if (Input.GetMouseButtonUp(0))
+        //{
+        //    EndDraw();
+        //}
+
+        //if (tempLine != null)
+        //{
+
+        //}
     }
 
     public void BeginDraw()
@@ -226,8 +232,8 @@ public class TempDrawLine : MonoBehaviour
 
     public void CheckBlockLayer()
     {
-        mousePos = cam.ScreenToWorldPoint(Input.GetTouch(0).position);
-        //mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        //mousePos = cam.ScreenToWorldPoint(Input.GetTouch(0).position);
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         hit = Physics2D.CircleCast(mousePos, lineWidth, Vector2.zero, 0.1f, blockLayer);
     }
 
@@ -313,6 +319,24 @@ public class TempDrawLine : MonoBehaviour
                 for (int i = 0; i < lineDrew.Length; i++)
                 {
                     lineDrew[i].GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+                }
+            }
+        }
+
+        if (wood.Length > 0)
+        {
+            if (line != null)
+            {
+                for (int i = 0; i < wood.Length; i++)
+                {
+                    wood[i].GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+                }
+            }
+            else
+            {
+                for (int i = 0; i < wood.Length; i++)
+                {
+                    wood[i].GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
                 }
             }
         }

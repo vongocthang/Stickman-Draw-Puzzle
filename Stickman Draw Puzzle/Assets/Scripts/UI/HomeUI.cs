@@ -25,7 +25,7 @@ public class HomeUI : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("SceneUnlockedBM") == 0)
         {
-            PlayerPrefs.SetInt("SceneUnlockedBM", 50);
+            PlayerPrefs.SetInt("SceneUnlockedBM", 80);
         }
         if (PlayerPrefs.GetInt("SceneUnlockedCW") == 0)
         {
@@ -33,11 +33,11 @@ public class HomeUI : MonoBehaviour
         }
         if (PlayerPrefs.GetInt("SceneUnlockedWM") == 0)
         {
-            PlayerPrefs.SetInt("SceneUnlockedWM", 50);
+            PlayerPrefs.SetInt("SceneUnlockedWM", 20);
         }
         if (PlayerPrefs.GetInt("SceneUnlockedSM") == 0)
         {
-            PlayerPrefs.SetInt("SceneUnlockedSM", 50);
+            PlayerPrefs.SetInt("SceneUnlockedSM", 20);
         }
 
         if (PlayerPrefs.GetInt("ClaimPen") == 0)
@@ -137,7 +137,7 @@ public class HomeUI : MonoBehaviour
     public void ShowSumStarM1()
     {
         int sumStar = 0;
-        for(int i=1; i<=50; i++)
+        for(int i=1; i<=80; i++)
         {
             int a = PlayerPrefs.GetInt("M1StarLevel" + i.ToString());
             sumStar += a;
@@ -148,7 +148,7 @@ public class HomeUI : MonoBehaviour
     public void ShowSumStarM2()
     {
         int sumStar = 0;
-        for (int i = 1; i <= 50; i++)
+        for (int i = 1; i <= 20; i++)
         {
             int a = PlayerPrefs.GetInt("M2StarLevel" + i.ToString());
             sumStar += a;
@@ -159,7 +159,7 @@ public class HomeUI : MonoBehaviour
     public void ShowSumStarM3()
     {
         int sumStar = 0;
-        for (int i = 1; i <= 50; i++)
+        for (int i = 1; i <= 20; i++)
         {
             int a = PlayerPrefs.GetInt("M3StarLevel" + i.ToString());
             sumStar += a;
@@ -170,7 +170,7 @@ public class HomeUI : MonoBehaviour
     public void ShowSumStarM4()
     {
         int sumStar = 0;
-        for (int i = 1; i <= 50; i++)
+        for (int i = 1; i <= 20; i++)
         {
             int a = PlayerPrefs.GetInt("M4StarLevel" + i.ToString());
             sumStar += a;
