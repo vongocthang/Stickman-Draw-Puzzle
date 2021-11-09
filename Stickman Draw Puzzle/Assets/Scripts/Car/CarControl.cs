@@ -14,7 +14,7 @@ public class CarControl : MonoBehaviour
     public TargetJoint2D targetJoint;
     public int countToON = 0;
 
-    public SkeletonAnimation sketAnim;
+    public SkeletonAnimation skeletonAnim;
 
     //Để xác định con dốc nằm ở bên nào
     //Từ đó xác định di chuyển trái/phải là xuống dốc
@@ -32,7 +32,7 @@ public class CarControl : MonoBehaviour
         uiControl = GameObject.Find("MainUI").GetComponent<UIControl>();
         targetJoint = this.GetComponent<TargetJoint2D>();
 
-        
+        Test();
     }
 
     // Update is called once per frame
@@ -53,11 +53,11 @@ public class CarControl : MonoBehaviour
             countAnim = 1;
             if (this.name == "CarLeft")
             {
-                sketAnim.AnimationName = "Forward";
+                skeletonAnim.AnimationName = "Forward";
             }
             else
             {
-                sketAnim.AnimationName = "Backward";
+                skeletonAnim.AnimationName = "Backward";
             }
             //Tốc độ tăng dần
             if (Mathf.Abs(tempMoveSpeed) < moveSpeed)
@@ -86,11 +86,11 @@ public class CarControl : MonoBehaviour
             countAnim = 1;
             if (this.name == "CarLeft")
             {
-                sketAnim.AnimationName = "Backward";
+                skeletonAnim.AnimationName = "Backward";
             }
             else
             {
-                sketAnim.AnimationName = "Forward";
+                skeletonAnim.AnimationName = "Forward";
             }
             //Tốc độ tăng dần
             if (Mathf.Abs(tempMoveSpeed) < moveSpeed)
@@ -128,7 +128,7 @@ public class CarControl : MonoBehaviour
             //Animation
             if(Time.time < countTime + 5)
             {
-                sketAnim.AnimationName = "Idle " + countAnim.ToString();
+                skeletonAnim.AnimationName = "Idle " + countAnim.ToString();
             }
             else
             {
@@ -141,5 +141,10 @@ public class CarControl : MonoBehaviour
                 countTime = Time.time;
             }
         }
+    }
+
+    public void Test()
+    {
+        Debug.Log(skeletonAnim.Skeleton.FindSlot("banh truoc"));
     }
 }

@@ -28,7 +28,7 @@ public class UIControl : MonoBehaviour
     //Điều khiển xe di chuyển lên xuống - chỉ chế độ không trọng lực
     public bool moveUp, moveDown;
 
-    public CarControl car;
+    public GameObject car;
 
     //DrawLine drawLine;
 
@@ -44,11 +44,12 @@ public class UIControl : MonoBehaviour
 
         if (GameObject.Find("CarLeft"))
         {
-            car = GameObject.Find("CarLeft").GetComponent<CarControl>();
+            car = GameObject.Find("CarLeft");
+            
         }
         if (GameObject.Find("CarRight"))
         {
-            car = GameObject.Find("CarRight").GetComponent<CarControl>();
+            car = GameObject.Find("CarRight");
         }
 
         SetPenLoad();
@@ -126,7 +127,14 @@ public class UIControl : MonoBehaviour
         moveUp = false;
         moveDown = false;
 
-        car.countTime = Time.time;
+        if (car.GetComponent<CarControl>() != null)
+        {
+            car.GetComponent<CarControl>().countTime = Time.time;
+        }
+        if (car.GetComponent<GravityCar>() != null)
+        {
+            car.GetComponent<GravityCar>().countTime = Time.time;
+        }
     }
 
     //Điều khiển xe di chuyển lên xuống - chỉ Mode không trọng lực

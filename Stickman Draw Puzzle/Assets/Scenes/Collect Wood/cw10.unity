@@ -1554,7 +1554,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6755352575003750473}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Woods
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1722,7 +1722,7 @@ GameObject:
   - component: {fileID: 6755352576390171027}
   - component: {fileID: 6755352576390171026}
   - component: {fileID: 6755352576390171025}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: go1
   m_TagString: Wood
   m_Icon: {fileID: 0}

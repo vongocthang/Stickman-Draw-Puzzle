@@ -137,7 +137,11 @@ public class TempDrawLine : MonoBehaviour
         tempLine = Instantiate(tempLinePrefab, this.transform).GetComponent<Line>();
         tempLine.SetLineColor(tempLineColor);
         tempLine.SetPointMinDistance(linePointsMinDistance);
-        tempLine.SetLineWidth(lineWidth);
+        //
+        tempLine.lineRenderer.startWidth = lineWidth;
+        tempLine.lineRenderer.endWidth = lineWidth / 2f;
+        tempLine.edgeCollider.edgeRadius = lineWidth / 4f;
+        //
         lastPoint = line.GetLastPoint();
         tempLine.lineRenderer.positionCount = 2;
         tempLine.lineRenderer.SetPosition(0, lastPoint);
@@ -234,7 +238,7 @@ public class TempDrawLine : MonoBehaviour
     {
         //mousePos = cam.ScreenToWorldPoint(Input.GetTouch(0).position);
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        hit = Physics2D.CircleCast(mousePos, lineWidth, Vector2.zero, 0.1f, blockLayer);
+        hit = Physics2D.CircleCast(mousePos, lineWidth / 2f, Vector2.zero, 0.5f, blockLayer);
     }
 
     public void StopPhysics()

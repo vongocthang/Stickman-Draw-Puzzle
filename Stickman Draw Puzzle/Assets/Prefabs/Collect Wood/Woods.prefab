@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6755352574422586492}
   - component: {fileID: 6755352574422586493}
   - component: {fileID: 6755352574422586490}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: go3
   m_TagString: Wood
   m_Icon: {fileID: 0}
@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectWood: {fileID: 0}
+  woodMax: 0
 --- !u!1 &6755352574630944756
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,7 +179,7 @@ GameObject:
   - component: {fileID: 6755352574630944753}
   - component: {fileID: 6755352574630944754}
   - component: {fileID: 6755352574630944751}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: go2 (2)
   m_TagString: Wood
   m_Icon: {fileID: 0}
@@ -336,6 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectWood: {fileID: 0}
+  woodMax: 0
 --- !u!1 &6755352574648128637
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,7 +351,7 @@ GameObject:
   - component: {fileID: 6755352574648128634}
   - component: {fileID: 6755352574648128635}
   - component: {fileID: 6755352574648128632}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: go1 (1)
   m_TagString: Wood
   m_Icon: {fileID: 0}
@@ -502,6 +504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectWood: {fileID: 0}
+  woodMax: 0
 --- !u!1 &6755352574913479236
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,7 +518,7 @@ GameObject:
   - component: {fileID: 6755352574913479233}
   - component: {fileID: 6755352574913479234}
   - component: {fileID: 6755352574913479231}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: go3 (2)
   m_TagString: Wood
   m_Icon: {fileID: 0}
@@ -667,6 +670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectWood: {fileID: 0}
+  woodMax: 0
 --- !u!1 &6755352575104666053
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,7 +684,7 @@ GameObject:
   - component: {fileID: 6755352575104666050}
   - component: {fileID: 6755352575104666051}
   - component: {fileID: 6755352575104666048}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: go1
   m_TagString: Wood
   m_Icon: {fileID: 0}
@@ -833,6 +837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectWood: {fileID: 0}
+  woodMax: 0
 --- !u!1 &6755352575897014369
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,7 +851,7 @@ GameObject:
   - component: {fileID: 6755352575897014366}
   - component: {fileID: 6755352575897014367}
   - component: {fileID: 6755352575897014364}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: go3 (1)
   m_TagString: Wood
   m_Icon: {fileID: 0}
@@ -998,6 +1003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectWood: {fileID: 0}
+  woodMax: 0
 --- !u!1 &6755352575973508235
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,7 +1017,7 @@ GameObject:
   - component: {fileID: 6755352575973508232}
   - component: {fileID: 6755352575973508233}
   - component: {fileID: 6755352575973508230}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: go2
   m_TagString: Wood
   m_Icon: {fileID: 0}
@@ -1169,6 +1175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectWood: {fileID: 0}
+  woodMax: 0
 --- !u!1 &6755352576041313450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,7 +1189,7 @@ GameObject:
   - component: {fileID: 6755352576041313447}
   - component: {fileID: 6755352576041313448}
   - component: {fileID: 6755352576041313445}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: go2 (1)
   m_TagString: Wood
   m_Icon: {fileID: 0}
@@ -1340,6 +1347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectWood: {fileID: 0}
+  woodMax: 0
 --- !u!1 &6755352576118745754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1353,7 +1361,7 @@ GameObject:
   - component: {fileID: 6755352576118745751}
   - component: {fileID: 6755352576118745752}
   - component: {fileID: 6755352576118745749}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: go1 (2)
   m_TagString: Wood
   m_Icon: {fileID: 0}
@@ -1506,6 +1514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectWood: {fileID: 0}
+  woodMax: 0
 --- !u!1 &6755352576360558617
 GameObject:
   m_ObjectHideFlags: 0

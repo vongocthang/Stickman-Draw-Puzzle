@@ -8302,7 +8302,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 2578321547865700531}
-          m_MethodName: SellectLevelBasicMode
+          m_MethodName: SellectLevel
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -10150,6 +10150,7 @@ MonoBehaviour:
   moveRight: 0
   moveUp: 0
   moveDown: 0
+  car: {fileID: 0}
 --- !u!114 &4123868663562777070
 MonoBehaviour:
   m_ObjectHideFlags: 0

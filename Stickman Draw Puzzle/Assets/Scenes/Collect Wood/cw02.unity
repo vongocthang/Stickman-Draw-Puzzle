@@ -939,7 +939,7 @@ GameObject:
   - component: {fileID: 1772925389519834263}
   - component: {fileID: 1772925389519834262}
   - component: {fileID: 1772925389519834265}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: go2
   m_TagString: Wood
   m_Icon: {fileID: 0}
@@ -1107,7 +1107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1772925390173485063}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Woods
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1144,7 +1144,7 @@ GameObject:
   - component: {fileID: 1772925390365957219}
   - component: {fileID: 1772925390365957218}
   - component: {fileID: 1772925390365957221}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: go3
   m_TagString: Wood
   m_Icon: {fileID: 0}
@@ -1310,7 +1310,7 @@ GameObject:
   - component: {fileID: 1772925390790083037}
   - component: {fileID: 1772925390790083036}
   - component: {fileID: 1772925390790083039}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: go1
   m_TagString: Wood
   m_Icon: {fileID: 0}

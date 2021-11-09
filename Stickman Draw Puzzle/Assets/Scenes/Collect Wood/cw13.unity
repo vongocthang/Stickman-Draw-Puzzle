@@ -1949,7 +1949,7 @@ GameObject:
   - component: {fileID: 6480847193994432664}
   - component: {fileID: 6480847193994432665}
   - component: {fileID: 6480847193994432662}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: go2
   m_TagString: Wood
   m_Icon: {fileID: 0}
@@ -2115,7 +2115,7 @@ GameObject:
   - component: {fileID: 6480847194035799118}
   - component: {fileID: 6480847194035799119}
   - component: {fileID: 6480847194035799116}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: go3 (1)
   m_TagString: Wood
   m_Icon: {fileID: 0}
@@ -2287,7 +2287,7 @@ GameObject:
   - component: {fileID: 6480847194197700791}
   - component: {fileID: 6480847194197700792}
   - component: {fileID: 6480847194197700789}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: go2 (1)
   m_TagString: Wood
   m_Icon: {fileID: 0}
@@ -2454,7 +2454,7 @@ GameObject:
   - component: {fileID: 6480847194350435975}
   - component: {fileID: 6480847194350435976}
   - component: {fileID: 6480847194350435973}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: go1 (2)
   m_TagString: Wood
   m_Icon: {fileID: 0}
@@ -2493,7 +2493,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6480847194381771784}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Woods
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2659,7 +2659,7 @@ GameObject:
   - component: {fileID: 6480847194708590700}
   - component: {fileID: 6480847194708590701}
   - component: {fileID: 6480847194708590698}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: go3
   m_TagString: Wood
   m_Icon: {fileID: 0}
@@ -2817,7 +2817,7 @@ GameObject:
   - component: {fileID: 6480847194800655329}
   - component: {fileID: 6480847194800655330}
   - component: {fileID: 6480847194800655359}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: go2 (2)
   m_TagString: Wood
   m_Icon: {fileID: 0}
@@ -2998,7 +2998,7 @@ GameObject:
   - component: {fileID: 6480847195018346602}
   - component: {fileID: 6480847195018346603}
   - component: {fileID: 6480847195018346600}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: go1 (1)
   m_TagString: Wood
   m_Icon: {fileID: 0}
@@ -3164,7 +3164,7 @@ GameObject:
   - component: {fileID: 6480847195291965009}
   - component: {fileID: 6480847195291965010}
   - component: {fileID: 6480847195291964975}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: go3 (2)
   m_TagString: Wood
   m_Icon: {fileID: 0}
@@ -3331,7 +3331,7 @@ GameObject:
   - component: {fileID: 6480847195400150482}
   - component: {fileID: 6480847195400150483}
   - component: {fileID: 6480847195400150480}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: go1
   m_TagString: Wood
   m_Icon: {fileID: 0}
