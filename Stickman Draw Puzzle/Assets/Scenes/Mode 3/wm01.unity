@@ -262,6 +262,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3462844200634650140, guid: 2e6de24ac3da51b41a6763b06bc70f79,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6377740575013124812, guid: 2e6de24ac3da51b41a6763b06bc70f79,
+        type: 3}
+      propertyPath: m_Target.x
+      value: -3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6377740575013124812, guid: 2e6de24ac3da51b41a6763b06bc70f79,
+        type: 3}
+      propertyPath: m_Target.y
+      value: -2.29
+      objectReference: {fileID: 0}
     - target: {fileID: 7309651197326476998, guid: 2e6de24ac3da51b41a6763b06bc70f79,
         type: 3}
       propertyPath: m_Name
@@ -270,7 +285,7 @@ PrefabInstance:
     - target: {fileID: 7309651197326477048, guid: 2e6de24ac3da51b41a6763b06bc70f79,
         type: 3}
       propertyPath: m_Target.x
-      value: -4.55
+      value: -3.6
       objectReference: {fileID: 0}
     - target: {fileID: 7309651197326477048, guid: 2e6de24ac3da51b41a6763b06bc70f79,
         type: 3}
@@ -290,7 +305,7 @@ PrefabInstance:
     - target: {fileID: 7309651197326477049, guid: 2e6de24ac3da51b41a6763b06bc70f79,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.29
+      value: -2.24
       objectReference: {fileID: 0}
     - target: {fileID: 7309651197326477049, guid: 2e6de24ac3da51b41a6763b06bc70f79,
         type: 3}
@@ -1113,7 +1128,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 17dcd91ffea183d478182cd23162ec1a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d655cfadaef95ec488e2d95c81fb7b5d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

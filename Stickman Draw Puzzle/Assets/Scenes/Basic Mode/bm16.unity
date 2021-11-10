@@ -126,12 +126,12 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 5119543023894106146}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6767700530943933622, guid: 2cd6be4893ee9d64980df85266473856,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6767700530943933622, guid: 2cd6be4893ee9d64980df85266473856,
         type: 3}
@@ -190,18 +190,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cd6be4893ee9d64980df85266473856, type: 3}
---- !u!4 &1099313325 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6767700530943933622, guid: 2cd6be4893ee9d64980df85266473856,
-    type: 3}
-  m_PrefabInstance: {fileID: 1099313324}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1111750744
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 5119543023894106146}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4279732185105916418, guid: 124bb06bb6512d84e80dd3cab2b84905,
         type: 3}
@@ -211,7 +205,7 @@ PrefabInstance:
     - target: {fileID: 4279732185105916431, guid: 124bb06bb6512d84e80dd3cab2b84905,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4279732185105916431, guid: 124bb06bb6512d84e80dd3cab2b84905,
         type: 3}
@@ -265,18 +259,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 124bb06bb6512d84e80dd3cab2b84905, type: 3}
---- !u!4 &1111750745 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4279732185105916431, guid: 124bb06bb6512d84e80dd3cab2b84905,
-    type: 3}
-  m_PrefabInstance: {fileID: 1111750744}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1303269836
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 5119543023894106146}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3433911246577892793, guid: 6381270813f263d4596d1c6f1a1f876d,
         type: 3}
@@ -286,7 +274,7 @@ PrefabInstance:
     - target: {fileID: 3433911246577892797, guid: 6381270813f263d4596d1c6f1a1f876d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3433911246577892797, guid: 6381270813f263d4596d1c6f1a1f876d,
         type: 3}
@@ -296,7 +284,7 @@ PrefabInstance:
     - target: {fileID: 3433911246577892797, guid: 6381270813f263d4596d1c6f1a1f876d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.39
+      value: -2.32
       objectReference: {fileID: 0}
     - target: {fileID: 3433911246577892797, guid: 6381270813f263d4596d1c6f1a1f876d,
         type: 3}
@@ -338,14 +326,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5393180229060139433, guid: 6381270813f263d4596d1c6f1a1f876d,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6381270813f263d4596d1c6f1a1f876d, type: 3}
---- !u!4 &1303269837 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3433911246577892797, guid: 6381270813f263d4596d1c6f1a1f876d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1303269836}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1376640668
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,11 +1490,8 @@ Transform:
   - {fileID: 725132588846476043}
   - {fileID: 1376640669}
   - {fileID: 1876242746}
-  - {fileID: 1099313325}
-  - {fileID: 1303269837}
-  - {fileID: 1111750745}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5119543023894106147
 SpriteRenderer:

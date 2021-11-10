@@ -117,11 +117,6 @@ public class TempDrawLine : MonoBehaviour
         //{
         //    EndDraw();
         //}
-
-        //if (tempLine != null)
-        //{
-
-        //}
     }
 
     public void BeginDraw()
