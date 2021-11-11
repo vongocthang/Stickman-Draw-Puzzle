@@ -266,8 +266,8 @@ GameObject:
   - component: {fileID: 663650663}
   - component: {fileID: 663650667}
   - component: {fileID: 663650666}
-  - component: {fileID: 663650665}
   - component: {fileID: 663650664}
+  - component: {fileID: 663650665}
   m_Layer: 8
   m_Name: go3 (3)
   m_TagString: Wood
@@ -303,8 +303,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectWood: {fileID: 0}
   woodMax: 0
---- !u!60 &663650665
-PolygonCollider2D:
+--- !u!58 &663650665
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -317,39 +317,8 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.48, y: 0.47}
-    newSize: {x: 0.48, y: 0.47}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.06043219, y: 0.23717998}
-      - {x: -0.011561453, y: 0.23861237}
-      - {x: -0.09286341, y: 0.22954036}
-      - {x: -0.14993371, y: 0.19135247}
-      - {x: -0.19121745, y: 0.14493373}
-      - {x: -0.22377767, y: 0.08858053}
-      - {x: -0.24077776, y: 0.008978531}
-      - {x: -0.24128371, y: -0.11202993}
-      - {x: -0.19918996, y: -0.16310994}
-      - {x: -0.16120751, y: -0.1863067}
-      - {x: -0.10559622, y: -0.21522146}
-      - {x: -0.06033554, y: -0.22983272}
-      - {x: -0.0025679686, y: -0.23623972}
-      - {x: 0.053778652, y: -0.2336612}
-      - {x: 0.10687014, y: -0.21664757}
-      - {x: 0.16148745, y: -0.17979872}
-      - {x: 0.20292607, y: -0.13047254}
-      - {x: 0.22972994, y: -0.078514956}
-      - {x: 0.24017166, y: -0.044921562}
-      - {x: 0.24042447, y: 0.08456366}
-      - {x: 0.19121745, y: 0.1552037}
-      - {x: 0.13405497, y: 0.2131762}
+  serializedVersion: 2
+  m_Radius: 0.23999998
 --- !u!50 &663650666
 Rigidbody2D:
   serializedVersion: 4
@@ -365,7 +334,7 @@ Rigidbody2D:
   m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1242,54 +1211,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectWood: {fileID: 0}
   woodMax: 0
---- !u!60 &6755352574691826370
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6755352574691826372}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.53, y: 0.46}
-    newSize: {x: 0.53, y: 0.46}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.07327797, y: 0.20306814}
-      - {x: -0.16374882, y: 0.1663456}
-      - {x: -0.19657573, y: 0.117012456}
-      - {x: -0.22473505, y: 0.07227426}
-      - {x: -0.22676568, y: 0.018741194}
-      - {x: -0.23991114, y: -0.0105986595}
-      - {x: -0.2354306, y: -0.063953355}
-      - {x: -0.2059265, y: -0.11609266}
-      - {x: -0.17937061, y: -0.16613628}
-      - {x: -0.14625394, y: -0.17599195}
-      - {x: -0.0860554, y: -0.19503231}
-      - {x: -0.01895098, y: -0.20046327}
-      - {x: 0.05962056, y: -0.20796888}
-      - {x: 0.12516099, y: -0.20811825}
-      - {x: 0.17546326, y: -0.18353139}
-      - {x: 0.21504359, y: -0.13878483}
-      - {x: 0.21575326, y: -0.11825933}
-      - {x: 0.23520893, y: -0.06207481}
-      - {x: 0.23141068, y: -0.008569453}
-      - {x: 0.19768167, y: 0.07882668}
-      - {x: 0.152526, y: 0.14609265}
-      - {x: 0.10538328, y: 0.18411437}
-      - {x: 0.022482477, y: 0.2043706}
 --- !u!50 &6755352574691826371
 Rigidbody2D:
   serializedVersion: 4
@@ -1305,7 +1226,7 @@ Rigidbody2D:
   m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1322,8 +1243,8 @@ GameObject:
   - component: {fileID: 6755352574691826373}
   - component: {fileID: 6755352574691826368}
   - component: {fileID: 6755352574691826371}
-  - component: {fileID: 6755352574691826370}
   - component: {fileID: 6755352574691826369}
+  - component: {fileID: 6755352574691826374}
   m_Layer: 8
   m_Name: go1
   m_TagString: Wood
@@ -1345,6 +1266,22 @@ Transform:
   m_Father: {fileID: 6755352575695463193}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &6755352574691826374
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6755352574691826372}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.004990782, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.22008385
 --- !u!114 &6755352574785327422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1374,7 +1311,7 @@ Rigidbody2D:
   m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1444,53 +1381,6 @@ Transform:
   m_Father: {fileID: 6755352575695463193}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &6755352574785327427
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6755352574785327429}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.48, y: 0.47}
-    newSize: {x: 0.48, y: 0.47}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.06043219, y: 0.23717998}
-      - {x: -0.011561453, y: 0.23861237}
-      - {x: -0.09286341, y: 0.22954036}
-      - {x: -0.14993371, y: 0.19135247}
-      - {x: -0.19121745, y: 0.14493373}
-      - {x: -0.22377767, y: 0.08858053}
-      - {x: -0.24077776, y: 0.008978531}
-      - {x: -0.24128371, y: -0.11202993}
-      - {x: -0.19918996, y: -0.16310994}
-      - {x: -0.16120751, y: -0.1863067}
-      - {x: -0.10559622, y: -0.21522146}
-      - {x: -0.06033554, y: -0.22983272}
-      - {x: -0.0025679686, y: -0.23623972}
-      - {x: 0.053778652, y: -0.2336612}
-      - {x: 0.10687014, y: -0.21664757}
-      - {x: 0.16148745, y: -0.17979872}
-      - {x: 0.20292607, y: -0.13047254}
-      - {x: 0.22972994, y: -0.078514956}
-      - {x: 0.24017166, y: -0.044921562}
-      - {x: 0.24042447, y: 0.08456366}
-      - {x: 0.19121745, y: 0.1552037}
-      - {x: 0.13405497, y: 0.2131762}
 --- !u!1 &6755352574785327429
 GameObject:
   m_ObjectHideFlags: 0
@@ -1502,8 +1392,8 @@ GameObject:
   - component: {fileID: 6755352574785327426}
   - component: {fileID: 6755352574785327425}
   - component: {fileID: 6755352574785327424}
-  - component: {fileID: 6755352574785327427}
   - component: {fileID: 6755352574785327422}
+  - component: {fileID: 6755352574785327430}
   m_Layer: 8
   m_Name: go3 (2)
   m_TagString: Wood
@@ -1511,6 +1401,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!58 &6755352574785327430
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6755352574785327429}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.00000047683716}
+  serializedVersion: 2
+  m_Radius: 0.23999998
 --- !u!212 &6755352575056840568
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1575,54 +1481,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectWood: {fileID: 0}
   woodMax: 0
---- !u!60 &6755352575056840570
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6755352575056840572}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.53, y: 0.46}
-    newSize: {x: 0.53, y: 0.46}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.07327797, y: 0.20306814}
-      - {x: -0.16374882, y: 0.1663456}
-      - {x: -0.19657573, y: 0.117012456}
-      - {x: -0.22473505, y: 0.07227426}
-      - {x: -0.22676568, y: 0.018741194}
-      - {x: -0.23991114, y: -0.0105986595}
-      - {x: -0.2354306, y: -0.063953355}
-      - {x: -0.2059265, y: -0.11609266}
-      - {x: -0.17937061, y: -0.16613628}
-      - {x: -0.14625394, y: -0.17599195}
-      - {x: -0.0860554, y: -0.19503231}
-      - {x: -0.01895098, y: -0.20046327}
-      - {x: 0.05962056, y: -0.20796888}
-      - {x: 0.12516099, y: -0.20811825}
-      - {x: 0.17546326, y: -0.18353139}
-      - {x: 0.21504359, y: -0.13878483}
-      - {x: 0.21575326, y: -0.11825933}
-      - {x: 0.23520893, y: -0.06207481}
-      - {x: 0.23141068, y: -0.008569453}
-      - {x: 0.19768167, y: 0.07882668}
-      - {x: 0.152526, y: 0.14609265}
-      - {x: 0.10538328, y: 0.18411437}
-      - {x: 0.022482477, y: 0.2043706}
 --- !u!50 &6755352575056840571
 Rigidbody2D:
   serializedVersion: 4
@@ -1638,7 +1496,7 @@ Rigidbody2D:
   m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1655,8 +1513,8 @@ GameObject:
   - component: {fileID: 6755352575056840573}
   - component: {fileID: 6755352575056840568}
   - component: {fileID: 6755352575056840571}
-  - component: {fileID: 6755352575056840570}
   - component: {fileID: 6755352575056840569}
+  - component: {fileID: 6755352575056840574}
   m_Layer: 8
   m_Name: go1 (1)
   m_TagString: Wood
@@ -1678,6 +1536,22 @@ Transform:
   m_Father: {fileID: 6755352575695463193}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &6755352575056840574
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6755352575056840572}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0016636509, y: -0.01663557}
+  serializedVersion: 2
+  m_Radius: 0.2200836
 --- !u!114 &6755352575308025070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1707,7 +1581,7 @@ Rigidbody2D:
   m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1777,59 +1651,6 @@ Transform:
   m_Father: {fileID: 6755352575695463193}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &6755352575308025075
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6755352575308025077}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.46, y: 0.47}
-    newSize: {x: 0.46, y: 0.47}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.19197685, y: 0.10751419}
-      - {x: 0.16029465, y: 0.15612942}
-      - {x: 0.13507347, y: 0.18447949}
-      - {x: 0.09371078, y: 0.2072833}
-      - {x: 0.030008018, y: 0.22942226}
-      - {x: -0.03814751, y: 0.23524652}
-      - {x: -0.09821117, y: 0.22127376}
-      - {x: -0.1467024, y: 0.19366501}
-      - {x: -0.17870235, y: 0.15865265}
-      - {x: -0.19899872, y: 0.124666244}
-      - {x: -0.21763325, y: 0.06903756}
-      - {x: -0.21921623, y: 0.020168014}
-      - {x: -0.22769487, y: -0.03724958}
-      - {x: -0.23302138, y: -0.09249069}
-      - {x: -0.21392527, y: -0.14514697}
-      - {x: -0.17359155, y: -0.17744337}
-      - {x: -0.12819606, y: -0.20717037}
-      - {x: -0.08703612, y: -0.22236988}
-      - {x: -0.032007456, y: -0.22894482}
-      - {x: 0.020739555, y: -0.23208834}
-      - {x: 0.07827622, y: -0.22592618}
-      - {x: 0.12918556, y: -0.20055419}
-      - {x: 0.17866501, y: -0.15925905}
-      - {x: 0.20588788, y: -0.114666246}
-      - {x: 0.22632557, y: -0.070539385}
-      - {x: 0.22369617, y: -0.031567708}
-      - {x: 0.22738948, y: 0.02104595}
-      - {x: 0.2150735, y: 0.07007351}
 --- !u!1 &6755352575308025077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,8 +1662,8 @@ GameObject:
   - component: {fileID: 6755352575308025074}
   - component: {fileID: 6755352575308025073}
   - component: {fileID: 6755352575308025072}
-  - component: {fileID: 6755352575308025075}
   - component: {fileID: 6755352575308025070}
+  - component: {fileID: 6755352575308025078}
   m_Layer: 8
   m_Name: go2 (2)
   m_TagString: Wood
@@ -1850,6 +1671,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!58 &6755352575308025078
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6755352575308025077}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000047683716, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.23499998
 --- !u!212 &6755352575351850874
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1914,53 +1751,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectWood: {fileID: 0}
   woodMax: 0
---- !u!60 &6755352575351850876
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6755352575351850878}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.48, y: 0.47}
-    newSize: {x: 0.48, y: 0.47}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.06043219, y: 0.23717998}
-      - {x: -0.011561453, y: 0.23861237}
-      - {x: -0.09286341, y: 0.22954036}
-      - {x: -0.14993371, y: 0.19135247}
-      - {x: -0.19121745, y: 0.14493373}
-      - {x: -0.22377767, y: 0.08858053}
-      - {x: -0.24077776, y: 0.008978531}
-      - {x: -0.24128371, y: -0.11202993}
-      - {x: -0.19918996, y: -0.16310994}
-      - {x: -0.16120751, y: -0.1863067}
-      - {x: -0.10559622, y: -0.21522146}
-      - {x: -0.06033554, y: -0.22983272}
-      - {x: -0.0025679686, y: -0.23623972}
-      - {x: 0.053778652, y: -0.2336612}
-      - {x: 0.10687014, y: -0.21664757}
-      - {x: 0.16148745, y: -0.17979872}
-      - {x: 0.20292607, y: -0.13047254}
-      - {x: 0.22972994, y: -0.078514956}
-      - {x: 0.24017166, y: -0.044921562}
-      - {x: 0.24042447, y: 0.08456366}
-      - {x: 0.19121745, y: 0.1552037}
-      - {x: 0.13405497, y: 0.2131762}
 --- !u!50 &6755352575351850877
 Rigidbody2D:
   serializedVersion: 4
@@ -1976,7 +1766,7 @@ Rigidbody2D:
   m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1993,8 +1783,8 @@ GameObject:
   - component: {fileID: 6755352575351850879}
   - component: {fileID: 6755352575351850874}
   - component: {fileID: 6755352575351850877}
-  - component: {fileID: 6755352575351850876}
   - component: {fileID: 6755352575351850875}
+  - component: {fileID: 6755352575351850880}
   m_Layer: 8
   m_Name: go3
   m_TagString: Wood
@@ -2016,6 +1806,22 @@ Transform:
   m_Father: {fileID: 6755352575695463193}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &6755352575351850880
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6755352575351850878}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000009536743, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.23999998
 --- !u!1 &6755352575695463192
 GameObject:
   m_ObjectHideFlags: 0
@@ -2085,7 +1891,7 @@ Rigidbody2D:
   m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2155,54 +1961,6 @@ Transform:
   m_Father: {fileID: 6755352575695463193}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &6755352575726811545
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6755352575726811547}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.53, y: 0.46}
-    newSize: {x: 0.53, y: 0.46}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.07327797, y: 0.20306814}
-      - {x: -0.16374882, y: 0.1663456}
-      - {x: -0.19657573, y: 0.117012456}
-      - {x: -0.22473505, y: 0.07227426}
-      - {x: -0.22676568, y: 0.018741194}
-      - {x: -0.23991114, y: -0.0105986595}
-      - {x: -0.2354306, y: -0.063953355}
-      - {x: -0.2059265, y: -0.11609266}
-      - {x: -0.17937061, y: -0.16613628}
-      - {x: -0.14625394, y: -0.17599195}
-      - {x: -0.0860554, y: -0.19503231}
-      - {x: -0.01895098, y: -0.20046327}
-      - {x: 0.05962056, y: -0.20796888}
-      - {x: 0.12516099, y: -0.20811825}
-      - {x: 0.17546326, y: -0.18353139}
-      - {x: 0.21504359, y: -0.13878483}
-      - {x: 0.21575326, y: -0.11825933}
-      - {x: 0.23520893, y: -0.06207481}
-      - {x: 0.23141068, y: -0.008569453}
-      - {x: 0.19768167, y: 0.07882668}
-      - {x: 0.152526, y: 0.14609265}
-      - {x: 0.10538328, y: 0.18411437}
-      - {x: 0.022482477, y: 0.2043706}
 --- !u!1 &6755352575726811547
 GameObject:
   m_ObjectHideFlags: 0
@@ -2214,8 +1972,8 @@ GameObject:
   - component: {fileID: 6755352575726811544}
   - component: {fileID: 6755352575726811543}
   - component: {fileID: 6755352575726811542}
-  - component: {fileID: 6755352575726811545}
   - component: {fileID: 6755352575726811540}
+  - component: {fileID: 6755352575726811548}
   m_Layer: 8
   m_Name: go1 (2)
   m_TagString: Wood
@@ -2223,6 +1981,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!58 &6755352575726811548
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6755352575726811547}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00857217, y: -0.018572807}
+  serializedVersion: 2
+  m_Radius: 0.21785396
 --- !u!114 &6755352575913162660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2252,7 +2026,7 @@ Rigidbody2D:
   m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2322,59 +2096,6 @@ Transform:
   m_Father: {fileID: 6755352575695463193}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &6755352575913162665
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6755352575913162667}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.46, y: 0.47}
-    newSize: {x: 0.46, y: 0.47}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.19197685, y: 0.10751419}
-      - {x: 0.16029465, y: 0.15612942}
-      - {x: 0.13507347, y: 0.18447949}
-      - {x: 0.09371078, y: 0.2072833}
-      - {x: 0.030008018, y: 0.22942226}
-      - {x: -0.03814751, y: 0.23524652}
-      - {x: -0.09821117, y: 0.22127376}
-      - {x: -0.1467024, y: 0.19366501}
-      - {x: -0.17870235, y: 0.15865265}
-      - {x: -0.19899872, y: 0.124666244}
-      - {x: -0.21763325, y: 0.06903756}
-      - {x: -0.21921623, y: 0.020168014}
-      - {x: -0.22769487, y: -0.03724958}
-      - {x: -0.23302138, y: -0.09249069}
-      - {x: -0.21392527, y: -0.14514697}
-      - {x: -0.17359155, y: -0.17744337}
-      - {x: -0.12819606, y: -0.20717037}
-      - {x: -0.08703612, y: -0.22236988}
-      - {x: -0.032007456, y: -0.22894482}
-      - {x: 0.020739555, y: -0.23208834}
-      - {x: 0.07827622, y: -0.22592618}
-      - {x: 0.12918556, y: -0.20055419}
-      - {x: 0.17866501, y: -0.15925905}
-      - {x: 0.20588788, y: -0.114666246}
-      - {x: 0.22632557, y: -0.070539385}
-      - {x: 0.22369617, y: -0.031567708}
-      - {x: 0.22738948, y: 0.02104595}
-      - {x: 0.2150735, y: 0.07007351}
 --- !u!1 &6755352575913162667
 GameObject:
   m_ObjectHideFlags: 0
@@ -2386,8 +2107,8 @@ GameObject:
   - component: {fileID: 6755352575913162664}
   - component: {fileID: 6755352575913162663}
   - component: {fileID: 6755352575913162662}
-  - component: {fileID: 6755352575913162665}
   - component: {fileID: 6755352575913162660}
+  - component: {fileID: 6755352575913162668}
   m_Layer: 8
   m_Name: go2 (1)
   m_TagString: Wood
@@ -2395,6 +2116,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!58 &6755352575913162668
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6755352575913162667}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0000009536743, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.23499998
 --- !u!212 &6755352576024642396
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2459,53 +2196,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectWood: {fileID: 0}
   woodMax: 0
---- !u!60 &6755352576024642398
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6755352576024642400}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.48, y: 0.47}
-    newSize: {x: 0.48, y: 0.47}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.06043219, y: 0.23717998}
-      - {x: -0.011561453, y: 0.23861237}
-      - {x: -0.09286341, y: 0.22954036}
-      - {x: -0.14993371, y: 0.19135247}
-      - {x: -0.19121745, y: 0.14493373}
-      - {x: -0.22377767, y: 0.08858053}
-      - {x: -0.24077776, y: 0.008978531}
-      - {x: -0.24128371, y: -0.11202993}
-      - {x: -0.19918996, y: -0.16310994}
-      - {x: -0.16120751, y: -0.1863067}
-      - {x: -0.10559622, y: -0.21522146}
-      - {x: -0.06033554, y: -0.22983272}
-      - {x: -0.0025679686, y: -0.23623972}
-      - {x: 0.053778652, y: -0.2336612}
-      - {x: 0.10687014, y: -0.21664757}
-      - {x: 0.16148745, y: -0.17979872}
-      - {x: 0.20292607, y: -0.13047254}
-      - {x: 0.22972994, y: -0.078514956}
-      - {x: 0.24017166, y: -0.044921562}
-      - {x: 0.24042447, y: 0.08456366}
-      - {x: 0.19121745, y: 0.1552037}
-      - {x: 0.13405497, y: 0.2131762}
 --- !u!50 &6755352576024642399
 Rigidbody2D:
   serializedVersion: 4
@@ -2521,7 +2211,7 @@ Rigidbody2D:
   m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2538,8 +2228,8 @@ GameObject:
   - component: {fileID: 6755352576024642401}
   - component: {fileID: 6755352576024642396}
   - component: {fileID: 6755352576024642399}
-  - component: {fileID: 6755352576024642398}
   - component: {fileID: 6755352576024642397}
+  - component: {fileID: 6755352576024642402}
   m_Layer: 8
   m_Name: go3 (1)
   m_TagString: Wood
@@ -2561,6 +2251,22 @@ Transform:
   m_Father: {fileID: 6755352575695463193}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &6755352576024642402
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6755352576024642400}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000047683716, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.23999998
 --- !u!212 &6755352576114251654
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2625,59 +2331,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectWood: {fileID: 0}
   woodMax: 0
---- !u!60 &6755352576114251656
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6755352576114251658}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.46, y: 0.47}
-    newSize: {x: 0.46, y: 0.47}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.19197685, y: 0.10751419}
-      - {x: 0.16029465, y: 0.15612942}
-      - {x: 0.13507347, y: 0.18447949}
-      - {x: 0.09371078, y: 0.2072833}
-      - {x: 0.030008018, y: 0.22942226}
-      - {x: -0.03814751, y: 0.23524652}
-      - {x: -0.09821117, y: 0.22127376}
-      - {x: -0.1467024, y: 0.19366501}
-      - {x: -0.17870235, y: 0.15865265}
-      - {x: -0.19899872, y: 0.124666244}
-      - {x: -0.21763325, y: 0.06903756}
-      - {x: -0.21921623, y: 0.020168014}
-      - {x: -0.22769487, y: -0.03724958}
-      - {x: -0.23302138, y: -0.09249069}
-      - {x: -0.21392527, y: -0.14514697}
-      - {x: -0.17359155, y: -0.17744337}
-      - {x: -0.12819606, y: -0.20717037}
-      - {x: -0.08703612, y: -0.22236988}
-      - {x: -0.032007456, y: -0.22894482}
-      - {x: 0.020739555, y: -0.23208834}
-      - {x: 0.07827622, y: -0.22592618}
-      - {x: 0.12918556, y: -0.20055419}
-      - {x: 0.17866501, y: -0.15925905}
-      - {x: 0.20588788, y: -0.114666246}
-      - {x: 0.22632557, y: -0.070539385}
-      - {x: 0.22369617, y: -0.031567708}
-      - {x: 0.22738948, y: 0.02104595}
-      - {x: 0.2150735, y: 0.07007351}
 --- !u!50 &6755352576114251657
 Rigidbody2D:
   serializedVersion: 4
@@ -2693,7 +2346,7 @@ Rigidbody2D:
   m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2710,8 +2363,8 @@ GameObject:
   - component: {fileID: 6755352576114251659}
   - component: {fileID: 6755352576114251654}
   - component: {fileID: 6755352576114251657}
-  - component: {fileID: 6755352576114251656}
   - component: {fileID: 6755352576114251655}
+  - component: {fileID: 6755352576114251660}
   m_Layer: 8
   m_Name: go2
   m_TagString: Wood
@@ -2733,6 +2386,22 @@ Transform:
   m_Father: {fileID: 6755352575695463193}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &6755352576114251660
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6755352576114251658}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000009536743, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.23499998
 --- !u!4 &8574762154837370612
 Transform:
   m_ObjectHideFlags: 0
