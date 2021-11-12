@@ -18,6 +18,9 @@ public class Level : MonoBehaviour
     public GameObject star2;
     public GameObject star3;
 
+    public bool enterButton;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +33,6 @@ public class Level : MonoBehaviour
 
     public void SetUp()
     {
-        
         if (mode == 1)
         {
             int scenceUnlocked = PlayerPrefs.GetInt("SceneUnlockedBM");
@@ -71,28 +73,40 @@ public class Level : MonoBehaviour
 
     public void LoadScene()
     {
-        if (locked.activeSelf == false)
+        if (enterButton == true)
         {
-            if (mode == 1)
+            if (locked.activeSelf == false)
             {
-                SceneManager.LoadScene(level);
-            }
-            if (mode == 2)
-            {
-                SceneManager.LoadScene(level + 80);
-            }
-            if (mode == 3)
-            {
-                SceneManager.LoadScene(level + 100);
-            }
-            if (mode == 4)
-            {
-                SceneManager.LoadScene(level + 120);
+                if (mode == 1)
+                {
+                    SceneManager.LoadScene(level);
+                }
+                if (mode == 2)
+                {
+                    SceneManager.LoadScene(level + 80);
+                }
+                if (mode == 3)
+                {
+                    SceneManager.LoadScene(level + 100);
+                }
+                if (mode == 4)
+                {
+                    SceneManager.LoadScene(level + 120);
+                }
             }
         }
-
-        
     }
+
+    public void EnterButton()
+    {
+        enterButton = true;
+    }
+
+    public void ExitButton()
+    {
+        enterButton = false;
+    }
+
 
     public void ShowStar()
     {

@@ -6,6 +6,10 @@ using Spine.Unity;
 
 public class GravityCar : MonoBehaviour
 {
+    public Rigidbody2D rb;
+    public float speed;
+    public float tempSpeed;
+
     public GameObject forwardWheel;
     public GameObject backWheel;
 
@@ -15,11 +19,15 @@ public class GravityCar : MonoBehaviour
 
     FixedJoystick joy;
 
+    float tempGoc = 0;
+    float goc = 0;
+
 
     // Start is called before the first frame update
     void Start()
     {
         joy = GameObject.FindObjectOfType<FixedJoystick>();
+        tempGoc = forwardWheel.transform.rotation.z * Mathf.Rad2Deg;
     }
 
     // Update is called once per frame
@@ -34,31 +42,70 @@ public class GravityCar : MonoBehaviour
         Vector2 b = joy.Direction;
         float canhHuyen = Vector2.Distance(a, b);
         float canhKe = a.y - b.y;
-        float goc = (float)(canhKe / canhHuyen) * Mathf.Rad2Deg;
-
-        //forwardWheel.transform.rotation = Quaternion.Euler(0, 0, goc);
- 
-        Debug.Log(goc);
-
-        //Animation
-        if (joy.Direction.x <= 0)
-        {
-            skeletonAnim.AnimationName = "Forward";
-            goc += 180;
-            forwardWheel.transform.rotation = Quaternion.Euler(0, 0, goc);
-        }
-        else
-        {
-            skeletonAnim.AnimationName = "Backward";
-            //goc -= 30;
-            //goc -= 180;
-            forwardWheel.transform.rotation = Quaternion.Euler(0, 0, -goc);
-        }
+        goc = (float)(canhKe / canhHuyen) * Mathf.Rad2Deg;
         
 
+        //Animation
+        if (joy.Direction.x < 0)
+        {
+            skeletonAnim.AnimationName = "Forward";
+            if (this.name == "CarLeft")
+            {
+                goc += 180;
+                Quaternion x = forwardWheel.transform.rotation;
+                Quaternion y = Quaternion.Euler(0, 0, goc);
 
+                forwardWheel.transform.rotation = Quaternion.Lerp(x, y, 10 * Time.deltaTime);
+                backWheel.transform.rotation = Quaternion.Lerp(x, y, 10 * Time.deltaTime);
+            }
+            else
+            {
+                //goc += 90;
+                Quaternion x = forwardWheel.transform.rotation;
+                Quaternion y = Quaternion.Euler(0, 0, goc);
+                Debug.Log(goc);
+                forwardWheel.transform.rotation = Quaternion.Lerp(x, y, 10 * Time.deltaTime);
+                backWheel.transform.rotation = Quaternion.Lerp(x, y, 10 * Time.deltaTime);
+            }
+            
+        }
+        if(joy.Direction.x > 0)
+        {
+            skeletonAnim.AnimationName = "Backward";
+
+            if (this.name == "CarLeft")
+            {
+                Quaternion x = forwardWheel.transform.rotation;
+                Quaternion y = Quaternion.Euler(0, 0, -goc);
+
+                forwardWheel.transform.rotation = Quaternion.Lerp(x, y, 10 * Time.deltaTime);
+                backWheel.transform.rotation = Quaternion.Lerp(x, y, 10 * Time.deltaTime);
+            }
+            else
+            {
+                goc += 180;
+                Quaternion x = forwardWheel.transform.rotation;
+                Quaternion y = Quaternion.Euler(0, 0, -goc);
+
+                forwardWheel.transform.rotation = Quaternion.Lerp(x, y, 10 * Time.deltaTime);
+                backWheel.transform.rotation = Quaternion.Lerp(x, y, 10 * Time.deltaTime);
+            }
+        }
+
+        if(joy.Direction != new Vector2(0, 0))
+        {
+            tempSpeed = Mathf.Lerp(tempSpeed, speed, 1 * Time.deltaTime);
+            rb.velocity = new Vector2(joy.Direction.x * tempSpeed * Time.deltaTime,
+                joy.Direction.y * tempSpeed * Time.deltaTime);
+            //rb.AddForce(new Vector2(joy.Direction.x * speed * Time.deltaTime,
+            //    joy.Direction.y * speed * Time.deltaTime));
+
+            //Animation reset lại từ 1
+            countAnim = 1;
+        }
         if (joy.Direction == new Vector2(0,0))
         {
+            tempSpeed = 0;
             //Animation
             if (Time.time < countTime + 5)
             {

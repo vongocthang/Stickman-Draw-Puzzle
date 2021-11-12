@@ -148,8 +148,8 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
-  _animationName: Idle 1
-  loop: 0
+  _animationName: 
+  loop: 1
   timeScale: 1
 --- !u!114 &1907516519001371582
 MonoBehaviour:
@@ -638,6 +638,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e08f4a064e83e504daeb4618d1141676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 8452503265834244563}
+  speed: 120
+  tempSpeed: 0
   forwardWheel: {fileID: 7208275053911904648}
   backWheel: {fileID: 7336850076102639824}
   skeletonAnim: {fileID: 8605021772660708684}
@@ -662,7 +665,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!60 &2398291353813425184
 PolygonCollider2D:

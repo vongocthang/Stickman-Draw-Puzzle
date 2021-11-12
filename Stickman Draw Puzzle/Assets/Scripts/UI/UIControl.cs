@@ -30,11 +30,8 @@ public class UIControl : MonoBehaviour
 
     public GameObject car;
 
-    //DrawLine drawLine;
-
     private void Start()
     {
-        //drawLine = GameObject.Find("Pen").GetComponent<DrawLine>();
         countStar = 3;
         tempCount = setupStar[countStar - 1];
         
@@ -69,7 +66,6 @@ public class UIControl : MonoBehaviour
             if (countStar >= 1)
             {
                 tempCount = setupStar[countStar - 1];
-                
             }
         }
 
@@ -84,14 +80,10 @@ public class UIControl : MonoBehaviour
         }
         if (countStar == 1)
         {
-
-
             star2.SetActive(false);
         }
         if (countStar == 0)
         {
-
-
             star1.SetActive(false);
         }
     }
@@ -197,5 +189,68 @@ public class UIControl : MonoBehaviour
     public void NextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+
+
+    
+    public void SceneInPage()
+    {
+        //Chế độ 1
+        if (SceneManager.GetActiveScene().buildIndex <= 80)
+        {
+            if (SceneManager.GetActiveScene().buildIndex % 15 == 0)
+            {
+                int pageNumber = SceneManager.GetActiveScene().buildIndex / 15;
+                PlayerPrefs.SetInt("PageNumber", pageNumber);
+            }
+            else
+            {
+                int pageNumber = SceneManager.GetActiveScene().buildIndex / 15 + 1;
+                PlayerPrefs.SetInt("PageNumber", pageNumber);
+            }
+        }
+        //Chế độ 2
+        if (SceneManager.GetActiveScene().buildIndex > 80 && SceneManager.GetActiveScene().buildIndex <= 100)
+        {
+            if ((SceneManager.GetActiveScene().buildIndex - 100) % 15 == 0)
+            {
+                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 80) / 15 ;
+                PlayerPrefs.SetInt("PageNumber", pageNumber);
+            }
+            else
+            {
+                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 80) / 15 + 1;
+                PlayerPrefs.SetInt("PageNumber", pageNumber);
+            }
+        }
+        //Chế độ 3
+        if (SceneManager.GetActiveScene().buildIndex > 100 && SceneManager.GetActiveScene().buildIndex <= 120)
+        {
+            if ((SceneManager.GetActiveScene().buildIndex - 100) % 15 == 0)
+            {
+                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 100) / 15;
+                PlayerPrefs.SetInt("PageNumber", pageNumber);
+            }
+            else
+            {
+                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 100) / 15 + 1;
+                PlayerPrefs.SetInt("PageNumber", pageNumber);
+            }
+        }
+        //Chế độ 4
+        if (SceneManager.GetActiveScene().buildIndex > 120 && SceneManager.GetActiveScene().buildIndex <= 140)
+        {
+            if ((SceneManager.GetActiveScene().buildIndex - 120) % 15 == 0)
+            {
+                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 120) / 15;
+                PlayerPrefs.SetInt("PageNumber", pageNumber);
+            }
+            else
+            {
+                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 120) / 15 + 1;
+                PlayerPrefs.SetInt("PageNumber", pageNumber);
+            }
+        }
     }
 }

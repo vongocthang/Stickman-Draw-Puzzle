@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SwipeMenu : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class SwipeMenu : MonoBehaviour
 
     public GameObject[] page;
 
+    public int maxUnlock;//Scene lớn nhất đã mở khóa
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +25,15 @@ public class SwipeMenu : MonoBehaviour
         {
             pos[i] = distance * i;
         }
+
+
+        if (PlayerPrefs.GetInt("PageNumber") != 0)
+        {
+            pageNumber = PlayerPrefs.GetInt("PageNumber");
+        }
+        
+        //Debug.Log(SceneManager.GetActiveScene().name);
+        //GetMaxSceneUnlock();
     }
 
     // Update is called once per frame
@@ -50,12 +62,15 @@ public class SwipeMenu : MonoBehaviour
 
     public void ChangePage()
     {
-        if (scrollbar.value != pos[pageNumber - 1])
+        if (!Input.GetMouseButton(0))
         {
-            scrollbar.value = Mathf.Lerp(scrollbar.value, pos[pageNumber - 1], 0.1f);
+            if (scrollbar.value != pos[pageNumber - 1])
+            {
+                scrollbar.value = Mathf.Lerp(scrollbar.value, pos[pageNumber - 1], 0.1f);
 
-            this.transform.GetChild(pageNumber - 1).localScale =
-                    Vector2.Lerp(this.transform.GetChild(pageNumber - 1).localScale, new Vector2(1f, 1f), 0.1f);
+                this.transform.GetChild(pageNumber - 1).localScale =
+                        Vector2.Lerp(this.transform.GetChild(pageNumber - 1).localScale, new Vector2(1f, 1f), 0.1f);
+            }
         }
     }
 
@@ -141,6 +156,26 @@ public class SwipeMenu : MonoBehaviour
                     page[i].SetActive(true);
                 }
             }
+        }
+    }
+
+    public void GetMaxSceneUnlock()
+    {
+        if(SceneManager.GetActiveScene().name=="Basic Mode")
+        {
+            maxUnlock = PlayerPrefs.GetInt("SceneUnlockBM");
+        }
+        if (SceneManager.GetActiveScene().name == "Collect Wood")
+        {
+            maxUnlock = PlayerPrefs.GetInt("SceneUnlockCW");
+        }
+        if (SceneManager.GetActiveScene().name == "Water Mode")
+        {
+            maxUnlock = PlayerPrefs.GetInt("SceneUnlockWM");
+        }
+        if (SceneManager.GetActiveScene().name == "Space Mode")
+        {
+            maxUnlock = PlayerPrefs.GetInt("SceneUnlockSM");
         }
     }
 }
