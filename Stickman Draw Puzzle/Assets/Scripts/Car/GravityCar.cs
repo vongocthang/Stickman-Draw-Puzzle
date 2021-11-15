@@ -48,9 +48,9 @@ public class GravityCar : MonoBehaviour
         //Animation
         if (joy.Direction.x < 0)
         {
-            skeletonAnim.AnimationName = "Forward";
             if (this.name == "CarLeft")
             {
+                skeletonAnim.AnimationName = "Forward";
                 goc += 180;
                 Quaternion x = forwardWheel.transform.rotation;
                 Quaternion y = Quaternion.Euler(0, 0, goc);
@@ -60,6 +60,7 @@ public class GravityCar : MonoBehaviour
             }
             else
             {
+                skeletonAnim.AnimationName = "Backward";
                 //goc += 90;
                 Quaternion x = forwardWheel.transform.rotation;
                 Quaternion y = Quaternion.Euler(0, 0, goc);
@@ -71,10 +72,9 @@ public class GravityCar : MonoBehaviour
         }
         if(joy.Direction.x > 0)
         {
-            skeletonAnim.AnimationName = "Backward";
-
             if (this.name == "CarLeft")
             {
+                skeletonAnim.AnimationName = "Backward";
                 Quaternion x = forwardWheel.transform.rotation;
                 Quaternion y = Quaternion.Euler(0, 0, -goc);
 
@@ -83,6 +83,7 @@ public class GravityCar : MonoBehaviour
             }
             else
             {
+                skeletonAnim.AnimationName = "Forward";
                 goc += 180;
                 Quaternion x = forwardWheel.transform.rotation;
                 Quaternion y = Quaternion.Euler(0, 0, -goc);

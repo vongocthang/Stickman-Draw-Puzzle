@@ -52,7 +52,7 @@ public class HomeUI : MonoBehaviour
         //    PlayerPrefs.SetInt("Pen" + i.ToString(), 0);
         //}
 
-        //for (int i = 1; i <= 50; i++)
+        //for (int i = 1; i <= 80; i++)
         //{
         //    PlayerPrefs.SetInt("M1StarLevel" + i.ToString(), 0);
         //}

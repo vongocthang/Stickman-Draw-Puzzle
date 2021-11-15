@@ -73,31 +73,6 @@ public class TempDrawLine : MonoBehaviour
 
         //////////////////////////////////////////////////////////////////////////////////
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (hit)
-            {
-                blocked = true;
-            }
-            else
-            {
-                BeginDraw();
-            }
-        }
-        if (Input.GetMouseButton(0))
-        {
-            if (uiControl.stopDrawLine == false)
-            {
-                Draw();
-            }
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            EndDraw();
-        }
-
-        ////////////////////////////////////////////////////////////////////////////////
-
         //if (Input.GetMouseButtonDown(0))
         //{
         //    if (hit)
@@ -109,14 +84,39 @@ public class TempDrawLine : MonoBehaviour
         //        BeginDraw();
         //    }
         //}
-        //if (Input.touchCount == 1)
+        //if (Input.GetMouseButton(0))
         //{
-        //    Draw();
+        //    if (uiControl.stopDrawLine == false)
+        //    {
+        //        Draw();
+        //    }
         //}
         //if (Input.GetMouseButtonUp(0))
         //{
         //    EndDraw();
         //}
+
+        ////////////////////////////////////////////////////////////////////////////////
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (hit)
+            {
+                blocked = true;
+            }
+            else
+            {
+                BeginDraw();
+            }
+        }
+        if (Input.touchCount == 1)
+        {
+            Draw();
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            EndDraw();
+        }
     }
 
     public void BeginDraw()
@@ -231,8 +231,8 @@ public class TempDrawLine : MonoBehaviour
 
     public void CheckBlockLayer()
     {
-        //mousePos = cam.ScreenToWorldPoint(Input.GetTouch(0).position);
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = cam.ScreenToWorldPoint(Input.GetTouch(0).position);
+        //mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         hit = Physics2D.CircleCast(mousePos, lineWidth / 2f, Vector2.zero, 0.1f, blockLayer);
     }
 
