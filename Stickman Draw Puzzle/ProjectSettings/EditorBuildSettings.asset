@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Start.unity
+    path: Assets/Scenes/UI/Start.unity
     guid: ca0d830aceb6e5e41bc119ea60378e20
   - enabled: 1
     path: Assets/Scenes/Basic Mode/bm01.unity
@@ -429,21 +429,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Mode 4/sm20.unity
     guid: 34a11a8424e300948908b04ecd74dab5
   - enabled: 1
-    path: Assets/Scenes/Home.unity
+    path: Assets/Scenes/UI/Home.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Shop.unity
+    path: Assets/Scenes/UI/Shop.unity
     guid: 49c880a4196950c419f4855a750cc8a4
   - enabled: 1
-    path: Assets/Scenes/Basic Mode.unity
+    path: Assets/Scenes/UI/Basic Mode.unity
     guid: 2f9fed084268534439d2127ae03f3807
   - enabled: 1
-    path: Assets/Scenes/Collect Wood.unity
+    path: Assets/Scenes/UI/Collect Wood.unity
     guid: e32a895cf88ec62449432963aed341e6
   - enabled: 1
-    path: Assets/Scenes/Water Mode.unity
+    path: Assets/Scenes/UI/Water Mode.unity
     guid: d010ac337a0a8eb4cbe881854093a71d
   - enabled: 1
-    path: Assets/Scenes/Space Mode.unity
+    path: Assets/Scenes/UI/Space Mode.unity
     guid: 1dc69b3cb051afe448ea326bbae90c38
   m_configObjects: {}

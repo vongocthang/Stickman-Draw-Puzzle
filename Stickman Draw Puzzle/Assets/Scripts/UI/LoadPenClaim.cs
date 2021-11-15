@@ -19,6 +19,8 @@ public class LoadPenClaim : MonoBehaviour
 
     public Transform center;
 
+    public GameObject effects;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,7 +69,11 @@ public class LoadPenClaim : MonoBehaviour
 
             slider.gameObject.SetActive(false);
         }
-        
+
+        if (Vector2.Distance(this.transform.position, center.position) == 0)
+        {
+            effects.SetActive(true);
+        }
     }
 
     public void LoadPen()

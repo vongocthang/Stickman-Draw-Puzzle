@@ -213,7 +213,7 @@ public class UIControl : MonoBehaviour
         //Chế độ 2
         if (SceneManager.GetActiveScene().buildIndex > 80 && SceneManager.GetActiveScene().buildIndex <= 100)
         {
-            if ((SceneManager.GetActiveScene().buildIndex - 100) % 15 == 0)
+            if ((SceneManager.GetActiveScene().buildIndex - 80) % 15 == 0)
             {
                 int pageNumber = (SceneManager.GetActiveScene().buildIndex - 80) / 15 ;
                 PlayerPrefs.SetInt("PageNumber", pageNumber);

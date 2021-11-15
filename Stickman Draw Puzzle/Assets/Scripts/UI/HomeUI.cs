@@ -82,6 +82,8 @@ public class HomeUI : MonoBehaviour
         //PlayerPrefs.SetInt("SceneUnlockedWM", 0);
         //PlayerPrefs.SetInt("SceneUnlockedSM", 0);
 
+        //PlayerPrefs.SetInt("PageNumber", 1);
+
         ////////////////////////////////////////////////////////////////////////////////////////////////
 
         PlayerPrefs.SetInt("Pen0", 1);
