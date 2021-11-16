@@ -11,7 +11,8 @@ public class BasicModeGC : MonoBehaviour
     public GameObject winGame;
     public TMP_Text countTime;
 
-    float threeSecond = 0;
+    float threeSecond = 3;
+    float tempSecond = 0;
 
     //Điều khiển thanh nâng của xe
     public bool up, down;
@@ -36,7 +37,7 @@ public class BasicModeGC : MonoBehaviour
 
     public void WinGame()
     {
-        if (threeSecond >= 3)
+        if (threeSecond == 0)
         {
             //Tắt vẽ Line
             drawLine.enabled = false;
@@ -65,19 +66,20 @@ public class BasicModeGC : MonoBehaviour
     {
         if (target.beginCountTime == true)
         {
-            countTime.enabled = true;
-
-            if (Time.time > target.timeLine + threeSecond + 1)
+            if (Time.time > target.timeLine + tempSecond + 1)
             {
-                threeSecond++;
+                threeSecond--;
+                tempSecond++;
                 countTime.text = threeSecond.ToString();
             }
+            countTime.enabled = true;
         }
 
         if (target.beginCountTime == false)
         {
-            countTime.text = 0.ToString();
-            threeSecond = 0;
+            countTime.text = 3.ToString();
+            threeSecond = 3;
+            tempSecond = 0;
             countTime.enabled = false;
         }
     }

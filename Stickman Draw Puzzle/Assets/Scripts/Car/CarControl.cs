@@ -10,7 +10,7 @@ public class CarControl : MonoBehaviour
 {
     public Rigidbody2D rb2D;
     public float moveSpeed;
-    public float tempMoveSpeed;
+    //public float tempMoveSpeed;
     public TargetJoint2D targetJoint;
     public int countToON = 0;
 
@@ -60,10 +60,10 @@ public class CarControl : MonoBehaviour
                 skeletonAnim.AnimationName = "Backward";
             }
             //Tốc độ tăng dần
-            if (Mathf.Abs(tempMoveSpeed) < moveSpeed)
-            {
-                tempMoveSpeed -= 2;
-            }
+            //if (Mathf.Abs(tempMoveSpeed) < moveSpeed)
+            //{
+            //    tempMoveSpeed -= 2;
+            //}
             if (zRotation > 0.02)
             {
                 //Debug.Log("Xuống dốc phải");
@@ -72,7 +72,8 @@ public class CarControl : MonoBehaviour
             {
                 if (countToON >= 1)
                 {
-                    rb2D.velocity = new Vector2(tempMoveSpeed * Time.deltaTime, 0f);
+                    //rb2D.velocity = new Vector2(tempMoveSpeed * Time.deltaTime, 0f);
+                    rb2D.velocity = new Vector2(-moveSpeed * Time.deltaTime, 0f);
                 }
                 //Debug.Log("Lên dốc trái");
                 //rb2D.velocity = new Vector2(tempMoveSpeed * Time.deltaTime, 0f);
@@ -93,10 +94,10 @@ public class CarControl : MonoBehaviour
                 skeletonAnim.AnimationName = "Forward";
             }
             //Tốc độ tăng dần
-            if (Mathf.Abs(tempMoveSpeed) < moveSpeed)
-            {
-                tempMoveSpeed += 2;
-            }
+            //if (Mathf.Abs(tempMoveSpeed) < moveSpeed)
+            //{
+            //    tempMoveSpeed += 2;
+            //}
             if (zRotation < -0.02)
             {
                 //Debug.Log("Xuống dốc trái");
@@ -105,7 +106,8 @@ public class CarControl : MonoBehaviour
             {
                 if (countToON >= 1)
                 {
-                    rb2D.velocity = new Vector2(tempMoveSpeed * Time.deltaTime, 0f);
+                    //rb2D.velocity = new Vector2(tempMoveSpeed * Time.deltaTime, 0f);
+                    rb2D.velocity = new Vector2(moveSpeed * Time.deltaTime, 0f);
                 }
                 //Debug.Log("Lên dốc phải");
                 //rb2D.velocity = new Vector2(tempMoveSpeed * Time.deltaTime, 0f);
@@ -124,7 +126,7 @@ public class CarControl : MonoBehaviour
                 targetJoint.enabled = false;
             }
             //targetJoint.enabled = true;
-            tempMoveSpeed = 0;
+            //tempMoveSpeed = 0;
             //Animation
             if(Time.time < countTime + 5)
             {

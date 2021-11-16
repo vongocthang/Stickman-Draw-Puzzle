@@ -24,12 +24,22 @@ public class WoodBlock : MonoBehaviour
     {
         if (collision.tag == "Truck")
         {
-            
             collectWood.countWood++;
-            if (collectWood.countWood == woodMax)
+            if (woodMax >= 5)
             {
-                collectWood.timeLine = Time.time;
-                collectWood.beginCountTime = true;
+                if (collectWood.countWood >= woodMax / 2 +1)
+                {
+                    collectWood.timeLine = Time.time;
+                    collectWood.beginCountTime = true;
+                }
+            }
+            else
+            {
+                if (collectWood.countWood == woodMax)
+                {
+                    collectWood.timeLine = Time.time;
+                    collectWood.beginCountTime = true;
+                }
             }
         }
     }
@@ -38,11 +48,22 @@ public class WoodBlock : MonoBehaviour
     {
         if (collision.tag == "Truck")
         {
-            if (collectWood.countWood == woodMax)
-            {
-                collectWood.beginCountTime = false;
-            }
             collectWood.countWood--;
+            if (woodMax >= 5)
+            {
+                if (collectWood.countWood < woodMax / 2 + 1)
+                {
+                    collectWood.beginCountTime = false;
+                }
+            }
+            else
+            {
+                if (collectWood.countWood < woodMax)
+                {
+                    collectWood.timeLine = Time.time;
+                    collectWood.beginCountTime = false;
+                }
+            }
         }
     }
 }

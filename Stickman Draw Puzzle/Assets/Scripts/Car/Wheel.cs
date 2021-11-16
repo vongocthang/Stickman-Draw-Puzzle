@@ -12,7 +12,7 @@ public class Wheel : MonoBehaviour
 
     UIControl uiControl;
 
-    // Start is called before the first frame update 
+    // Start is called before the first frame update
     void Start()
     {
         wheel = GetComponent<WheelJoint2D>();
@@ -29,10 +29,24 @@ public class Wheel : MonoBehaviour
 
     public void WheelRotate()
     {
-        float carSpeed = carControl.tempMoveSpeed;
+        //float carSpeed = carControl.tempMoveSpeed;
 
-        motor.motorSpeed = carSpeed * speed;
+        //motor.motorSpeed = carSpeed * speed;
+        //motor.motorSpeed = carControl.moveSpeed * speed;
         wheel.motor = motor;
+
+        if (uiControl.moveLeft == true)
+        {
+            motor.motorSpeed = -carControl.moveSpeed * speed;
+        }
+        if (uiControl.moveRight == true)
+        {
+            motor.motorSpeed = carControl.moveSpeed * speed;
+        }
+        if(uiControl.moveLeft == false && uiControl.moveRight == false)
+        {
+            motor.motorSpeed = 0;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

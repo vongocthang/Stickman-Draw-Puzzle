@@ -81,7 +81,10 @@ public class TempDrawLine : MonoBehaviour
             }
             else
             {
-                BeginDraw();
+                if (uiControl.stopDrawLine == false)
+                {
+                    BeginDraw();
+                }
             }
         }
         if (Input.GetMouseButton(0))
@@ -106,12 +109,18 @@ public class TempDrawLine : MonoBehaviour
         //    }
         //    else
         //    {
-        //        BeginDraw();
+        //        if (uiControl.stopDrawLine == false)
+        //        {
+        //            BeginDraw();
+        //        }
         //    }
         //}
         //if (Input.touchCount == 1)
         //{
-        //    Draw();
+        //    if (uiControl.stopDrawLine == false)
+        //    {
+        //        Draw();
+        //    }
         //}
         //if (Input.GetMouseButtonUp(0))
         //{

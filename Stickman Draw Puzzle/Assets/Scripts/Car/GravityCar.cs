@@ -18,8 +18,6 @@ public class GravityCar : MonoBehaviour
     public float countTime;
 
     FixedJoystick joy;
-
-    float tempGoc = 0;
     float goc = 0;
 
 
@@ -27,7 +25,6 @@ public class GravityCar : MonoBehaviour
     void Start()
     {
         joy = GameObject.FindObjectOfType<FixedJoystick>();
-        tempGoc = forwardWheel.transform.rotation.z * Mathf.Rad2Deg;
     }
 
     // Update is called once per frame
@@ -48,9 +45,9 @@ public class GravityCar : MonoBehaviour
         //Animation
         if (joy.Direction.x < 0)
         {
-            skeletonAnim.AnimationName = "Forward";
             if (this.name == "CarLeft")
             {
+                skeletonAnim.AnimationName = "Forward";
                 goc += 180;
                 Quaternion x = forwardWheel.transform.rotation;
                 Quaternion y = Quaternion.Euler(0, 0, goc);
@@ -60,6 +57,7 @@ public class GravityCar : MonoBehaviour
             }
             else
             {
+                skeletonAnim.AnimationName = "Backward";
                 //goc += 90;
                 Quaternion x = forwardWheel.transform.rotation;
                 Quaternion y = Quaternion.Euler(0, 0, goc);
@@ -71,10 +69,9 @@ public class GravityCar : MonoBehaviour
         }
         if(joy.Direction.x > 0)
         {
-            skeletonAnim.AnimationName = "Backward";
-
             if (this.name == "CarLeft")
             {
+                skeletonAnim.AnimationName = "Backward";
                 Quaternion x = forwardWheel.transform.rotation;
                 Quaternion y = Quaternion.Euler(0, 0, -goc);
 
@@ -83,6 +80,7 @@ public class GravityCar : MonoBehaviour
             }
             else
             {
+                skeletonAnim.AnimationName = "Forward";
                 goc += 180;
                 Quaternion x = forwardWheel.transform.rotation;
                 Quaternion y = Quaternion.Euler(0, 0, -goc);
@@ -94,13 +92,9 @@ public class GravityCar : MonoBehaviour
 
         if(joy.Direction != new Vector2(0, 0))
         {
-            tempSpeed = Mathf.Lerp(tempSpeed, speed, 1 * Time.deltaTime);
-            rb.velocity = new Vector2(joy.Direction.x * tempSpeed * Time.deltaTime,
-                joy.Direction.y * tempSpeed * Time.deltaTime);
-            //rb.AddForce(new Vector2(joy.Direction.x * speed * Time.deltaTime,
-            //    joy.Direction.y * speed * Time.deltaTime));
-
-            //Animation reset lại từ 1
+            //tempSpeed = Mathf.Lerp(tempSpeed, speed, 1 * Time.deltaTime);
+            rb.velocity = new Vector2(joy.Direction.x * speed * Time.deltaTime,
+                joy.Direction.y * speed * Time.deltaTime);
             countAnim = 1;
         }
         if (joy.Direction == new Vector2(0,0))

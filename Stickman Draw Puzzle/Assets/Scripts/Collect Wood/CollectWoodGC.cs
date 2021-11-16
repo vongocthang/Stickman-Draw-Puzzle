@@ -14,7 +14,9 @@ public class CollectWoodGC : MonoBehaviour
 
 
     public float timeLine;
-    public float threeSecond = 0;
+    float threeSecond = 3;
+    float tempSecond = 0;
+
 
     public TempDrawLine drawLine;
 
@@ -34,7 +36,7 @@ public class CollectWoodGC : MonoBehaviour
 
     public void WinGame()
     {
-        if (threeSecond >= 3)
+        if (threeSecond == 0)
         {
             drawLine.enabled = false;
 
@@ -55,20 +57,23 @@ public class CollectWoodGC : MonoBehaviour
         //Điều kiện thỏa mãn để bắt đầu đếm
         if (beginCountTime == true)
         {
-            countTime.enabled = true;
-            if (Time.time > timeLine + threeSecond + 1)
+            
+            if (Time.time > timeLine + tempSecond + 1)
             {
-                threeSecond++;
+                tempSecond++;
+                threeSecond--;
                 countTime.text = threeSecond.ToString();
             }
+            countTime.enabled = true;
         }
 
         //Nếu đang đếm mà điều kiện không thỏa mãn nữa thì
         if (countTime.enabled == true && beginCountTime == false)
         {
             countTime.enabled = false;
-            threeSecond = 0;
-            countTime.text = 0.ToString();
+            threeSecond = 3;
+            tempSecond = 0;
+            countTime.text = 3.ToString();
         }
     }
 

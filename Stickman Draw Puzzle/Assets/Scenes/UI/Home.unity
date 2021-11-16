@@ -362,6 +362,82 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 074e72e91f5931047aa6351be2c1a135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scaleX: 0
+  scaleY: 0
+--- !u!1 &17981304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 17981305}
+  - component: {fileID: 17981307}
+  - component: {fileID: 17981306}
+  m_Layer: 5
+  m_Name: Worlds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &17981305
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17981304}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 403341918}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 100}
+  m_SizeDelta: {x: 500, y: 120}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &17981306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17981304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: cd980f500f6b3cb459206a9d0b180f78, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &17981307
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17981304}
+  m_CullTransparentMesh: 0
 --- !u!1 &28642269
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,6 +580,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 074e72e91f5931047aa6351be2c1a135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scaleX: 0
+  scaleY: 0
 --- !u!1 &53231507
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,6 +1032,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 074e72e91f5931047aa6351be2c1a135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scaleX: 0
+  scaleY: 0
 --- !u!114 &166133791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1105,6 +1185,7 @@ RectTransform:
   - {fileID: 502840808}
   - {fileID: 1656360670}
   - {fileID: 1719686970}
+  - {fileID: 17981305}
   m_Father: {fileID: 1526521073}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1293,6 +1374,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 074e72e91f5931047aa6351be2c1a135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scaleX: 0
+  scaleY: 0
 --- !u!1 &502840807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1833,6 +1916,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 074e72e91f5931047aa6351be2c1a135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scaleX: 0
+  scaleY: 0
 --- !u!114 &897204340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2307,7 +2392,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1ea81169f5f4c724a93f34f981197554, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 74de2fcf99320b348a4d037c91d44cce, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2391,6 +2476,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 074e72e91f5931047aa6351be2c1a135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scaleX: 0
+  scaleY: 0
 --- !u!1 &1391496070
 GameObject:
   m_ObjectHideFlags: 0
@@ -2442,6 +2529,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 074e72e91f5931047aa6351be2c1a135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scaleX: 0
+  scaleY: 0
 --- !u!114 &1391496073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2513,6 +2602,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1391496072}
           m_MethodName: UpEffects
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1526521074}
+          m_MethodName: LoadToVideoEditor
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3398,7 +3498,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1ea81169f5f4c724a93f34f981197554, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 64ad2cf665c67cf4a8067887a1d77248, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3482,6 +3582,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 074e72e91f5931047aa6351be2c1a135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scaleX: 0
+  scaleY: 0
 --- !u!1 &1947713763
 GameObject:
   m_ObjectHideFlags: 0
@@ -3675,7 +3777,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1ea81169f5f4c724a93f34f981197554, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a1d1b02828fa37244a0eec2ab4e7fd3f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3759,6 +3861,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 074e72e91f5931047aa6351be2c1a135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scaleX: 0
+  scaleY: 0
 --- !u!1 &2116276022
 GameObject:
   m_ObjectHideFlags: 0
@@ -3810,6 +3914,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 074e72e91f5931047aa6351be2c1a135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scaleX: 0
+  scaleY: 0
 --- !u!114 &2116276025
 MonoBehaviour:
   m_ObjectHideFlags: 0
