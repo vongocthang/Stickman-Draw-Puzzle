@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Mode 3/wm20.unity
+=======
+- path: Assets/Scenes/Mode 4/sm01.unity
+>>>>>>> 1ad4ac640a648a00ffdba7ba202a1d064cdca1f1
   isLoaded: 1
   isActive: 1
   isSubScene: 0
