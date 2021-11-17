@@ -50,6 +50,9 @@ public class UIControl : MonoBehaviour
         }
 
         SetPenLoad();
+
+        //Temp
+        ShowLevelNumber();
     }
 
     private void Update()
@@ -258,5 +261,34 @@ public class UIControl : MonoBehaviour
     public void LoadToVideoEditor()
     {
         SceneManager.LoadSceneAsync("ToVideoEditor");
+    }
+
+    //Hiện tên level ở mỗi màn chơi tạm thời
+    public void ShowLevelNumber()
+    {
+        //Chế độ 1
+        if (SceneManager.GetActiveScene().buildIndex <= 80)
+        {
+            GameObject.Find("ShowLevelNumber").GetComponent<TMP_Text>().text = "Level " +
+                SceneManager.GetActiveScene().buildIndex.ToString();
+        }
+        //Chế độ 2
+        if (SceneManager.GetActiveScene().buildIndex > 80 && SceneManager.GetActiveScene().buildIndex <= 100)
+        {
+            GameObject.Find("ShowLevelNumber").GetComponent<TMP_Text>().text = "Level " +
+                (SceneManager.GetActiveScene().buildIndex - 80).ToString();
+        }
+        //Chế độ 3
+        if (SceneManager.GetActiveScene().buildIndex > 100 && SceneManager.GetActiveScene().buildIndex <= 120)
+        {
+            GameObject.Find("ShowLevelNumber").GetComponent<TMP_Text>().text = "Level " +
+                (SceneManager.GetActiveScene().buildIndex - 100).ToString();
+        }
+        //Chế độ 4
+        if (SceneManager.GetActiveScene().buildIndex > 120 && SceneManager.GetActiveScene().buildIndex <= 140)
+        {
+            GameObject.Find("ShowLevelNumber").GetComponent<TMP_Text>().text = "Level " +
+                (SceneManager.GetActiveScene().buildIndex - 120).ToString();
+        }
     }
 }

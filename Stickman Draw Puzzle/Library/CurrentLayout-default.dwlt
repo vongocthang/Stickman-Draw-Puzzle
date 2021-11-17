@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: -1640
-    y: 174
+    x: -1344
+    y: 16
     width: 1300
-    height: 737
+    height: 728
   m_ShowMode: 0
   m_Title: 
   m_RootView: {fileID: 4}
@@ -66,7 +66,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1300
-    height: 737
+    height: 728
   m_MinSize: {x: 100, y: 121}
   m_MaxSize: {x: 4000, y: 4021}
   m_ActualView: {fileID: 18}
@@ -94,11 +94,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1300
-    height: 737
+    height: 728
   m_MinSize: {x: 100, y: 121}
   m_MaxSize: {x: 4000, y: 4021}
   vertical: 0
-  controlID: 10920
+  controlID: 189
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -118,8 +118,8 @@ MonoBehaviour:
     y: 0
     width: 604
     height: 374
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 25}
   m_Panes:
   - {fileID: 25}
@@ -146,10 +146,10 @@ MonoBehaviour:
     y: 573
     width: 1530
     height: 374
-  m_MinSize: {x: 433, y: 271}
-  m_MaxSize: {x: 14003, y: 10021}
+  m_MinSize: {x: 432, y: 271}
+  m_MaxSize: {x: 14002, y: 10021}
   vertical: 0
-  controlID: 242
+  controlID: 149
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -195,8 +195,8 @@ MonoBehaviour:
     y: 0
     width: 420
     height: 573
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 23}
   m_Panes:
   - {fileID: 23}
@@ -223,10 +223,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 779, y: 492}
-  m_MaxSize: {x: 18004, y: 14042}
+  m_MinSize: {x: 780, y: 492}
+  m_MaxSize: {x: 18002, y: 14042}
   vertical: 0
-  controlID: 83
+  controlID: 18
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -246,8 +246,8 @@ MonoBehaviour:
     y: 0
     width: 390
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 22}
@@ -367,10 +367,10 @@ MonoBehaviour:
     y: 0
     width: 1530
     height: 947
-  m_MinSize: {x: 503, y: 492}
-  m_MaxSize: {x: 14003, y: 14042}
+  m_MinSize: {x: 505, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 1
-  controlID: 42
+  controlID: 105
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -393,10 +393,10 @@ MonoBehaviour:
     y: 0
     width: 1530
     height: 573
-  m_MinSize: {x: 503, y: 221}
-  m_MaxSize: {x: 12003, y: 4021}
+  m_MinSize: {x: 505, y: 221}
+  m_MaxSize: {x: 12005, y: 4021}
   vertical: 0
-  controlID: 133
+  controlID: 106
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -416,8 +416,8 @@ MonoBehaviour:
     y: 0
     width: 707
     height: 573
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 24}
   m_Panes:
   - {fileID: 24}
@@ -445,10 +445,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1640
-    y: 174
+    x: -1344
+    y: 16
     width: 1300
-    height: 716
+    height: 707
   m_ViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
     m_KeySerializationHelper:
@@ -635,7 +635,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 130710
+  m_LastSelectedObjectID: -39728
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -701,35 +701,34 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/AnimationForUI/Home
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/AnimationForUI/Home
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Administrator\Desktop\Puzzle\Stickman-Draw-Puzzle\Stickman
-    Draw Puzzle
+  m_LastProjectPath: C:\Github\Stickman-Draw-Puzzle\Stickman Draw Puzzle
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 111}
-    m_SelectedIDs: 50ab0000
-    m_LastClickedID: 43856
-    m_ExpandedIDs: 00000000cc530000ce530000d0530000d2530000d4530000d6530000d8530000da530000dc530000de530000e0530000e2530000e4530000045400000654000008540000607c000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: f6530000
+    m_LastClickedID: 21494
+    m_ExpandedIDs: 00000000f4530000f6530000f8530000fa530000fc530000fe53000000540000025400000454000006540000085400000a5400000c5400000e5400001054000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Mode 1+2
-      m_OriginalName: Mode 1+2
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 21490
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_SearchString: 
@@ -743,7 +742,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000cc530000ce530000d0530000d2530000d4530000d6530000d8530000da530000dc530000de530000e0530000e2530000e4530000
+    m_ExpandedIDs: 00000000f4530000f6530000f8530000fa530000fc530000fe53000000540000025400000454000006540000085400000a5400000c5400000e54000010540000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -866,23 +865,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 8242ffff
+      m_SelectedIDs: 9a3b0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 0243ffff2a43ffffe67affffd287ffff24a6ffff7ea6ffffbcb4ffffa4d0ffffd4d0ffff3adeffffb8e2ffff6ceaffff74eaffff42f4ffff3af5ffff667f0000e89b0000489c000068aa0000bcaa0000c6d700001cd8000062360100b8360100c8360100a6fe0100
+      m_ExpandedIDs: 30e8fcff44e8fcff30e9fcff12eefcfff4f2fcffd6f7fcff0cf8fcff42f8fcff78f8fcff2cf9fcff4cf9fcff62f9fcffd8fdfcff4e02fdffc406fdff3a0bfdffb00ffdffbc0ffdff3214fdffa818fdff1e1dfdff9421fdff0a26fdff802afdfff62efdff6c33fdffe237fdff583cfdffce40fdff4445fdffba49fdffc849fdff264efdff8452fdffe256fdff405bfdff9e5ffdfffc63fdff5a68fdffb86cfdff1671fdff7475fdffd279fdff307efdff8e82fdffec86fdff4a8bfdffa88ffdff0694fdff6498fdffc29cfdff20a1fdff2ca1fdff74a5fdffbca9fdff04aefdff10aefdff58b2fdffa0b6fdffacb6fdfff4bafdff3cbffdff84c3fdffccc7fdff14ccfdff5cd0fdffa4d4fdffecd8fdff34ddfdff7ce1fdffc4e5fdff10eafdff9eeefdff2cf3fdffbaf7fdff48fcfdffd800feff6605fefff409feff820efeff1013feff9e17feff2c1cfeffba20feff4825feffd629feff642efefff232feff8037feff0e3cfeff9c40feff2a45feffb849feff464efeffd452feff5a57feffe85bfeff7660feff0465feff9269feff206efeffae72feff3c77feffca7bfeff5880feffe684feff7489feff028efeff9092feff1e97feffac9bfeff3aa0feffc8a4feff56a9feffe4adfeff72b2feff00b7feff8ebbfeff1cc0feffaac4feff38c9feffc6cdfeff54d2feffe2d6feff70dbfefffedffeff8ce4feff1ae9feffa8edfeff36f2feffc4f6feff52fbfeffe0fffeff6e04fffffc08ffff8a0dffff1812ffffa616ffff341bffffc21fffff5024ffffde28ffff6c2dfffffa31ffff8836ffff163bffffa43fffff3244ffffc048ffff4e4dffffdc51ffff7056ffff8456ffff0865ffffb471ffff3c7effffa68bffff3890ffff9294ffff46f1fffff0f1ffff7ef6ffff34f7ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Stickman
-        m_OriginalName: Stickman
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 79458
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
