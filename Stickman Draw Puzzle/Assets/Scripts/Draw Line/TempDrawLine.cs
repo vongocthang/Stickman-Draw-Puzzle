@@ -73,7 +73,6 @@ public class TempDrawLine : MonoBehaviour
 
         //////////////////////////////////////////////////////////////////////////////////
 
-<<<<<<< HEAD
         if (Input.GetMouseButtonDown(0))
         {
             if (hit)
@@ -102,8 +101,6 @@ public class TempDrawLine : MonoBehaviour
 
         ////////////////////////////////////////////////////////////////////////////////
 
-=======
->>>>>>> 1ad4ac640a648a00ffdba7ba202a1d064cdca1f1
         //if (Input.GetMouseButtonDown(0))
         //{
         //    if (hit)
@@ -118,7 +115,7 @@ public class TempDrawLine : MonoBehaviour
         //        }
         //    }
         //}
-        //if (Input.GetMouseButton(0))
+        //if (Input.touchCount == 1)
         //{
         //    if (uiControl.stopDrawLine == false)
         //    {
@@ -129,28 +126,6 @@ public class TempDrawLine : MonoBehaviour
         //{
         //    EndDraw();
         //}
-
-        ////////////////////////////////////////////////////////////////////////////////
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (hit)
-            {
-                blocked = true;
-            }
-            else
-            {
-                BeginDraw();
-            }
-        }
-        if (Input.touchCount == 1)
-        {
-            Draw();
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            EndDraw();
-        }
     }
 
     public void BeginDraw()
@@ -265,8 +240,8 @@ public class TempDrawLine : MonoBehaviour
 
     public void CheckBlockLayer()
     {
-        mousePos = cam.ScreenToWorldPoint(Input.GetTouch(0).position);
-        //mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        //mousePos = cam.ScreenToWorldPoint(Input.GetTouch(0).position);
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         hit = Physics2D.CircleCast(mousePos, lineWidth / 2f, Vector2.zero, 0.1f, blockLayer);
     }
 
