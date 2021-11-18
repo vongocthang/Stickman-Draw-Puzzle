@@ -21,11 +21,16 @@ public class BasicModeGC : MonoBehaviour
 
     TempDrawLine drawLine;
 
+    GameObject phaoHoa;
+
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.Find("Target").GetComponent<Target>();
         drawLine = GameObject.Find("Draw Line").GetComponent<TempDrawLine>();
+
+        phaoHoa = GameObject.Find("Phao Hoa");
+        phaoHoa.SetActive(false);
     }
 
     // Update is called once per frame
@@ -47,16 +52,10 @@ public class BasicModeGC : MonoBehaviour
             {
                 PlayerPrefs.SetInt("SceneUnlockedBM", SceneManager.GetActiveScene().buildIndex + 1);
             }
-            
-            //int b = PlayerPrefs.GetInt("StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString());
-            //if (b < uiControl.countStar)
-            //{
-            //    PlayerPrefs.SetInt("StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString(), uiControl.countStar);
-            //    //Debug.Log("Sao dat dc= " + PlayerPrefs.GetInt("StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString()));
-            //}
-            
 
-            StartCoroutine(DisabledCountTime());
+            phaoHoa.SetActive(true);
+
+            StartCoroutine(ActiveWinGame());
         }
 
     }
@@ -68,9 +67,13 @@ public class BasicModeGC : MonoBehaviour
         {
             if (Time.time > target.timeLine + tempSecond + 1)
             {
-                threeSecond--;
-                tempSecond++;
-                countTime.text = threeSecond.ToString();
+                if (tempSecond < 3)
+                {
+                    threeSecond--;
+                    tempSecond++;
+                    countTime.text = threeSecond.ToString();
+                }
+                
             }
             countTime.enabled = true;
         }
@@ -84,12 +87,11 @@ public class BasicModeGC : MonoBehaviour
         }
     }
 
-    IEnumerator DisabledCountTime()
+    IEnumerator ActiveWinGame()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(3.2f);
 
         winGame.SetActive(true);
-        target.beginCountTime = false;
     }
 
     //Điều khiển nâng

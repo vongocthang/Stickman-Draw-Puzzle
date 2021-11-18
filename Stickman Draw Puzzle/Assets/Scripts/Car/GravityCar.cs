@@ -24,12 +24,13 @@ public class GravityCar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        joy = GameObject.FindObjectOfType<FixedJoystick>();
+        //joy = GameObject.FindObjectOfType<FixedJoystick>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        joy = GameObject.FindObjectOfType<FixedJoystick>();
         Move();
     }
 

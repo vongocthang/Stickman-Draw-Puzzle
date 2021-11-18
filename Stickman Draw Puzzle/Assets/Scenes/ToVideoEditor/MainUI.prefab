@@ -4042,6 +4042,7 @@ MonoBehaviour:
   claimButton: {fileID: 1274959759049208948}
   center: {fileID: 6640201417017320737}
   effects: {fileID: 1132414875559899672}
+  backgroundOFF: {fileID: 0}
 --- !u!1 &1274959758384171550
 GameObject:
   m_ObjectHideFlags: 0
@@ -6774,6 +6775,7 @@ MonoBehaviour:
   claimButton: {fileID: 606586775399503187}
   center: {fileID: 6640201417017320737}
   effects: {fileID: 7023396700434577773}
+  backgroundOFF: {fileID: 0}
 --- !u!1 &4051693359619899034
 GameObject:
   m_ObjectHideFlags: 0
@@ -11292,6 +11294,7 @@ MonoBehaviour:
   claimButton: {fileID: 4532057432104206492}
   center: {fileID: 6640201417017320737}
   effects: {fileID: 2386509914671500780}
+  backgroundOFF: {fileID: 0}
 --- !u!1 &6467953732335632218
 GameObject:
   m_ObjectHideFlags: 0
@@ -11504,6 +11507,7 @@ MonoBehaviour:
   claimButton: {fileID: 4195195938465644680}
   center: {fileID: 6640201417017320737}
   effects: {fileID: 8295929402819196124}
+  backgroundOFF: {fileID: 0}
 --- !u!1 &7023396700434577773
 GameObject:
   m_ObjectHideFlags: 0
@@ -12212,6 +12216,7 @@ MonoBehaviour:
   claimButton: {fileID: 2235759297115766605}
   center: {fileID: 6640201417017320737}
   effects: {fileID: 7529614670356714152}
+  backgroundOFF: {fileID: 0}
 --- !u!1 &8132737838420568040
 GameObject:
   m_ObjectHideFlags: 0

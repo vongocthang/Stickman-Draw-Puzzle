@@ -17,15 +17,23 @@ public class LoadPenClaim : MonoBehaviour
 
     UIControl uiControl;
 
-    public Transform center;
+    public Transform lightEffects;
 
-    public GameObject effects;
+    public GameObject blackBackground;
+
+    public Image backgroundOFF;
+
+    public Animator anim;
+
+    bool beginLoad;
 
     // Start is called before the first frame update
     void Start()
     {
-        //PlayerPrefs.SetInt("PenLoad", 0);
+        PlayerPrefs.SetInt("PenLoad", 90);
+        PlayerPrefs.SetInt("ClaimPen", 1);
 
+        anim = GetComponent<Animator>();
         uiControl = GameObject.Find("MainUI").GetComponent<UIControl>();
         penNumber = int.Parse(this.name.Substring(5, 2));
         if (penNumber == 1 || penNumber == 2)
@@ -45,7 +53,11 @@ public class LoadPenClaim : MonoBehaviour
         }
         slider.value = PlayerPrefs.GetInt("PenLoad");
         tempLoad = PlayerPrefs.GetInt("PenLoad");
+        claim.text = tempLoad.ToString() + "%";
         sliderPos = PlayerPrefs.GetInt("PenLoad");
+        
+
+        StartCoroutine(WaitToLoadPen());
 
         //Debug.Log(PlayerPrefs.GetInt("PenLoad"));
     }
@@ -53,27 +65,36 @@ public class LoadPenClaim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        LoadPen();
+        if (beginLoad == true)
+        {
+            LoadPen();
+        }
+        
 
         if (slider.value == 100)
         {
+            backgroundOFF.enabled = false;
             claimButton.SetActive(true);
-            this.transform.position = Vector2.MoveTowards(this.transform.position, center.position, 31.5f);
+            //this.transform.position = Vector2.MoveTowards(this.transform.position, center.position, 31.5f);
 
-            float x = this.transform.localScale.x;
-            float y = this.transform.localScale.y;
-            x = Mathf.MoveTowards(x, 1.7f, 2f * Time.deltaTime);
-            y = Mathf.MoveTowards(y, 1.7f, 2f * Time.deltaTime);
+            //float x = this.transform.localScale.x;
+            //float y = this.transform.localScale.y;
+            //x = Mathf.MoveTowards(x, 1.7f, 2f * Time.deltaTime);
+            //y = Mathf.MoveTowards(y, 1.7f, 2f * Time.deltaTime);
 
-            this.transform.localScale = new Vector2(x, y);
+            //this.transform.localScale = new Vector2(x, y);
 
             slider.gameObject.SetActive(false);
+
+            anim.Play("claim_pen");
+
+            blackBackground.SetActive(true);
         }
 
-        if (Vector2.Distance(this.transform.position, center.position) == 0)
-        {
-            effects.SetActive(true);
-        }
+        //if (Vector2.Distance(this.transform.position, center.position) == 0)
+        //{
+        //    effects.SetActive(true);
+        //}
     }
 
     public void LoadPen()
@@ -130,6 +151,14 @@ public class LoadPenClaim : MonoBehaviour
         {
             PlayerPrefs.SetInt("ClaimPen", PlayerPrefs.GetInt("ClaimPen") + 1);
         }
+        blackBackground.SetActive(false);
         Destroy(this.transform.gameObject);
+    }
+
+    IEnumerator WaitToLoadPen()
+    {
+        yield return new WaitForSeconds(1.2f);
+
+        beginLoad = true;
     }
 }

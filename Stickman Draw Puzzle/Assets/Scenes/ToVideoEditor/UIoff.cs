@@ -6,11 +6,18 @@ using UnityEngine.UI;
 public class UIoff : MonoBehaviour
 {
     public GameObject[] uiOFF;
+    public GameObject tempJoystick;
 
     // Start is called before the first frame update
     void Start()
     {
         uiOFF = GameObject.FindGameObjectsWithTag("uiOFF");
+        if(GameObject.Find("Temp Fixed Joystick")!=null)
+        {
+            tempJoystick = GameObject.Find("Temp Fixed Joystick");
+            tempJoystick.SetActive(false);
+        }
+        
     }
 
     // Update is called once per frame
@@ -21,6 +28,10 @@ public class UIoff : MonoBehaviour
             for(int i=0; i<uiOFF.Length; i++)
             {
                 uiOFF[i].SetActive(false);
+                if (tempJoystick != null)
+                {
+                    tempJoystick.SetActive(true);
+                }
             }
         }
         if (Input.GetKeyDown(KeyCode.R))
@@ -28,6 +39,10 @@ public class UIoff : MonoBehaviour
             for (int i = 0; i < uiOFF.Length; i++)
             {
                 uiOFF[i].SetActive(true);
+                if (tempJoystick != null)
+                {
+                    tempJoystick.SetActive(false);
+                }
             }
         }
     }

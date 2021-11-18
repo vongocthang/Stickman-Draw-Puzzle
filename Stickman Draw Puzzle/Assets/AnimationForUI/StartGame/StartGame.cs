@@ -29,6 +29,4 @@ public class StartGame : MonoBehaviour
         start_button.SetActive(true);
         this.GetComponent<StartGame>().enabled = false;
     }
-
-
 }

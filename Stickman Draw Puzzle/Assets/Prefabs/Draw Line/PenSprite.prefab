@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1721352355740978907}
   - component: {fileID: 1721352355740978883}
   - component: {fileID: 1721352355740978906}
+  - component: {fileID: 1078267151}
   m_Layer: 0
   m_Name: PenSprite
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721352355740978908}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 10, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -94,6 +95,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1078267151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721352355740978908}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35cbe3a1e08b4434c95d888fe1883707, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6751261841841196430
 GameObject:
   m_ObjectHideFlags: 0

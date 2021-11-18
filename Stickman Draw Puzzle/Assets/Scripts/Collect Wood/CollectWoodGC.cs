@@ -20,10 +20,15 @@ public class CollectWoodGC : MonoBehaviour
 
     public TempDrawLine drawLine;
 
+    GameObject phaoHoa;
+
     // Start is called before the first frame update
     void Start()
     {
         drawLine = GameObject.Find("Draw Line").GetComponent<TempDrawLine>();
+
+        phaoHoa = GameObject.Find("Phao Hoa");
+        phaoHoa.SetActive(false);
     }
 
     // Update is called once per frame
@@ -46,7 +51,9 @@ public class CollectWoodGC : MonoBehaviour
                 PlayerPrefs.SetInt("SceneUnlockedBM", SceneManager.GetActiveScene().buildIndex + 1);
             }
 
-            StartCoroutine(DisabledCountTime());
+            phaoHoa.SetActive(true);
+
+            StartCoroutine(ActiveWinGame());
         }
     }
 
@@ -57,18 +64,20 @@ public class CollectWoodGC : MonoBehaviour
         //Điều kiện thỏa mãn để bắt đầu đếm
         if (beginCountTime == true)
         {
-            
             if (Time.time > timeLine + tempSecond + 1)
             {
-                tempSecond++;
-                threeSecond--;
-                countTime.text = threeSecond.ToString();
+                if (tempSecond < 3)
+                {
+                    threeSecond--;
+                    tempSecond++;
+                    countTime.text = threeSecond.ToString();
+                }
             }
             countTime.enabled = true;
         }
 
         //Nếu đang đếm mà điều kiện không thỏa mãn nữa thì
-        if (countTime.enabled == true && beginCountTime == false)
+        if (beginCountTime == false)
         {
             countTime.enabled = false;
             threeSecond = 3;
@@ -77,11 +86,10 @@ public class CollectWoodGC : MonoBehaviour
         }
     }
 
-    IEnumerator DisabledCountTime()
+    IEnumerator ActiveWinGame()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(3.2f);
 
         winGame.SetActive(true);
-        beginCountTime = false;
     }
 }

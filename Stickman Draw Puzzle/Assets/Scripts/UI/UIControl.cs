@@ -52,7 +52,7 @@ public class UIControl : MonoBehaviour
         SetPenLoad();
 
         //Temp
-        ShowLevelNumber();
+        //ShowLevelNumber();
     }
 
     private void Update()
