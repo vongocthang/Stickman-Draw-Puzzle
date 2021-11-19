@@ -44,6 +44,7 @@ public class BasicModeGC : MonoBehaviour
     {
         if (threeSecond == 0)
         {
+            countTime.enabled = false;
             //Tắt vẽ Line
             drawLine.enabled = false;
 
@@ -54,6 +55,7 @@ public class BasicModeGC : MonoBehaviour
             }
 
             phaoHoa.SetActive(true);
+            
 
             StartCoroutine(ActiveWinGame());
         }

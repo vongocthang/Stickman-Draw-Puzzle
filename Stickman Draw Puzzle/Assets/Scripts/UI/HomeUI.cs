@@ -88,10 +88,10 @@ public class HomeUI : MonoBehaviour
 
         PlayerPrefs.SetInt("Pen0", 1);
 
-        ShowSumStarM1();
-        ShowSumStarM2();
-        ShowSumStarM3();
-        ShowSumStarM4();
+        //ShowSumStarM1();
+        //ShowSumStarM2();
+        //ShowSumStarM3();
+        //ShowSumStarM4();
     }
 
     // Update is called once per frame

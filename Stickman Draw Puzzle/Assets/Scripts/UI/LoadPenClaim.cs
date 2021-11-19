@@ -30,8 +30,8 @@ public class LoadPenClaim : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.SetInt("PenLoad", 90);
-        PlayerPrefs.SetInt("ClaimPen", 1);
+        //PlayerPrefs.SetInt("PenLoad", 90);
+        //PlayerPrefs.SetInt("ClaimPen", 1);
 
         anim = GetComponent<Animator>();
         uiControl = GameObject.Find("MainUI").GetComponent<UIControl>();
@@ -105,19 +105,18 @@ public class LoadPenClaim : MonoBehaviour
             PlayerPrefs.SetInt("PenLoad", sliderPos + load1);
             if (slider.value != sliderPos + load1)
             {
-                Debug.Log("Loading 3 star");
+                //Debug.Log("Loading 3 star");
                 slider.value = Mathf.MoveTowards(slider.value, sliderPos + load1, 0.2f); 
             }
             if (slider.value > tempLoad)
             {
-                Debug.Log("Tang %");
+                //Debug.Log("Tang %");
                 tempLoad++;
                 claim.text = tempLoad.ToString() + "%";
             }
             if (slider.value == sliderPos + load1)
             {
-                Debug.Log("Ket thuc load");
-                
+                //Debug.Log("Ket thuc load");
             }
         }
         else
@@ -125,18 +124,18 @@ public class LoadPenClaim : MonoBehaviour
             PlayerPrefs.SetInt("PenLoad", sliderPos + load2);
             if (slider.value != sliderPos + load2)
             {
-                Debug.Log("Loading < 3 star");
+                //Debug.Log("Loading < 3 star");
                 slider.value = Mathf.MoveTowards(slider.value, sliderPos + load2, 0.2f);
             }
             if (slider.value > tempLoad)
             {
-                Debug.Log("Tang %");
+                //Debug.Log("Tang %");
                 tempLoad++;
                 claim.text = tempLoad.ToString() + "%";
             }
             if (slider.value == sliderPos + load2)
             {
-                Debug.Log("Ket thuc load");
+                //Debug.Log("Ket thuc load");
                 PlayerPrefs.SetInt("PenLoad", sliderPos + load2);
             }
         }

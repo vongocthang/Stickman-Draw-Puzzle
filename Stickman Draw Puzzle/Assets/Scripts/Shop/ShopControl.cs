@@ -38,11 +38,11 @@ public class ShopControl : MonoBehaviour
 
     public void BuyCoin2()
     {
-        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 2000);
+        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 2500);
     }
 
     public void BuyCoin3()
     {
-        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 5000);
+        PlayerPrefs.SetInt("Coin", PlayerPrefs.GetInt("Coin") + 10000);
     }
 }

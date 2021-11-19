@@ -71,7 +71,7 @@ public class PenShop : MonoBehaviour
                     if (j != i)
                     {
                         this.transform.GetChild(j).localScale =
-                            Vector2.Lerp(this.transform.GetChild(j).localScale, new Vector2(0.8f, 0.8f), 0.05f);
+                            Vector2.Lerp(this.transform.GetChild(j).localScale, new Vector2(0.6f, 0.6f), 0.05f);
                     }
                 }
             }

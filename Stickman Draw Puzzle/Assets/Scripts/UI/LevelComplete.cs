@@ -45,12 +45,6 @@ public class LevelComplete : MonoBehaviour
         //Debug.Log(PlayerPrefs.GetInt("ClaimPen"));
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ShowCountLine()
     {
         countLine.text = "Line: " + drawLine.countLine.ToString();
@@ -58,7 +52,7 @@ public class LevelComplete : MonoBehaviour
 
     public void ShowStar()
     {
-        Debug.Log("So sao cua lan choi nay= " + uiControl.countStar);
+        //Debug.Log("So sao cua lan choi nay= " + uiControl.countStar);
         if (uiControl.countStar == 2)
         {
             star3.SetActive(false);
@@ -84,7 +78,7 @@ public class LevelComplete : MonoBehaviour
             if (SceneManager.GetActiveScene().buildIndex <= 80)
             {
                 int a = PlayerPrefs.GetInt("M1StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString());
-                Debug.Log("So sao da dat dc truoc do= " + a);
+                //Debug.Log("So sao da dat dc truoc do= " + a);
                 if (uiControl.countStar > a)
                 {
                     if (uiControl.countStar - a == 1)
@@ -116,7 +110,7 @@ public class LevelComplete : MonoBehaviour
             if (SceneManager.GetActiveScene().buildIndex > 80 && SceneManager.GetActiveScene().buildIndex <= 100)
             {
                 int a = PlayerPrefs.GetInt("M2StarLevel" + (SceneManager.GetActiveScene().buildIndex - 80).ToString());
-                Debug.Log("So sao da dat dc truoc do= " + a);
+                //Debug.Log("So sao da dat dc truoc do= " + a);
                 if (uiControl.countStar > a)
                 {
                     if (uiControl.countStar - a == 1)
@@ -148,7 +142,7 @@ public class LevelComplete : MonoBehaviour
             if (SceneManager.GetActiveScene().buildIndex > 100 && SceneManager.GetActiveScene().buildIndex <= 120)
             {
                 int a = PlayerPrefs.GetInt("M3StarLevel" + (SceneManager.GetActiveScene().buildIndex - 100).ToString());
-                Debug.Log("So sao da dat dc truoc do= " + a);
+                //Debug.Log("So sao da dat dc truoc do= " + a);
                 if (uiControl.countStar > a)
                 {
                     if (uiControl.countStar - a == 1)
@@ -180,7 +174,7 @@ public class LevelComplete : MonoBehaviour
             if (SceneManager.GetActiveScene().buildIndex > 120 && SceneManager.GetActiveScene().buildIndex <= 140)
             {
                 int a = PlayerPrefs.GetInt("M4StarLevel" + (SceneManager.GetActiveScene().buildIndex - 120).ToString());
-                Debug.Log("So sao da dat dc truoc do= " + a);
+                //Debug.Log("So sao da dat dc truoc do= " + a);
                 if (uiControl.countStar > a)
                 {
                     if (uiControl.countStar - a == 1)
@@ -216,7 +210,7 @@ public class LevelComplete : MonoBehaviour
             if(SceneManager.GetActiveScene().buildIndex <= 80)
             {
                 int a = PlayerPrefs.GetInt("M1StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString());
-                Debug.Log("So sao da dat dc truoc do= " + a);
+                //Debug.Log("So sao da dat dc truoc do= " + a);
                 if (uiControl.countStar > a)
                 {
                     if (uiControl.countStar - a == 1)
@@ -242,7 +236,7 @@ public class LevelComplete : MonoBehaviour
             if (SceneManager.GetActiveScene().buildIndex > 80 && SceneManager.GetActiveScene().buildIndex <= 100)
             {
                 int a = PlayerPrefs.GetInt("M2StarLevel" + (SceneManager.GetActiveScene().buildIndex - 80).ToString());
-                Debug.Log("So sao da dat dc truoc do= " + a);
+                //Debug.Log("So sao da dat dc truoc do= " + a);
                 if (uiControl.countStar > a)
                 {
                     if (uiControl.countStar - a == 1)
@@ -268,7 +262,7 @@ public class LevelComplete : MonoBehaviour
             if (SceneManager.GetActiveScene().buildIndex > 100 && SceneManager.GetActiveScene().buildIndex <= 120)
             {
                 int a = PlayerPrefs.GetInt("M3StarLevel" + (SceneManager.GetActiveScene().buildIndex - 100).ToString());
-                Debug.Log("So sao da dat dc truoc do= " + a);
+                //Debug.Log("So sao da dat dc truoc do= " + a);
                 if (uiControl.countStar > a)
                 {
                     if (uiControl.countStar - a == 1)
@@ -294,7 +288,7 @@ public class LevelComplete : MonoBehaviour
             if (SceneManager.GetActiveScene().buildIndex > 120 && SceneManager.GetActiveScene().buildIndex <= 140)
             {
                 int a = PlayerPrefs.GetInt("M4StarLevel" + (SceneManager.GetActiveScene().buildIndex - 120).ToString());
-                Debug.Log("So sao da dat dc truoc do= " + a);
+                //Debug.Log("So sao da dat dc truoc do= " + a);
                 if (uiControl.countStar > a)
                 {
                     if (uiControl.countStar - a == 1)
@@ -316,7 +310,6 @@ public class LevelComplete : MonoBehaviour
                     showCoin.text = "+" + (0).ToString();
                 }
             }
-            
         }
         /////////////////////////////
         if (uiControl.countStar == 1)
@@ -324,7 +317,7 @@ public class LevelComplete : MonoBehaviour
             if (SceneManager.GetActiveScene().buildIndex <= 80)
             {
                 int a = PlayerPrefs.GetInt("M1StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString());
-                Debug.Log("So sao da dat dc truoc do= " + a);
+                //Debug.Log("So sao da dat dc truoc do= " + a);
                 if (uiControl.countStar > a)
                 {
                     if (uiControl.countStar - a == 1)
@@ -344,7 +337,7 @@ public class LevelComplete : MonoBehaviour
             if (SceneManager.GetActiveScene().buildIndex > 80 && SceneManager.GetActiveScene().buildIndex <= 100)
             {
                 int a = PlayerPrefs.GetInt("M2StarLevel" + (SceneManager.GetActiveScene().buildIndex - 80).ToString());
-                Debug.Log("So sao da dat dc truoc do= " + a);
+                //Debug.Log("So sao da dat dc truoc do= " + a);
                 if (uiControl.countStar > a)
                 {
                     if (uiControl.countStar - a == 1)
@@ -364,7 +357,7 @@ public class LevelComplete : MonoBehaviour
             if (SceneManager.GetActiveScene().buildIndex > 100 && SceneManager.GetActiveScene().buildIndex <= 120)
             {
                 int a = PlayerPrefs.GetInt("M3StarLevel" + (SceneManager.GetActiveScene().buildIndex - 100).ToString());
-                Debug.Log("So sao da dat dc truoc do= " + a);
+                //Debug.Log("So sao da dat dc truoc do= " + a);
                 if (uiControl.countStar > a)
                 {
                     if (uiControl.countStar - a == 1)
@@ -384,7 +377,7 @@ public class LevelComplete : MonoBehaviour
             if (SceneManager.GetActiveScene().buildIndex > 120 && SceneManager.GetActiveScene().buildIndex <= 140)
             {
                 int a = PlayerPrefs.GetInt("M4StarLevel" + (SceneManager.GetActiveScene().buildIndex - 120).ToString());
-                Debug.Log("So sao da dat dc truoc do= " + a);
+                //Debug.Log("So sao da dat dc truoc do= " + a);
                 if (uiControl.countStar > a)
                 {
                     if (uiControl.countStar - a == 1)

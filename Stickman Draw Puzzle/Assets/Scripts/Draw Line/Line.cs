@@ -74,61 +74,61 @@ public class Line : MonoBehaviour
     {
         if (collision.tag == "Wall")
         {
-            Debug.Log("Va chạm với: " + collision.tag);
+            //Debug.Log("Va chạm với: " + collision.tag);
             countCollision++;
             blocked = true;
         }
         if (collision.tag == "Line")
         {
-            Debug.Log("Va chạm với: " + collision.tag);
+            //Debug.Log("Va chạm với: " + collision.tag);
             countCollision++;
             blocked = true;
         }
         if (collision.tag == "Barrier")
         {
-            Debug.Log("Va chạm với: " + collision.tag);
+            //Debug.Log("Va chạm với: " + collision.tag);
             countCollision++;
             blocked = true;
         }
         if (collision.tag == "Wheel")
         {
-            Debug.Log("Va chạm với: " + collision.tag);
+            //Debug.Log("Va chạm với: " + collision.tag);
             countCollision++;
             blocked = true;
         }
         if (collision.tag == "Box")
         {
-            Debug.Log("Va chạm với: " + collision.tag);
+            //Debug.Log("Va chạm với: " + collision.tag);
             countCollision++;
             blocked = true;
         }
         if (collision.tag == "Wood")
         {
-            Debug.Log("Va chạm với: " + collision.tag);
+            //Debug.Log("Va chạm với: " + collision.tag);
             countCollision++;
             blocked = true;
         }
         if (collision.tag == "Car")
         {
-            Debug.Log("Va chạm với: " + collision.tag);
+            //Debug.Log("Va chạm với: " + collision.tag);
             countCollision++;
             blocked = true;
         }
         if (collision.tag == "BapBenh")
         {
-            Debug.Log("Va chạm với: " + collision.tag);
+            //Debug.Log("Va chạm với: " + collision.tag);
             countCollision++;
             blocked = true;
         }
         if (collision.tag == "ConLac")
         {
-            Debug.Log("Va chạm với: " + collision.tag);
+            //Debug.Log("Va chạm với: " + collision.tag);
             countCollision++;
             blocked = true;
         }
         if (collision.tag == "GaiXoay")
         {
-            Debug.Log("Va chạm với: " + collision.tag);
+            //Debug.Log("Va chạm với: " + collision.tag);
             countCollision++;
             blocked = true;
         }
@@ -138,7 +138,7 @@ public class Line : MonoBehaviour
     {
         if (collision.tag == "Wall")
         {
-            Debug.Log("Thoát khỏi: " + collision.tag);
+            //Debug.Log("Thoát khỏi: " + collision.tag);
             countCollision--;
             if (countCollision == 0)
             {
@@ -147,7 +147,7 @@ public class Line : MonoBehaviour
         }
         if (collision.tag == "Line")
         {
-            Debug.Log("Thoát khỏi: " + collision.tag);
+            //Debug.Log("Thoát khỏi: " + collision.tag);
             countCollision--;
             if (countCollision == 0)
             {
@@ -156,7 +156,7 @@ public class Line : MonoBehaviour
         }
         if (collision.tag == "Barrier")
         {
-            Debug.Log("Thoát khỏi: " + collision.tag);
+            //Debug.Log("Thoát khỏi: " + collision.tag);
             countCollision--;
             if (countCollision == 0)
             {
@@ -165,7 +165,7 @@ public class Line : MonoBehaviour
         }
         if (collision.tag == "Wheel")
         {
-            Debug.Log("Thoát khỏi: " + collision.tag);
+            //Debug.Log("Thoát khỏi: " + collision.tag);
             countCollision--;
             if (countCollision == 0)
             {
@@ -174,7 +174,7 @@ public class Line : MonoBehaviour
         }
         if (collision.tag == "Box")
         {
-            Debug.Log("Thoát khỏi: " + collision.tag);
+            //Debug.Log("Thoát khỏi: " + collision.tag);
             countCollision--;
             if (countCollision == 0)
             {
@@ -183,7 +183,7 @@ public class Line : MonoBehaviour
         }
         if (collision.tag == "Wood")
         {
-            Debug.Log("Thoát khỏi: " + collision.tag);
+            //Debug.Log("Thoát khỏi: " + collision.tag);
             countCollision--;
             if (countCollision == 0)
             {
@@ -192,7 +192,7 @@ public class Line : MonoBehaviour
         }
         if (collision.tag == "Car")
         {
-            Debug.Log("Thoát khỏi: " + collision.tag);
+            //Debug.Log("Thoát khỏi: " + collision.tag);
             countCollision--;
             if (countCollision == 0)
             {
@@ -201,7 +201,7 @@ public class Line : MonoBehaviour
         }
         if (collision.tag == "BapBenh")
         {
-            Debug.Log("Thoát khỏi: " + collision.tag);
+            //Debug.Log("Thoát khỏi: " + collision.tag);
             countCollision--;
             if (countCollision == 0)
             {
@@ -210,7 +210,7 @@ public class Line : MonoBehaviour
         }
         if (collision.tag == "ConLac")
         {
-            Debug.Log("Thoát khỏi: " + collision.tag);
+            //Debug.Log("Thoát khỏi: " + collision.tag);
             countCollision--;
             if (countCollision == 0)
             {
@@ -219,7 +219,7 @@ public class Line : MonoBehaviour
         }
         if (collision.tag == "GaiXoay")
         {
-            Debug.Log("Thoát khỏi: " + collision.tag);
+            //Debug.Log("Thoát khỏi: " + collision.tag);
             countCollision--;
             if (countCollision == 0)
             {

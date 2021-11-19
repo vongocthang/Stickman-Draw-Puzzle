@@ -32,7 +32,7 @@ public class CarControl : MonoBehaviour
         uiControl = GameObject.Find("MainUI").GetComponent<UIControl>();
         targetJoint = this.GetComponent<TargetJoint2D>();
 
-        Test();
+        //Test();
     }
 
     // Update is called once per frame
@@ -145,8 +145,8 @@ public class CarControl : MonoBehaviour
         }
     }
 
-    public void Test()
-    {
-        Debug.Log(skeletonAnim.Skeleton.FindSlot("banh truoc"));
-    }
+    //public void Test()
+    //{
+    //    Debug.Log(skeletonAnim.Skeleton.FindSlot("banh truoc"));
+    //}
 }

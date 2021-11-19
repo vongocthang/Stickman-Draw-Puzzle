@@ -52,6 +52,7 @@ public class CollectWoodGC : MonoBehaviour
             }
 
             phaoHoa.SetActive(true);
+            countTime.enabled = false;
 
             StartCoroutine(ActiveWinGame());
         }

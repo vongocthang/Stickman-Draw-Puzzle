@@ -8,12 +8,6 @@ public class Target : MonoBehaviour
     public float timeLine;
     public bool winGame;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -24,7 +18,7 @@ public class Target : MonoBehaviour
     {
         if (collision.tag == "BoxCheck")
         {
-            Debug.Log("Vao dung vi tri");
+            //Debug.Log("Vao dung vi tri");
             beginCountTime = true;
             timeLine = Time.time;
         }

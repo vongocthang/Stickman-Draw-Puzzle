@@ -73,34 +73,6 @@ public class TempDrawLine : MonoBehaviour
 
         //////////////////////////////////////////////////////////////////////////////////
 
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    if (hit)
-        //    {
-        //        blocked = true;
-        //    }
-        //    else
-        //    {
-        //        if (uiControl.stopDrawLine == false)
-        //        {
-        //            BeginDraw();
-        //        }
-        //    }
-        //}
-        //if (Input.GetMouseButton(0))
-        //{
-        //    if (uiControl.stopDrawLine == false)
-        //    {
-        //        Draw();
-        //    }
-        //}
-        //if (Input.GetMouseButtonUp(0))
-        //{
-        //    EndDraw();
-        //}
-
-        ////////////////////////////////////////////////////////////////////////////////
-
         if (Input.GetMouseButtonDown(0))
         {
             if (hit)
@@ -115,7 +87,7 @@ public class TempDrawLine : MonoBehaviour
                 }
             }
         }
-        if (Input.touchCount == 1)
+        if (Input.GetMouseButton(0))
         {
             if (uiControl.stopDrawLine == false)
             {
@@ -126,6 +98,34 @@ public class TempDrawLine : MonoBehaviour
         {
             EndDraw();
         }
+
+        ////////////////////////////////////////////////////////////////////////////////
+
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    if (hit)
+        //    {
+        //        blocked = true;
+        //    }
+        //    else
+        //    {
+        //        if (uiControl.stopDrawLine == false)
+        //        {
+        //            BeginDraw();
+        //        }
+        //    }
+        //}
+        //if (Input.touchCount == 1)
+        //{
+        //    if (uiControl.stopDrawLine == false)
+        //    {
+        //        Draw();
+        //    }
+        //}
+        //if (Input.GetMouseButtonUp(0))
+        //{
+        //    EndDraw();
+        //}
     }
 
     public void BeginDraw()
@@ -144,7 +144,7 @@ public class TempDrawLine : MonoBehaviour
         //
         tempLine.lineRenderer.startWidth = lineWidth;
         tempLine.lineRenderer.endWidth = lineWidth / 2f;
-        tempLine.edgeCollider.edgeRadius = lineWidth / 4f;
+        tempLine.edgeCollider.edgeRadius = lineWidth / 5f;
         //
         lastPoint = line.GetLastPoint();
         tempLine.lineRenderer.positionCount = 2;
@@ -177,7 +177,7 @@ public class TempDrawLine : MonoBehaviour
 
             if (line == null)
             {
-                Debug.Log("Bắt đầu vẽ khi đưa chuột khỏi vị trí bị chặn");
+                //Debug.Log("Bắt đầu vẽ khi đưa chuột khỏi vị trí bị chặn");
                 BeginDraw();
                 blocked = false;
             }
@@ -206,7 +206,7 @@ public class TempDrawLine : MonoBehaviour
 
         if (blocked == true && tempLine != null)
         {
-            Debug.Log("Vẽ Temp Line");
+            //Debug.Log("Vẽ Temp Line");
             tempLine.lineRenderer.SetPosition(1, mousePos);
             points.Clear();
             points.Add(lastPoint);
@@ -240,9 +240,9 @@ public class TempDrawLine : MonoBehaviour
 
     public void CheckBlockLayer()
     {
-        mousePos = cam.ScreenToWorldPoint(Input.GetTouch(0).position);
-        //mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        hit = Physics2D.CircleCast(mousePos, lineWidth / 2f, Vector2.zero, 0.1f, blockLayer);
+        //mousePos = cam.ScreenToWorldPoint(Input.GetTouch(0).position);
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        hit = Physics2D.CircleCast(mousePos, lineWidth / 2f, Vector2.zero, 0.5f, blockLayer);
     }
 
     public void StopPhysics()
