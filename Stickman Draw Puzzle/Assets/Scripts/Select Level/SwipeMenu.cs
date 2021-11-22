@@ -9,8 +9,10 @@ public class SwipeMenu : MonoBehaviour
     public Scrollbar scrollbar;
     public float[] pos;
     public float distance;
-    public int pageNumber = 1;
+    public float scrollbarPos;//Vị trí ngay khi thả chuột-kết thúc cuộn
+    public int pageNumber;
     public int maxPage;
+    public bool useButton;
 
     public GameObject[] page;
 
@@ -27,11 +29,11 @@ public class SwipeMenu : MonoBehaviour
         }
 
 
-        if (PlayerPrefs.GetInt("PageNumber") != 0)
-        {
-            pageNumber = PlayerPrefs.GetInt("PageNumber");
-        }
-        
+        pageNumber = PlayerPrefs.GetInt("PageNumber");
+        scrollbarPos = pos[pageNumber];
+        //Debug.Log(pageNumber);
+        scrollbar.value = pos[pageNumber];
+
         //Debug.Log(SceneManager.GetActiveScene().name);
         //GetMaxSceneUnlock();
     }
@@ -39,64 +41,121 @@ public class SwipeMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ChangePage();
-        ChangeScale();
+        ChangePageUseScroll();
+        ChangePageUseButton();
         WhatPage();
     }
 
     public void NextPage()
     {
-        if (pageNumber < maxPage)
+        if (pageNumber < maxPage - 1)
         {
+            //Debug.Log("Next page");
             pageNumber++;
+            useButton = true;
         }
     }
 
     public void BackPage()
     {
-        if (pageNumber > 1)
+        if (pageNumber > 0)
         {
+            //Debug.Log("Back page");
             pageNumber--;
+            useButton = true;
         }
     }
 
-    public void ChangePage()
+    public void ChangePageUseScroll()
     {
-        if (!Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0))
         {
-            if (scrollbar.value != pos[pageNumber - 1])
+            scrollbarPos = scrollbar.value;
+            useButton = false;
+        }
+        else
+        {
+            if (useButton == false)
             {
-                scrollbar.value = Mathf.Lerp(scrollbar.value, pos[pageNumber - 1], 0.1f);
-
-                this.transform.GetChild(pageNumber - 1).localScale =
-                        Vector2.Lerp(this.transform.GetChild(pageNumber - 1).localScale, new Vector2(1f, 1f), 0.1f);
+                //Debug.Log("Su dung cuon");
+                for (int i = 0; i < pos.Length; i++)
+                {
+                    if (scrollbarPos < pos[i] + (distance / 2) && scrollbarPos > pos[i] - (distance / 2))
+                    {
+                        //Debug.Log("Doi pen hien thi");
+                        scrollbar.value = Mathf.Lerp(scrollbar.value, pos[i], 0.05f);
+                        pageNumber = i;
+                    }
+                }
+            }
+            ////////////////////////////////////////////////////////////////////////////////////////
+            for (int i = 0; i < pos.Length; i++)
+            {
+                if (scrollbarPos < pos[i] + (distance / 2f) && scrollbarPos > pos[i] - (distance / 2f))
+                {
+                    this.transform.GetChild(i).localScale =
+                        Vector2.Lerp(this.transform.GetChild(i).localScale, new Vector2(1f, 1f), 0.05f);
+                    for (int j = 0; j < pos.Length; j++)
+                    {
+                        if (j != i)
+                        {
+                            this.transform.GetChild(j).localScale =
+                                Vector2.Lerp(this.transform.GetChild(j).localScale, new Vector2(0.6f, 0.6f), 0.05f);
+                        }
+                    }
+                }
             }
         }
     }
 
-    public void ChangeScale()
+    public void ChangePageUseButton()
     {
-        if (scrollbar.value < pos[pageNumber - 1] && scrollbar.value >= 0)
+        if (useButton == true)
         {
-            this.transform.GetChild(pageNumber - 2).localScale =
-                Vector2.Lerp(this.transform.GetChild(pageNumber - 2).localScale, new Vector2(0.8f, 0.8f), 0.1f);
-        }
+            //Debug.Log("Su dung button");
+            if (scrollbar.value != pos[pageNumber])
+            {
+                //Debug.Log("Bat dau hanh dong");
+                scrollbar.value = Mathf.Lerp(scrollbar.value, pos[pageNumber], 0.1f);
 
-        if (scrollbar.value > pos[pageNumber - 1] && scrollbar.value <= 1)
-        {
-            this.transform.GetChild(pageNumber).localScale =
-                Vector2.Lerp(this.transform.GetChild(pageNumber).localScale, new Vector2(0.8f, 0.8f), 0.1f);
+                this.transform.GetChild(pageNumber).localScale =
+                        Vector2.Lerp(this.transform.GetChild(pageNumber).localScale, new Vector2(1f, 1f), 0.1f);
+            }
+            /////////////////////////////////////////////
+            if (scrollbar.value < pos[pageNumber] && scrollbar.value >= 0)
+            {
+                this.transform.GetChild(pageNumber - 1).localScale =
+                    Vector2.Lerp(this.transform.GetChild(pageNumber - 1).localScale, new Vector2(0.6f, 0.6f), 0.1f);
+            }
+            ////////////////////////////////////////////
+            if (scrollbar.value > pos[pageNumber] && scrollbar.value <= 1)
+            {
+                this.transform.GetChild(pageNumber + 1).localScale =
+                    Vector2.Lerp(this.transform.GetChild(pageNumber + 1).localScale, new Vector2(0.6f, 0.6f), 0.1f);
+            }
+            scrollbarPos = scrollbar.value;
         }
     }
 
     public void WhatPage()
     {
-        if (pageNumber == 1)
+        if (pageNumber == 0)
         {
-            page[1-1].SetActive(false);
+            page[pageNumber].SetActive(false);
             for(int i=0; i<page.Length; i++)
             {
-                if (i + 1 != pageNumber)
+                if (i != pageNumber)
+                {
+                    page[i].SetActive(true);
+                }
+            }
+        }
+        if (pageNumber == 1)
+        {
+            page[pageNumber].SetActive(false);
+            for (int i = 0; i < page.Length; i++)
+            {
+                if (i != pageNumber)
                 {
                     page[i].SetActive(true);
                 }
@@ -104,10 +163,10 @@ public class SwipeMenu : MonoBehaviour
         }
         if (pageNumber == 2)
         {
-            page[2 - 1].SetActive(false);
+            page[pageNumber].SetActive(false);
             for (int i = 0; i < page.Length; i++)
             {
-                if (i + 1 != pageNumber)
+                if (i != pageNumber)
                 {
                     page[i].SetActive(true);
                 }
@@ -115,10 +174,10 @@ public class SwipeMenu : MonoBehaviour
         }
         if (pageNumber == 3)
         {
-            page[3 - 1].SetActive(false);
+            page[pageNumber].SetActive(false);
             for (int i = 0; i < page.Length; i++)
             {
-                if (i + 1 != pageNumber)
+                if (i != pageNumber)
                 {
                     page[i].SetActive(true);
                 }
@@ -126,10 +185,10 @@ public class SwipeMenu : MonoBehaviour
         }
         if (pageNumber == 4)
         {
-            page[4 - 1].SetActive(false);
+            page[pageNumber].SetActive(false);
             for (int i = 0; i < page.Length; i++)
             {
-                if (i + 1 != pageNumber)
+                if (i != pageNumber)
                 {
                     page[i].SetActive(true);
                 }
@@ -137,21 +196,10 @@ public class SwipeMenu : MonoBehaviour
         }
         if (pageNumber == 5)
         {
-            page[5 - 1].SetActive(false);
+            page[pageNumber].SetActive(false);
             for (int i = 0; i < page.Length; i++)
             {
-                if (i + 1 != pageNumber)
-                {
-                    page[i].SetActive(true);
-                }
-            }
-        }
-        if (pageNumber == 6)
-        {
-            page[6 - 1].SetActive(false);
-            for (int i = 0; i < page.Length; i++)
-            {
-                if (i + 1 != pageNumber)
+                if (i != pageNumber)
                 {
                     page[i].SetActive(true);
                 }

@@ -136,7 +136,7 @@ PrefabInstance:
     - target: {fileID: 542115214650559868, guid: e43a4e64f7316224dad96e6bc5198477,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 542115214650559868, guid: e43a4e64f7316224dad96e6bc5198477,
         type: 3}
@@ -210,7 +210,7 @@ PrefabInstance:
     - target: {fileID: 2738631636999246484, guid: 0e0a6713f61b5a84996e2a174f6aa516,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2738631636999246484, guid: 0e0a6713f61b5a84996e2a174f6aa516,
         type: 3}
@@ -408,7 +408,7 @@ PrefabInstance:
     - target: {fileID: 1665421615192314676, guid: 0c184046e3e092f4788236a3bd7e5ae5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1665421615192314676, guid: 0c184046e3e092f4788236a3bd7e5ae5,
         type: 3}
@@ -546,7 +546,7 @@ PrefabInstance:
     - target: {fileID: 1721352355740978907, guid: 4d4333df9a4d0d5459c39ab81a8b64e4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1721352355740978907, guid: 4d4333df9a4d0d5459c39ab81a8b64e4,
         type: 3}
@@ -762,7 +762,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972641107}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.9081743, y: -2.2763152, z: 0}
+  m_LocalPosition: {x: 1.9081743, y: -2.224, z: 0}
   m_LocalScale: {x: 1.6231251, y: 1.6242187, z: 1}
   m_Children: []
   m_Father: {fileID: 3632604556507409491}
@@ -807,12 +807,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 4bb9b399f758c924487d4aa209134228, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 585e4bffc3968a44ca58b907a67aba8e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.27, y: 1.16}
+  m_Size: {x: 4.21, y: 1.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -856,17 +856,17 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.27, y: 1.16}
-    newSize: {x: 4.27, y: 1.16}
+    oldSize: {x: 4.21, y: 1.1}
+    newSize: {x: 4.21, y: 1.1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.065, y: 0.58}
-      - {x: -0.019190818, y: 0.57613146}
-      - {x: -2.069191, y: -0.5070797}
+    - - {x: 0.13298093, y: 0.4655826}
+      - {x: 0.002277026, y: 0.5582539}
+      - {x: -2.0083659, y: -0.49992874}
       - {x: -2.135, y: -0.58}
       - {x: 2.135, y: -0.58}
       - {x: 2.135, y: -0.5}
@@ -1284,7 +1284,7 @@ Transform:
   - {fileID: 1872260046}
   - {fileID: 1972641108}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &3632604557605615400
 Rigidbody2D:

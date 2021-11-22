@@ -62,7 +62,7 @@ public class GravityCar : MonoBehaviour
                 //goc += 90;
                 Quaternion x = forwardWheel.transform.rotation;
                 Quaternion y = Quaternion.Euler(0, 0, goc);
-                Debug.Log(goc);
+                //Debug.Log(goc);
                 forwardWheel.transform.rotation = Quaternion.Lerp(x, y, 10 * Time.deltaTime);
                 backWheel.transform.rotation = Quaternion.Lerp(x, y, 10 * Time.deltaTime);
             }

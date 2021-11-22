@@ -44,17 +44,18 @@ public class SelectMode : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             scrollbarPos = scrollbar.value;
+            useButton = false;
         }
         else
         {
             if(useButton == false)
             {
-                Debug.Log("Su dung cuon");
+                //Debug.Log("Su dung cuon");
                 for (int i = 0; i < pos.Length; i++)
                 {
                     if (scrollbarPos < pos[i] + (distance / 2) && scrollbarPos > pos[i] - (distance / 2))
                     {
-                        Debug.Log("Doi pen hien thi");
+                        //Debug.Log("Doi pen hien thi");
                         scrollbar.value = Mathf.Lerp(scrollbar.value, pos[i], 0.05f);
                         modeNumber = i;
                     }
@@ -84,23 +85,17 @@ public class SelectMode : MonoBehaviour
     {
         if (useButton == true)
         {
-            Debug.Log("Su dung button");
+            //Debug.Log("Su dung button");
             if (scrollbar.value != pos[modeNumber])
             {
-                Debug.Log("Bat dau hanh dong");
+                //Debug.Log("Bat dau hanh dong");
                 scrollbar.value = Mathf.Lerp(scrollbar.value, pos[modeNumber], 0.1f);
 
                 this.transform.GetChild(modeNumber).localScale =
                         Vector2.Lerp(this.transform.GetChild(modeNumber).localScale,
                         new Vector2(1f, 1f), 0.1f);
             }
-            if (scrollbar.value < pos[modeNumber] && scrollbar.value > pos[modeNumber] - 0.0000002)
-            {
-                Debug.Log("Hoan thanh han dong");
-                useButton = false;
-            }
-            Debug.Log(scrollbar.value + " = " + pos[modeNumber]);
-            ///////////////////////////////////////////////////////////////////////////////////
+
             if (scrollbar.value < pos[modeNumber] && scrollbar.value >= 0)
             {
                 this.transform.GetChild(modeNumber - 1).localScale =
@@ -112,6 +107,7 @@ public class SelectMode : MonoBehaviour
                 this.transform.GetChild(modeNumber + 1).localScale =
                     Vector2.Lerp(this.transform.GetChild(modeNumber + 1).localScale, new Vector2(0.6f, 0.6f), 0.1f);
             }
+            scrollbarPos = scrollbar.value;
         }
     }
 
@@ -119,7 +115,7 @@ public class SelectMode : MonoBehaviour
     {
         if (modeNumber < maxMode - 1)
         {
-            Debug.Log("Next page");
+            //Debug.Log("Next page");
             modeNumber++;
             useButton = true;
         }
@@ -129,7 +125,7 @@ public class SelectMode : MonoBehaviour
     {
         if (modeNumber > 0)
         {
-            Debug.Log("Back page");
+            //Debug.Log("Back page");
             modeNumber--;
             useButton = true;
         }

@@ -348,7 +348,7 @@ PrefabInstance:
     - target: {fileID: 2738631636999246484, guid: 0e0a6713f61b5a84996e2a174f6aa516,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2738631636999246484, guid: 0e0a6713f61b5a84996e2a174f6aa516,
         type: 3}
@@ -686,7 +686,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073454897}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.74, y: -1.63, z: 0}
+  m_LocalPosition: {x: -4.74, y: -1.55, z: 0}
   m_LocalScale: {x: 2.4733, y: 2.4733, z: 2.4733}
   m_Children: []
   m_Father: {fileID: 8885181150505800486}
@@ -709,21 +709,21 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.27, y: 1.16}
-    newSize: {x: 1.49, y: 4.26}
+    oldSize: {x: 4.21, y: 1.1}
+    newSize: {x: 4.21, y: 1.1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.020292059, y: 0.5840643}
-      - {x: -0.085, y: 0.58}
+    - - {x: 0.0024295114, y: 0.55503786}
+      - {x: -0.08276706, y: 0.5219471}
       - {x: -2.135, y: -0.48}
       - {x: -2.135, y: -0.58}
       - {x: 2.135, y: -0.58}
       - {x: 2.1146781, y: -0.52438617}
-      - {x: 1.8368711, y: -0.3684505}
+      - {x: 1.814543, y: -0.3952442}
 --- !u!50 &2073454900
 Rigidbody2D:
   serializedVersion: 4
@@ -784,12 +784,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 54e9a1b94e6ac0d4295a02fd1975f4be, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b731aa4243be5740b07f1d4a784506b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.49, y: 4.26}
+  m_Size: {x: 4.21, y: 1.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1480,7 +1480,7 @@ Transform:
   - {fileID: 3914459652509710013}
   - {fileID: 3914459651951585295}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8885181150505800487
 SpriteRenderer:

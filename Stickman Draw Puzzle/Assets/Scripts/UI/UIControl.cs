@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
-//Điều khiển các tác vụ sử dụng đồng thời cho cả 2 chế độ Basic và Collect Wood
-//PlayerPrefs (SceneUnlocked)(StarLevel+x)(
+//
 
 public class UIControl : MonoBehaviour
 {
@@ -14,11 +13,13 @@ public class UIControl : MonoBehaviour
     //Cái này là khác nhau cho mỗi Level, tùy vào độ khó
     public int[] setupStar;
     public int countStar;
-    public int tempCount;//Đếm số line đã vẽ mỗi mức sao
+    public int tempCount = 0;//Đếm số line đã vẽ mỗi mức sao
+    public int duocVe;
 
     public GameObject star1, star2, star3;
     
-    public TMP_Text countLine;//Hiển thị số Line còn lại đc phép vẽ cho mốc sao hiện tại
+    public TMP_Text countLine;//Hiển thị số Line đã vẽ
+    public TMP_Text showDuocVe;//Số Line được vẽ để đạt được mốc sao
 
     public TempDrawLine drawLine;
     public bool stopDrawLine;
@@ -33,8 +34,7 @@ public class UIControl : MonoBehaviour
     private void Start()
     {
         countStar = 3;
-        tempCount = setupStar[countStar - 1];
-        
+        showDuocVe.text = setupStar[2].ToString();
         countLine.text = tempCount.ToString();
 
         drawLine = GameObject.Find("Draw Line").GetComponent<TempDrawLine>();
@@ -63,12 +63,33 @@ public class UIControl : MonoBehaviour
 
     public void CountLine()
     {
-        if (tempCount == 0 && countStar >= 1)
+        //if (tempCount == 0 && countStar >= 1)
+        //{
+        //    countStar--;
+        //    if (countStar >= 1)
+        //    {
+        //        tempCount = setupStar[countStar - 1];
+        //    }
+        //}
+        if (countStar == 3)
         {
-            countStar--;
-            if (countStar >= 1)
+            if (tempCount - setupStar[2] == 0)
             {
-                tempCount = setupStar[countStar - 1];
+                countStar--;
+            }
+        }
+        if (countStar == 2)
+        {
+            if (tempCount - setupStar[2] - setupStar[1] == 0)
+            {
+                countStar--;
+            }
+        }
+        if (countStar == 1)
+        {
+            if (tempCount - setupStar[2] - setupStar[1] - setupStar[0] == 0)
+            {
+                countStar--;
             }
         }
 
@@ -202,12 +223,12 @@ public class UIControl : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().buildIndex % 15 == 0)
             {
-                int pageNumber = SceneManager.GetActiveScene().buildIndex / 15;
+                int pageNumber = SceneManager.GetActiveScene().buildIndex / 15 - 1;
                 PlayerPrefs.SetInt("PageNumber", pageNumber);
             }
             else
             {
-                int pageNumber = SceneManager.GetActiveScene().buildIndex / 15 + 1;
+                int pageNumber = SceneManager.GetActiveScene().buildIndex / 15;
                 PlayerPrefs.SetInt("PageNumber", pageNumber);
             }
         }
@@ -216,12 +237,12 @@ public class UIControl : MonoBehaviour
         {
             if ((SceneManager.GetActiveScene().buildIndex - 80) % 15 == 0)
             {
-                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 80) / 15 ;
+                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 80) / 15 - 1;
                 PlayerPrefs.SetInt("PageNumber", pageNumber);
             }
             else
             {
-                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 80) / 15 + 1;
+                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 80) / 15;
                 PlayerPrefs.SetInt("PageNumber", pageNumber);
             }
         }
@@ -230,12 +251,12 @@ public class UIControl : MonoBehaviour
         {
             if ((SceneManager.GetActiveScene().buildIndex - 100) % 15 == 0)
             {
-                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 100) / 15;
+                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 100) / 15 - 1;
                 PlayerPrefs.SetInt("PageNumber", pageNumber);
             }
             else
             {
-                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 100) / 15 + 1;
+                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 100) / 15;
                 PlayerPrefs.SetInt("PageNumber", pageNumber);
             }
         }
@@ -244,12 +265,12 @@ public class UIControl : MonoBehaviour
         {
             if ((SceneManager.GetActiveScene().buildIndex - 120) % 15 == 0)
             {
-                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 120) / 15;
+                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 120) / 15 - 1;
                 PlayerPrefs.SetInt("PageNumber", pageNumber);
             }
             else
             {
-                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 120) / 15 + 1;
+                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 120) / 15;
                 PlayerPrefs.SetInt("PageNumber", pageNumber);
             }
         }

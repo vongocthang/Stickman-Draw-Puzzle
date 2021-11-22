@@ -74,7 +74,10 @@ public class CollectWoodGC : MonoBehaviour
                     countTime.text = threeSecond.ToString();
                 }
             }
-            countTime.enabled = true;
+            if (threeSecond > 0)
+            {
+                countTime.enabled = true;
+            }
         }
 
         //Nếu đang đếm mà điều kiện không thỏa mãn nữa thì

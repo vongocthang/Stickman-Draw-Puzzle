@@ -66,7 +66,7 @@ public class CarControl : MonoBehaviour
             //}
             if (zRotation > 0.02)
             {
-                //Debug.Log("Xuống dốc phải");
+                Debug.Log("Xuống dốc phải");
             }
             else
             {
@@ -75,7 +75,7 @@ public class CarControl : MonoBehaviour
                     //rb2D.velocity = new Vector2(tempMoveSpeed * Time.deltaTime, 0f);
                     rb2D.velocity = new Vector2(-moveSpeed * Time.deltaTime, 0f);
                 }
-                //Debug.Log("Lên dốc trái");
+                Debug.Log("Lên dốc trái");
                 //rb2D.velocity = new Vector2(tempMoveSpeed * Time.deltaTime, 0f);
             }
         }
@@ -100,7 +100,7 @@ public class CarControl : MonoBehaviour
             //}
             if (zRotation < -0.02)
             {
-                //Debug.Log("Xuống dốc trái");
+                Debug.Log("Xuống dốc trái");
             }
             else
             {
@@ -109,7 +109,7 @@ public class CarControl : MonoBehaviour
                     //rb2D.velocity = new Vector2(tempMoveSpeed * Time.deltaTime, 0f);
                     rb2D.velocity = new Vector2(moveSpeed * Time.deltaTime, 0f);
                 }
-                //Debug.Log("Lên dốc phải");
+                Debug.Log("Lên dốc phải");
                 //rb2D.velocity = new Vector2(tempMoveSpeed * Time.deltaTime, 0f);
             }
         }

@@ -223,10 +223,11 @@ public class TempDrawLine : MonoBehaviour
             line.gameObject.layer = 8;
             line.UsePhysics(true);
             line = null;
-            if (uiControl.countStar >= 1)
-            {
-                uiControl.tempCount--;
-            }
+            //if (uiControl.countStar >= 1)
+            //{
+            //    uiControl.tempCount--;
+            //}
+            uiControl.tempCount++;
 
             countLine++;
         }

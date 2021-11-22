@@ -691,7 +691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 9046078242588729531}
-  speed: 130
+  speed: 180
   tempSpeed: 0
   forwardWheel: {fileID: 8423214421059206041}
   backWheel: {fileID: 3928497643139085653}

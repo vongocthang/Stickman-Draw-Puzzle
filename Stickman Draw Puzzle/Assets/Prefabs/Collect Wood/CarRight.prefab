@@ -371,7 +371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2D: {fileID: 6484727603636905455}
-  moveSpeed: 100
+  moveSpeed: 140
   targetJoint: {fileID: 6484727603636905449}
   countToON: 0
   skeletonAnim: {fileID: 6289962879178552480}

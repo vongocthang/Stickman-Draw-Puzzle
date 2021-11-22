@@ -2228,7 +2228,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 10}
-  m_SizeDelta: {x: 1360, y: 660.00006}
+  m_SizeDelta: {x: 1300, y: 660}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1406012746
 MonoBehaviour:
@@ -3642,7 +3642,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 4519579990998932029}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.46345812
+  m_Size: 0.4609929
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3917,9 +3917,9 @@ RectTransform:
   m_Father: {fileID: 4519579990671903119}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 330}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 1}
   m_SizeDelta: {x: 0, y: 655}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &4519579990822351794
@@ -3935,8 +3935,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 465
-    m_Right: 440
+    m_Left: 460
+    m_Right: 460
     m_Top: 150
     m_Bottom: 0
   m_ChildAlignment: 3
@@ -3959,7 +3959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalFit: 2
+  m_HorizontalFit: 1
   m_VerticalFit: 0
 --- !u!114 &4519579990822351796
 MonoBehaviour:
@@ -3979,6 +3979,7 @@ MonoBehaviour:
   scrollbarPos: 0
   modeNumber: 0
   maxMode: 0
+  useButton: 0
   origin: {fileID: 2126278206486515717}
   woods: {fileID: 1545469665}
   water: {fileID: 2021987559}

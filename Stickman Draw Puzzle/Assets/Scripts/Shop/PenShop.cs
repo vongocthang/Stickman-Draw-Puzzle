@@ -53,7 +53,7 @@ public class PenShop : MonoBehaviour
             {
                 if (scrollbarPos < pos[i] + (distance / 2) && scrollbarPos > pos[i] - (distance / 2))
                 {
-                    Debug.Log("Doi pen hien thi");
+                    //Debug.Log("Doi pen hien thi");
                     scrollbar.value = Mathf.Lerp(scrollbar.value, pos[i], 0.05f);
                     penNumber = i;
                 }

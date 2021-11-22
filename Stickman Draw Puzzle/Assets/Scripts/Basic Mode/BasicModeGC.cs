@@ -59,7 +59,6 @@ public class BasicModeGC : MonoBehaviour
 
             StartCoroutine(ActiveWinGame());
         }
-
     }
 
     //Đếm thời gian
@@ -77,7 +76,10 @@ public class BasicModeGC : MonoBehaviour
                 }
                 
             }
-            countTime.enabled = true;
+            if (threeSecond > 0)
+            {
+                countTime.enabled = true;
+            }
         }
 
         if (target.beginCountTime == false)
