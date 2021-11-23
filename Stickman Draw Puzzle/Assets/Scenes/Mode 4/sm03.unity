@@ -552,7 +552,7 @@ PrefabInstance:
     - target: {fileID: 3605378104350961817, guid: 55748bd840ca3a240a8244b98c9549cb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3605378104350961817, guid: 55748bd840ca3a240a8244b98c9549cb,
         type: 3}
@@ -616,17 +616,17 @@ PrefabInstance:
     - target: {fileID: 1618913648128331924, guid: 79275ecaa3b19954bb21c4f611e1c1fc,
         type: 3}
       propertyPath: setupStar.Array.data[0]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1618913648128331924, guid: 79275ecaa3b19954bb21c4f611e1c1fc,
         type: 3}
       propertyPath: setupStar.Array.data[1]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1618913648128331924, guid: 79275ecaa3b19954bb21c4f611e1c1fc,
         type: 3}
       propertyPath: setupStar.Array.data[2]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6763625857757908914, guid: 79275ecaa3b19954bb21c4f611e1c1fc,
         type: 3}
@@ -1104,7 +1104,7 @@ Transform:
   - {fileID: 2282653738201347853}
   - {fileID: 1306046638}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5958798891841219639
 SpriteRenderer:

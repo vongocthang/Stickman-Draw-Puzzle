@@ -51,9 +51,10 @@ public class Wheel : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        carControl.countToON++;
         if (collision.collider.tag != "Car")
         {
-            carControl.countToON++;
+            
             //if (uiControl.moveLeft == false && uiControl.moveRight == false)
             //{
             //    carControl.targetJoint.enabled = true;
@@ -63,9 +64,10 @@ public class Wheel : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
+        carControl.countToON--;
         if (collision.collider.tag != "Car")
         {
-            carControl.countToON--;
+            
             //if (uiControl.moveLeft == false && uiControl.moveRight == false)
             //{
             //    carControl.targetJoint.enabled = true;

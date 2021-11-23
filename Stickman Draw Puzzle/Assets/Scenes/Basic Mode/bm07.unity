@@ -530,6 +530,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarRight
       objectReference: {fileID: 0}
+    - target: {fileID: 8978241100893426496, guid: 8a37d0de1a94b9746a81dcfbd183428f,
+        type: 3}
+      propertyPath: m_Target.x
+      value: 7.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8978241100893426496, guid: 8a37d0de1a94b9746a81dcfbd183428f,
+        type: 3}
+      propertyPath: m_Target.y
+      value: -0.333
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a37d0de1a94b9746a81dcfbd183428f, type: 3}
 --- !u!1001 &1837294473
@@ -721,17 +731,17 @@ PrefabInstance:
     - target: {fileID: 7902447859575459250, guid: 0e0a6713f61b5a84996e2a174f6aa516,
         type: 3}
       propertyPath: setupStar.Array.data[0]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7902447859575459250, guid: 0e0a6713f61b5a84996e2a174f6aa516,
         type: 3}
       propertyPath: setupStar.Array.data[1]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7902447859575459250, guid: 0e0a6713f61b5a84996e2a174f6aa516,
         type: 3}
       propertyPath: setupStar.Array.data[2]
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e0a6713f61b5a84996e2a174f6aa516, type: 3}

@@ -73,23 +73,26 @@ public class UIControl : MonoBehaviour
         //}
         if (countStar == 3)
         {
-            if (tempCount - setupStar[2] == 0)
+            if (tempCount - setupStar[2] - 1 == 0)
             {
                 countStar--;
+                showDuocVe.text = (setupStar[2] + setupStar[1] + 1).ToString();
             }
         }
         if (countStar == 2)
         {
-            if (tempCount - setupStar[2] - setupStar[1] == 0)
+            if (tempCount - setupStar[2] - setupStar[1] - 2 == 0)
             {
                 countStar--;
+                showDuocVe.text = (setupStar[2] + setupStar[1] + setupStar[0] + 2).ToString();
             }
         }
         if (countStar == 1)
         {
-            if (tempCount - setupStar[2] - setupStar[1] - setupStar[0] == 0)
+            if (tempCount - setupStar[2] - setupStar[1] - setupStar[0] - 3 == 0)
             {
                 countStar--;
+                showDuocVe.text = "";
             }
         }
 
