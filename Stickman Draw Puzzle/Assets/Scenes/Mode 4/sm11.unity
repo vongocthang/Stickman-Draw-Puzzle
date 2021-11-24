@@ -537,17 +537,17 @@ PrefabInstance:
     - target: {fileID: 1618913648128331924, guid: 79275ecaa3b19954bb21c4f611e1c1fc,
         type: 3}
       propertyPath: setupStar.Array.data[0]
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1618913648128331924, guid: 79275ecaa3b19954bb21c4f611e1c1fc,
         type: 3}
       propertyPath: setupStar.Array.data[1]
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1618913648128331924, guid: 79275ecaa3b19954bb21c4f611e1c1fc,
         type: 3}
       propertyPath: setupStar.Array.data[2]
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6763625857757908914, guid: 79275ecaa3b19954bb21c4f611e1c1fc,
         type: 3}

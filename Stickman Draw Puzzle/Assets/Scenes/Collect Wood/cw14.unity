@@ -412,17 +412,17 @@ PrefabInstance:
     - target: {fileID: 2578321547865700531, guid: 7a967eb5450bf9d4cafdf37c8dcfa49c,
         type: 3}
       propertyPath: setupStar.Array.data[0]
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2578321547865700531, guid: 7a967eb5450bf9d4cafdf37c8dcfa49c,
         type: 3}
       propertyPath: setupStar.Array.data[1]
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2578321547865700531, guid: 7a967eb5450bf9d4cafdf37c8dcfa49c,
         type: 3}
       propertyPath: setupStar.Array.data[2]
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7521778058810042261, guid: 7a967eb5450bf9d4cafdf37c8dcfa49c,
         type: 3}

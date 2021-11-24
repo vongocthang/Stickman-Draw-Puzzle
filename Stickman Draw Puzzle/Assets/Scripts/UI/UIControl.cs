@@ -42,7 +42,6 @@ public class UIControl : MonoBehaviour
         if (GameObject.Find("CarLeft"))
         {
             car = GameObject.Find("CarLeft");
-            
         }
         if (GameObject.Find("CarRight"))
         {

@@ -42,9 +42,8 @@ public class BasicModeGC : MonoBehaviour
 
     public void WinGame()
     {
-        if (threeSecond == 0)
+        if (threeSecond == 1)
         {
-            countTime.enabled = false;
             //Tắt vẽ Line
             drawLine.enabled = false;
 
@@ -54,8 +53,10 @@ public class BasicModeGC : MonoBehaviour
                 PlayerPrefs.SetInt("SceneUnlockedBM", SceneManager.GetActiveScene().buildIndex + 1);
             }
 
-            phaoHoa.SetActive(true);
-            
+            //countTime.enabled = false;
+            //phaoHoa.SetActive(true);
+
+            StartCoroutine(DisAtiveCountTime());
 
             StartCoroutine(ActiveWinGame());
         }
@@ -74,9 +75,8 @@ public class BasicModeGC : MonoBehaviour
                     tempSecond++;
                     countTime.text = threeSecond.ToString();
                 }
-                
             }
-            if (threeSecond > 0)
+            if (threeSecond > 1)
             {
                 countTime.enabled = true;
             }
@@ -91,9 +91,17 @@ public class BasicModeGC : MonoBehaviour
         }
     }
 
+    IEnumerator DisAtiveCountTime()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        countTime.enabled = false;
+        phaoHoa.SetActive(true);
+    }
+
     IEnumerator ActiveWinGame()
     {
-        yield return new WaitForSeconds(3.2f);
+        yield return new WaitForSeconds(2.5f);
 
         winGame.SetActive(true);
     }

@@ -348,17 +348,17 @@ PrefabInstance:
     - target: {fileID: 2578321547865700531, guid: 7a967eb5450bf9d4cafdf37c8dcfa49c,
         type: 3}
       propertyPath: setupStar.Array.data[0]
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2578321547865700531, guid: 7a967eb5450bf9d4cafdf37c8dcfa49c,
         type: 3}
       propertyPath: setupStar.Array.data[1]
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2578321547865700531, guid: 7a967eb5450bf9d4cafdf37c8dcfa49c,
         type: 3}
       propertyPath: setupStar.Array.data[2]
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7521778058810042261, guid: 7a967eb5450bf9d4cafdf37c8dcfa49c,
         type: 3}
@@ -580,15 +580,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 54e9a1b94e6ac0d4295a02fd1975f4be, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b731aa4243be5740b07f1d4a784506b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.49, y: 4.26}
+  m_Size: {x: 4.21, y: 1.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!60 &1596961557359570633
@@ -608,21 +608,21 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.27, y: 1.16}
-    newSize: {x: 1.49, y: 4.26}
+    oldSize: {x: 4.21, y: 1.1}
+    newSize: {x: 4.21, y: 1.1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.065, y: 0.58}
-      - {x: -0.085, y: 0.58}
-      - {x: -2.135, y: -0.48}
+    - - {x: 0.013208844, y: 0.54547215}
+      - {x: -0.015946448, y: 0.5483496}
+      - {x: -1.9623642, y: -0.47712255}
       - {x: -2.135, y: -0.58}
       - {x: 2.135, y: -0.58}
       - {x: 2.135, y: -0.5}
-      - {x: 1.8449999, y: -0.34}
+      - {x: 1.9226863, y: -0.44358295}
 --- !u!50 &1596961557359570634
 Rigidbody2D:
   serializedVersion: 4

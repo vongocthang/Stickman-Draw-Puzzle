@@ -448,17 +448,17 @@ PrefabInstance:
     - target: {fileID: 7902447859575459250, guid: 0e0a6713f61b5a84996e2a174f6aa516,
         type: 3}
       propertyPath: setupStar.Array.data[0]
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7902447859575459250, guid: 0e0a6713f61b5a84996e2a174f6aa516,
         type: 3}
       propertyPath: setupStar.Array.data[1]
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7902447859575459250, guid: 0e0a6713f61b5a84996e2a174f6aa516,
         type: 3}
       propertyPath: setupStar.Array.data[2]
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e0a6713f61b5a84996e2a174f6aa516, type: 3}
@@ -989,8 +989,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2793276748391757983}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.52, y: 0.3, z: 0}
-  m_LocalScale: {x: 2.537856, y: 0.1597679, z: 3.5248}
+  m_LocalPosition: {x: 6.09, y: 0.3, z: 0}
+  m_LocalScale: {x: 3.9654002, y: 0.1597679, z: 3.5248}
   m_Children: []
   m_Father: {fileID: 7773145994151730439}
   m_RootOrder: 4
