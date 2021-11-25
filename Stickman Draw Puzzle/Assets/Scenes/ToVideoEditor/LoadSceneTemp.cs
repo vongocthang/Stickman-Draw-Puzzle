@@ -19,14 +19,14 @@ public class LoadSceneTemp : MonoBehaviour
 
     public void LoadScene01()
     {
-        SceneManager.LoadScene(147);
+        SceneManager.LoadScene(157);
     }
     public void LoadScene02()
     {
-        SceneManager.LoadScene(148);
+        SceneManager.LoadScene(158);
     }
     public void LoadScene03()
     {
-        SceneManager.LoadScene(149);
+        SceneManager.LoadScene(159);
     }
 }

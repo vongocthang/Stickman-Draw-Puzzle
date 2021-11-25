@@ -25,7 +25,7 @@ public class HomeUI : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("SceneUnlockedBM") == 0)
         {
-            PlayerPrefs.SetInt("SceneUnlockedBM", 80);
+            PlayerPrefs.SetInt("SceneUnlockedBM", 90);
         }
         if (PlayerPrefs.GetInt("SceneUnlockedCW") == 0)
         {
@@ -52,7 +52,7 @@ public class HomeUI : MonoBehaviour
         //    PlayerPrefs.SetInt("Pen" + i.ToString(), 0);
         //}
 
-        //for (int i = 1; i <= 80; i++)
+        //for (int i = 1; i <= 90; i++)
         //{
         //    PlayerPrefs.SetInt("M1StarLevel" + i.ToString(), 0);
         //}
@@ -139,7 +139,7 @@ public class HomeUI : MonoBehaviour
     public void ShowSumStarM1()
     {
         int sumStar = 0;
-        for(int i=1; i<=80; i++)
+        for(int i=1; i<=90; i++)
         {
             int a = PlayerPrefs.GetInt("M1StarLevel" + i.ToString());
             sumStar += a;

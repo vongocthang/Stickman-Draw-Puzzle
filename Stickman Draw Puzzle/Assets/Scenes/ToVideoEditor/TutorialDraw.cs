@@ -29,21 +29,32 @@ public class TutorialDraw : MonoBehaviour
 
     public void AutoDrawLine()
     {
-        if (location == points.Length)
-        {
-            location = 0;
-            hand.gameObject.SetActive(false);
-            hand.transform.position = points[location].position;
-            hand.gameObject.SetActive(true);
-        }
+        
         if(Vector2.Distance(hand.transform.position, points[location].position) == 0)
         {
-            location++;
+            if (location == points.Length - 1)
+            {
+                hand.gameObject.SetActive(false);
+                StartCoroutine(StartAgain());
+            }
+            else
+            {
+                location++;
+            }
         }
         else
         {
             hand.transform.position = Vector2.MoveTowards(hand.transform.position,
             points[location].position, speed * Time.deltaTime);
         }
+    }
+
+    IEnumerator StartAgain()
+    {
+        yield return new WaitForSeconds(1f);
+
+        location = 0;
+        hand.transform.position = points[location].position;
+        hand.gameObject.SetActive(true);
     }
 }

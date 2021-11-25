@@ -190,22 +190,25 @@ public class UIControl : MonoBehaviour
     public void SellectLevel()
     {
         //Chế độ 1
-        if (SceneManager.GetActiveScene().buildIndex <= 80)
+        if (SceneManager.GetActiveScene().buildIndex <= 90)
         {
             SceneManager.LoadSceneAsync("Basic Mode");
         }
+        else
         //Chế độ 2
-        if (SceneManager.GetActiveScene().buildIndex > 80 && SceneManager.GetActiveScene().buildIndex <= 100)
+        if (SceneManager.GetActiveScene().buildIndex <= 110)
         {
             SceneManager.LoadSceneAsync("Collect Wood");
         }
+        else
         //Chế độ 3
-        if (SceneManager.GetActiveScene().buildIndex > 100 && SceneManager.GetActiveScene().buildIndex <= 120)
+        if (SceneManager.GetActiveScene().buildIndex <= 130)
         {
             SceneManager.LoadSceneAsync("Water Mode");
         }
+        else
         //Chế độ 4
-        if (SceneManager.GetActiveScene().buildIndex > 120 && SceneManager.GetActiveScene().buildIndex <= 140)
+        if (SceneManager.GetActiveScene().buildIndex <= 150)
         {
             SceneManager.LoadSceneAsync("Space Mode");
         }
@@ -221,7 +224,7 @@ public class UIControl : MonoBehaviour
     public void SceneInPage()
     {
         //Chế độ 1
-        if (SceneManager.GetActiveScene().buildIndex <= 80)
+        if (SceneManager.GetActiveScene().buildIndex <= 90)
         {
             if (SceneManager.GetActiveScene().buildIndex % 15 == 0)
             {
@@ -234,45 +237,48 @@ public class UIControl : MonoBehaviour
                 PlayerPrefs.SetInt("PageNumber", pageNumber);
             }
         }
+        else
         //Chế độ 2
-        if (SceneManager.GetActiveScene().buildIndex > 80 && SceneManager.GetActiveScene().buildIndex <= 100)
+        if (SceneManager.GetActiveScene().buildIndex <= 110)
         {
-            if ((SceneManager.GetActiveScene().buildIndex - 80) % 15 == 0)
+            if ((SceneManager.GetActiveScene().buildIndex - 90) % 15 == 0)
             {
-                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 80) / 15 - 1;
+                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 90) / 15 - 1;
                 PlayerPrefs.SetInt("PageNumber", pageNumber);
             }
             else
             {
-                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 80) / 15;
+                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 90) / 15;
                 PlayerPrefs.SetInt("PageNumber", pageNumber);
             }
         }
+        else
         //Chế độ 3
-        if (SceneManager.GetActiveScene().buildIndex > 100 && SceneManager.GetActiveScene().buildIndex <= 120)
+        if (SceneManager.GetActiveScene().buildIndex <= 130)
         {
-            if ((SceneManager.GetActiveScene().buildIndex - 100) % 15 == 0)
+            if ((SceneManager.GetActiveScene().buildIndex - 110) % 15 == 0)
             {
-                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 100) / 15 - 1;
+                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 110) / 15 - 1;
                 PlayerPrefs.SetInt("PageNumber", pageNumber);
             }
             else
             {
-                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 100) / 15;
+                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 110) / 15;
                 PlayerPrefs.SetInt("PageNumber", pageNumber);
             }
         }
+        else
         //Chế độ 4
-        if (SceneManager.GetActiveScene().buildIndex > 120 && SceneManager.GetActiveScene().buildIndex <= 140)
+        if (SceneManager.GetActiveScene().buildIndex <= 150)
         {
-            if ((SceneManager.GetActiveScene().buildIndex - 120) % 15 == 0)
+            if ((SceneManager.GetActiveScene().buildIndex - 130) % 15 == 0)
             {
-                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 120) / 15 - 1;
+                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 130) / 15 - 1;
                 PlayerPrefs.SetInt("PageNumber", pageNumber);
             }
             else
             {
-                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 120) / 15;
+                int pageNumber = (SceneManager.GetActiveScene().buildIndex - 130) / 15;
                 PlayerPrefs.SetInt("PageNumber", pageNumber);
             }
         }
@@ -288,28 +294,31 @@ public class UIControl : MonoBehaviour
     public void ShowLevelNumber()
     {
         //Chế độ 1
-        if (SceneManager.GetActiveScene().buildIndex <= 80)
+        if (SceneManager.GetActiveScene().buildIndex <= 90)
         {
             GameObject.Find("ShowLevelNumber").GetComponent<TMP_Text>().text = "Level " +
                 SceneManager.GetActiveScene().buildIndex.ToString();
         }
+        else
         //Chế độ 2
-        if (SceneManager.GetActiveScene().buildIndex > 80 && SceneManager.GetActiveScene().buildIndex <= 100)
+        if (SceneManager.GetActiveScene().buildIndex <= 110)
         {
             GameObject.Find("ShowLevelNumber").GetComponent<TMP_Text>().text = "Level " +
-                (SceneManager.GetActiveScene().buildIndex - 80).ToString();
+                (SceneManager.GetActiveScene().buildIndex - 90).ToString();
         }
+        else
         //Chế độ 3
-        if (SceneManager.GetActiveScene().buildIndex > 100 && SceneManager.GetActiveScene().buildIndex <= 120)
+        if (SceneManager.GetActiveScene().buildIndex <= 130)
         {
             GameObject.Find("ShowLevelNumber").GetComponent<TMP_Text>().text = "Level " +
-                (SceneManager.GetActiveScene().buildIndex - 100).ToString();
+                (SceneManager.GetActiveScene().buildIndex - 110).ToString();
         }
+        else
         //Chế độ 4
-        if (SceneManager.GetActiveScene().buildIndex > 120 && SceneManager.GetActiveScene().buildIndex <= 140)
+        if (SceneManager.GetActiveScene().buildIndex <= 150)
         {
             GameObject.Find("ShowLevelNumber").GetComponent<TMP_Text>().text = "Level " +
-                (SceneManager.GetActiveScene().buildIndex - 120).ToString();
+                (SceneManager.GetActiveScene().buildIndex - 130).ToString();
         }
     }
 }

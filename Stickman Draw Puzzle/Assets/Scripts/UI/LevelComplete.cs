@@ -75,7 +75,7 @@ public class LevelComplete : MonoBehaviour
         if(uiControl.countStar == 3)
         {
             //Chế độ 1
-            if (SceneManager.GetActiveScene().buildIndex <= 80)
+            if (SceneManager.GetActiveScene().buildIndex <= 90)
             {
                 int a = PlayerPrefs.GetInt("M1StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString());
                 //Debug.Log("So sao da dat dc truoc do= " + a);
@@ -107,7 +107,7 @@ public class LevelComplete : MonoBehaviour
                 }
             }
             //Chế độ 2
-            if (SceneManager.GetActiveScene().buildIndex > 80 && SceneManager.GetActiveScene().buildIndex <= 100)
+            if (SceneManager.GetActiveScene().buildIndex > 90 && SceneManager.GetActiveScene().buildIndex <= 110)
             {
                 int a = PlayerPrefs.GetInt("M2StarLevel" + (SceneManager.GetActiveScene().buildIndex - 80).ToString());
                 //Debug.Log("So sao da dat dc truoc do= " + a);
@@ -139,7 +139,7 @@ public class LevelComplete : MonoBehaviour
                 }
             }
             //Chế độ 3
-            if (SceneManager.GetActiveScene().buildIndex > 100 && SceneManager.GetActiveScene().buildIndex <= 120)
+            if (SceneManager.GetActiveScene().buildIndex > 110 && SceneManager.GetActiveScene().buildIndex <= 130)
             {
                 int a = PlayerPrefs.GetInt("M3StarLevel" + (SceneManager.GetActiveScene().buildIndex - 100).ToString());
                 //Debug.Log("So sao da dat dc truoc do= " + a);
@@ -171,7 +171,7 @@ public class LevelComplete : MonoBehaviour
                 }
             }
             //Chế độ 4
-            if (SceneManager.GetActiveScene().buildIndex > 120 && SceneManager.GetActiveScene().buildIndex <= 140)
+            if (SceneManager.GetActiveScene().buildIndex > 130 && SceneManager.GetActiveScene().buildIndex <= 150)
             {
                 int a = PlayerPrefs.GetInt("M4StarLevel" + (SceneManager.GetActiveScene().buildIndex - 120).ToString());
                 //Debug.Log("So sao da dat dc truoc do= " + a);
@@ -207,7 +207,7 @@ public class LevelComplete : MonoBehaviour
         if (uiControl.countStar == 2)
         {
             //Chế độ 1
-            if(SceneManager.GetActiveScene().buildIndex <= 80)
+            if(SceneManager.GetActiveScene().buildIndex <= 90)
             {
                 int a = PlayerPrefs.GetInt("M1StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString());
                 //Debug.Log("So sao da dat dc truoc do= " + a);
@@ -233,7 +233,7 @@ public class LevelComplete : MonoBehaviour
                 }
             }
             //Chế độ 2
-            if (SceneManager.GetActiveScene().buildIndex > 80 && SceneManager.GetActiveScene().buildIndex <= 100)
+            if (SceneManager.GetActiveScene().buildIndex > 90 && SceneManager.GetActiveScene().buildIndex <= 110)
             {
                 int a = PlayerPrefs.GetInt("M2StarLevel" + (SceneManager.GetActiveScene().buildIndex - 80).ToString());
                 //Debug.Log("So sao da dat dc truoc do= " + a);
@@ -259,7 +259,7 @@ public class LevelComplete : MonoBehaviour
                 }
             }
             //Chế độ 3
-            if (SceneManager.GetActiveScene().buildIndex > 100 && SceneManager.GetActiveScene().buildIndex <= 120)
+            if (SceneManager.GetActiveScene().buildIndex > 110 && SceneManager.GetActiveScene().buildIndex <= 130)
             {
                 int a = PlayerPrefs.GetInt("M3StarLevel" + (SceneManager.GetActiveScene().buildIndex - 100).ToString());
                 //Debug.Log("So sao da dat dc truoc do= " + a);
@@ -285,7 +285,7 @@ public class LevelComplete : MonoBehaviour
                 }
             }
             //Chế độ 4
-            if (SceneManager.GetActiveScene().buildIndex > 120 && SceneManager.GetActiveScene().buildIndex <= 140)
+            if (SceneManager.GetActiveScene().buildIndex > 130 && SceneManager.GetActiveScene().buildIndex <= 150)
             {
                 int a = PlayerPrefs.GetInt("M4StarLevel" + (SceneManager.GetActiveScene().buildIndex - 120).ToString());
                 //Debug.Log("So sao da dat dc truoc do= " + a);
@@ -314,7 +314,7 @@ public class LevelComplete : MonoBehaviour
         /////////////////////////////
         if (uiControl.countStar == 1)
         {
-            if (SceneManager.GetActiveScene().buildIndex <= 80)
+            if (SceneManager.GetActiveScene().buildIndex <= 90)
             {
                 int a = PlayerPrefs.GetInt("M1StarLevel" + SceneManager.GetActiveScene().buildIndex.ToString());
                 //Debug.Log("So sao da dat dc truoc do= " + a);
@@ -334,7 +334,7 @@ public class LevelComplete : MonoBehaviour
                 }
             }
             //Chế độ 2
-            if (SceneManager.GetActiveScene().buildIndex > 80 && SceneManager.GetActiveScene().buildIndex <= 100)
+            if (SceneManager.GetActiveScene().buildIndex > 90 && SceneManager.GetActiveScene().buildIndex <= 110)
             {
                 int a = PlayerPrefs.GetInt("M2StarLevel" + (SceneManager.GetActiveScene().buildIndex - 80).ToString());
                 //Debug.Log("So sao da dat dc truoc do= " + a);
@@ -354,7 +354,7 @@ public class LevelComplete : MonoBehaviour
                 }
             }
             //Chế độ 3
-            if (SceneManager.GetActiveScene().buildIndex > 100 && SceneManager.GetActiveScene().buildIndex <= 120)
+            if (SceneManager.GetActiveScene().buildIndex > 110 && SceneManager.GetActiveScene().buildIndex <= 130)
             {
                 int a = PlayerPrefs.GetInt("M3StarLevel" + (SceneManager.GetActiveScene().buildIndex - 100).ToString());
                 //Debug.Log("So sao da dat dc truoc do= " + a);
@@ -374,7 +374,7 @@ public class LevelComplete : MonoBehaviour
                 }
             }
             //Chế độ 4
-            if (SceneManager.GetActiveScene().buildIndex > 120 && SceneManager.GetActiveScene().buildIndex <= 140)
+            if (SceneManager.GetActiveScene().buildIndex > 130 && SceneManager.GetActiveScene().buildIndex <= 150)
             {
                 int a = PlayerPrefs.GetInt("M4StarLevel" + (SceneManager.GetActiveScene().buildIndex - 120).ToString());
                 //Debug.Log("So sao da dat dc truoc do= " + a);

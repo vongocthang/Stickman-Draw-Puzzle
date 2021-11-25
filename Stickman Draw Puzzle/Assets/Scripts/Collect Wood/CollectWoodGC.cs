@@ -41,18 +41,20 @@ public class CollectWoodGC : MonoBehaviour
 
     public void WinGame()
     {
-        if (threeSecond == 0)
+        if (threeSecond == 1)
         {
             drawLine.enabled = false;
 
-            int a = PlayerPrefs.GetInt("SceneUnlockedBM");
+            int a = PlayerPrefs.GetInt("SceneUnlockedCW");
             if (a < SceneManager.GetActiveScene().buildIndex + 1)
             {
-                PlayerPrefs.SetInt("SceneUnlockedBM", SceneManager.GetActiveScene().buildIndex + 1);
+                PlayerPrefs.SetInt("SceneUnlockedCW", SceneManager.GetActiveScene().buildIndex + 1);
             }
 
-            phaoHoa.SetActive(true);
-            countTime.enabled = false;
+            //phaoHoa.SetActive(true);
+            //countTime.enabled = false;
+
+            StartCoroutine(DisAtiveCountTime());
 
             StartCoroutine(ActiveWinGame());
         }
@@ -90,9 +92,17 @@ public class CollectWoodGC : MonoBehaviour
         }
     }
 
+    IEnumerator DisAtiveCountTime()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        countTime.enabled = false;
+        phaoHoa.SetActive(true);
+    }
+
     IEnumerator ActiveWinGame()
     {
-        yield return new WaitForSeconds(3.2f);
+        yield return new WaitForSeconds(2.5f);
 
         winGame.SetActive(true);
     }

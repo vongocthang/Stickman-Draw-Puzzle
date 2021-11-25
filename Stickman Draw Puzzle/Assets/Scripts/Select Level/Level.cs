@@ -78,15 +78,15 @@ public class Level : MonoBehaviour
             }
             if (mode == 2)
             {
-                SceneManager.LoadScene(level + 80);
+                SceneManager.LoadScene(level + 90);
             }
             if (mode == 3)
             {
-                SceneManager.LoadScene(level + 100);
+                SceneManager.LoadScene(level + 110);
             }
             if (mode == 4)
             {
-                SceneManager.LoadScene(level + 120);
+                SceneManager.LoadScene(level + 130);
             }
         }
     }

@@ -73,34 +73,6 @@ public class TempDrawLine : MonoBehaviour
 
         //////////////////////////////////////////////////////////////////////////////////
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (hit)
-            {
-                blocked = true;
-            }
-            else
-            {
-                if (uiControl.stopDrawLine == false)
-                {
-                    BeginDraw();
-                }
-            }
-        }
-        if (Input.GetMouseButton(0))
-        {
-            if (uiControl.stopDrawLine == false)
-            {
-                Draw();
-            }
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            EndDraw();
-        }
-
-        ////////////////////////////////////////////////////////////////////////////////
-
         //if (Input.GetMouseButtonDown(0))
         //{
         //    if (hit)
@@ -115,7 +87,7 @@ public class TempDrawLine : MonoBehaviour
         //        }
         //    }
         //}
-        //if (Input.touchCount == 1)
+        //if (Input.GetMouseButton(0))
         //{
         //    if (uiControl.stopDrawLine == false)
         //    {
@@ -126,18 +98,46 @@ public class TempDrawLine : MonoBehaviour
         //{
         //    EndDraw();
         //}
+
+        ////////////////////////////////////////////////////////////////////////////////
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (hit)
+            {
+                blocked = true;
+            }
+            else
+            {
+                if (uiControl.stopDrawLine == false)
+                {
+                    BeginDraw();
+                }
+            }
+        }
+        if (Input.touchCount == 1)
+        {
+            if (uiControl.stopDrawLine == false)
+            {
+                Draw();
+            }
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            EndDraw();
+        }
     }
 
     public void CheckBlockLayer()
     {
         //Dùng touch
-        //if (Input.touchCount == 1)
-        //{
-        //    mousePos = cam.ScreenToWorldPoint(Input.GetTouch(0).position);
-        //}
+        if (Input.touchCount == 1)
+        {
+            mousePos = cam.ScreenToWorldPoint(Input.GetTouch(0).position);
+        }
 
         //Dùng chuột
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        //mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
         hit = Physics2D.CircleCast(mousePos, lineWidth / 2f, Vector2.zero, 0f, blockLayer);
     }
