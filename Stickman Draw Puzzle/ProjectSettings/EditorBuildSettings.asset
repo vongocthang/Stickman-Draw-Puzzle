@@ -15,11 +15,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Basic Mode/bm03.unity
     guid: 237b9bb1aeb0b564da1ed0a2b825409f
   - enabled: 1
-    path: Assets/Scenes/Basic Mode/bm12.unity
-    guid: b2443a56887a6a546ad26b6f622824a1
-  - enabled: 1
     path: Assets/Scenes/Basic Mode/bm02.unity
     guid: ff25596a5523a604ba97af34035d24e7
+  - enabled: 1
+    path: Assets/Scenes/Basic Mode/bm12.unity
+    guid: b2443a56887a6a546ad26b6f622824a1
   - enabled: 1
     path: Assets/Scenes/Basic Mode/bm06.unity
     guid: c7c8359864f2eda4cafa0eb39b842614

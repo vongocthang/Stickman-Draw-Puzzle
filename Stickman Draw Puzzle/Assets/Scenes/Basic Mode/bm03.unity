@@ -895,7 +895,7 @@ GameObject:
   - component: {fileID: 4579226728147885684}
   - component: {fileID: 1419386442}
   m_Layer: 5
-  m_Name: Tap here to move
+  m_Name: Tap here to rise
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -939,7 +939,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9b2be46d051edf549bbc03b7065d1516, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ea00cab3ea52aa14a8a028c47c9c915e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

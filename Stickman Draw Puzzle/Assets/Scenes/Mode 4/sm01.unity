@@ -211,6 +211,7 @@ MonoBehaviour:
   tuto: []
   noOFF:
   - {fileID: 435569758}
+  win: {fileID: 90793791365853784}
 --- !u!1001 &552496909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -707,6 +708,12 @@ PrefabInstance:
 --- !u!224 &90793791365853783 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6763625857757908914, guid: 79275ecaa3b19954bb21c4f611e1c1fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 90793791365853782}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &90793791365853784 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 362039879192980786, guid: 79275ecaa3b19954bb21c4f611e1c1fc,
     type: 3}
   m_PrefabInstance: {fileID: 90793791365853782}
   m_PrefabAsset: {fileID: 0}

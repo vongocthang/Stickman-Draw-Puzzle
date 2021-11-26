@@ -46,6 +46,8 @@ public class Tutorial : MonoBehaviour
 
         if (win.activeSelf)
         {
+            PlayerPrefs.SetInt("Tutorial" + SceneManager.GetActiveScene().buildIndex.ToString(), 5);
+
             Debug.Log("Tat tutorial");
             if (noOFF != null)
             {
@@ -58,8 +60,6 @@ public class Tutorial : MonoBehaviour
             {
                 Destroy(tuto[i]);
             }
-
-            PlayerPrefs.SetInt("Tutorial" + SceneManager.GetActiveScene().buildIndex.ToString(), 5);
         }
     }
 }
