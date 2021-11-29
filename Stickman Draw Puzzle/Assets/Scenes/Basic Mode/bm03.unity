@@ -190,6 +190,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e43a4e64f7316224dad96e6bc5198477, type: 3}
+--- !u!1 &411211783 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2738631636999246568, guid: 0e0a6713f61b5a84996e2a174f6aa516,
+    type: 3}
+  m_PrefabInstance: {fileID: 1053829216}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &411211784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411211783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c52af316bca4ca54e901a7b67267397f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tuto:
+  - {fileID: 355779195991271908}
+  - {fileID: 4579226728147885688}
+  noOFF: []
+  win: {fileID: 1830222512}
 --- !u!1001 &549606629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -670,23 +693,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cd6be4893ee9d64980df85266473856, type: 3}
---- !u!114 &1419386442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4579226728147885688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c52af316bca4ca54e901a7b67267397f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tuto:
-  - {fileID: 355779195991271908}
-  noOFF:
-  - {fileID: 4579226728147885688}
-  win: {fileID: 1830222512}
 --- !u!1 &1830222512 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8026259997149456194, guid: 0e0a6713f61b5a84996e2a174f6aa516,
@@ -893,7 +899,6 @@ GameObject:
   - component: {fileID: 4579226728147885691}
   - component: {fileID: 4579226728147885690}
   - component: {fileID: 4579226728147885684}
-  - component: {fileID: 1419386442}
   m_Layer: 5
   m_Name: Tap here to rise
   m_TagString: Untagged

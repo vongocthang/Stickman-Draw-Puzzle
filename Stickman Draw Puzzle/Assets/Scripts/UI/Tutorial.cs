@@ -19,6 +19,7 @@ public class Tutorial : MonoBehaviour
 
         if(PlayerPrefs.GetInt("Tutorial" + SceneManager.GetActiveScene().buildIndex.ToString()) != 0)
         {
+            Debug.Log("Khong hien tutorial");
             if (noOFF != null)
             {
                 for (int i = 0; i < noOFF.Length; i++)

@@ -1,0 +1,7 @@
+-Wood impact từ 1-4 : gọi random mỗi khi object box wood hoặc object gỗ ở map chạm với collinder.
+
+-Ở Truck chia thành điểm bắt đầu -> loop -> kết thúc của động cơ tương ứng với thao tác chạy xe ở trong game : Bắt đầu di chuyển = startup, đang di chuyển = rev, dừng di chuyển = rev stop
+
+-Những map underwater để ambience underwater loop, ngoài ra để lowpass filter TẤT CẢ những SFX ingame 
+
+-Khi gọi Music WIn -> Mute MUSIC Ingame lại cho đến khi hết music win

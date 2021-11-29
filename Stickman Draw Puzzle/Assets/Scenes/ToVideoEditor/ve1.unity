@@ -496,7 +496,7 @@ PrefabInstance:
     - target: {fileID: 3433911246577892797, guid: 6381270813f263d4596d1c6f1a1f876d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3433911246577892797, guid: 6381270813f263d4596d1c6f1a1f876d,
         type: 3}
@@ -555,6 +555,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6381270813f263d4596d1c6f1a1f876d, type: 3}
+--- !u!1 &2122998621 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 542115214385955296, guid: e43a4e64f7316224dad96e6bc5198477,
+    type: 3}
+  m_PrefabInstance: {fileID: 1105687586}
+  m_PrefabAsset: {fileID: 0}
+--- !u!169 &2122998622
+AudioLowPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122998621}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_LowpassResonanceQ: 1
+  lowpassLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.22727273
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1346901002878035253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -565,7 +596,7 @@ PrefabInstance:
     - target: {fileID: 1346901002261608457, guid: be66a3b426344a74189a7ff263131697,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1346901002261608457, guid: be66a3b426344a74189a7ff263131697,
         type: 3}
@@ -1346,5 +1377,5 @@ Transform:
   - {fileID: 4648563187655058969}
   - {fileID: 4008073142186205340}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

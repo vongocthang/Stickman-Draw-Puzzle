@@ -24,9 +24,12 @@ public class StartGame : MonoBehaviour
     IEnumerator StopRotate(float second)
     {
         yield return new WaitForSeconds(second);
+        
+        this.GetComponent<StartGame>().enabled = false;
+
+        yield return new WaitForSeconds(0.2f);
 
         temp_box.SetActive(false);
         start_button.SetActive(true);
-        this.GetComponent<StartGame>().enabled = false;
     }
 }
