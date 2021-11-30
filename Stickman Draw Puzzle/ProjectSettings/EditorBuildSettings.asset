@@ -21,59 +21,59 @@ EditorBuildSettings:
     path: Assets/Scenes/Basic Mode/bm12.unity
     guid: b2443a56887a6a546ad26b6f622824a1
   - enabled: 1
-    path: Assets/Scenes/Basic Mode/bm41.unity
-    guid: 19bbb246b923e414da76774938100cc9
-  - enabled: 1
-    path: Assets/Scenes/Basic Mode/bm18.unity
-    guid: c528f7175eed932479c30a0a5d5c768b
-  - enabled: 1
-    path: Assets/Scenes/Basic Mode/bm29.unity
-    guid: 948bfef44bac37347a9a2e78574134d1
-  - enabled: 1
-    path: Assets/Scenes/Basic Mode/bm07.unity
-    guid: 2b7b09e2e6abe5542acda5b307644601
-  - enabled: 1
-    path: Assets/Scenes/Basic Mode/bm34.unity
-    guid: e9cd77d8fe22ab744899fb34535e74f3
+    path: Assets/Scenes/New Scene/1.unity
+    guid: 2bbde73c532781f4d8ea3763776d7668
   - enabled: 1
     path: Assets/Scenes/Basic Mode/bm26.unity
     guid: bbb9dee4a5a5c3342bc178df564e953a
   - enabled: 1
-    path: Assets/Scenes/Basic Mode/bm47.unity
-    guid: 262092f5ff92c214192975443ebf47b2
-  - enabled: 1
-    path: Assets/Scenes/Basic Mode/bm36.unity
-    guid: 30941806c3464d84f9d317997107b24b
-  - enabled: 1
-    path: Assets/Scenes/Basic Mode/bm32.unity
-    guid: 531c696f3e66380449fcf06bd8724703
-  - enabled: 1
-    path: Assets/Scenes/Basic Mode/bm23.unity
-    guid: 264dff54094ecef4da9afbdab6fb608d
-  - enabled: 1
-    path: Assets/Scenes/Basic Mode/bm60.unity
-    guid: 7d51bb6e1b7b29d4b9758c2fc8ec3425
-  - enabled: 1
-    path: Assets/Scenes/Basic Mode/bm62.unity
-    guid: 79e2a0d31211caa4790d69c8c45ff164
-  - enabled: 1
-    path: Assets/Scenes/Basic Mode/bm67.unity
-    guid: 1526888ca5155794f888e1900a8c3821
-  - enabled: 1
-    path: Assets/Scenes/New Scene/1.unity
-    guid: 2bbde73c532781f4d8ea3763776d7668
-  - enabled: 1
-    path: Assets/Scenes/New Scene/2.unity
-    guid: c270a3c999440494491c315dd7de60cf
+    path: Assets/Scenes/Basic Mode/bm29.unity
+    guid: 948bfef44bac37347a9a2e78574134d1
   - enabled: 1
     path: Assets/Scenes/New Scene/3.unity
     guid: 34caf9c79f7450f4db255fda7a10bfad
   - enabled: 1
+    path: Assets/Scenes/Basic Mode/bm67.unity
+    guid: 1526888ca5155794f888e1900a8c3821
+  - enabled: 1
+    path: Assets/Scenes/Basic Mode/bm18.unity
+    guid: c528f7175eed932479c30a0a5d5c768b
+  - enabled: 1
+    path: Assets/Scenes/Basic Mode/bm60.unity
+    guid: 7d51bb6e1b7b29d4b9758c2fc8ec3425
+  - enabled: 1
+    path: Assets/Scenes/Basic Mode/bm36.unity
+    guid: 30941806c3464d84f9d317997107b24b
+  - enabled: 1
+    path: Assets/Scenes/Basic Mode/bm62.unity
+    guid: 79e2a0d31211caa4790d69c8c45ff164
+  - enabled: 1
+    path: Assets/Scenes/Basic Mode/bm23.unity
+    guid: 264dff54094ecef4da9afbdab6fb608d
+  - enabled: 1
+    path: Assets/Scenes/Basic Mode/bm47.unity
+    guid: 262092f5ff92c214192975443ebf47b2
+  - enabled: 1
+    path: Assets/Scenes/Basic Mode/bm32.unity
+    guid: 531c696f3e66380449fcf06bd8724703
+  - enabled: 1
+    path: Assets/Scenes/Basic Mode/bm34.unity
+    guid: e9cd77d8fe22ab744899fb34535e74f3
+  - enabled: 1
+    path: Assets/Scenes/Basic Mode/bm41.unity
+    guid: 19bbb246b923e414da76774938100cc9
+  - enabled: 1
+    path: Assets/Scenes/New Scene/2.unity
+    guid: c270a3c999440494491c315dd7de60cf
+  - enabled: 1
+    path: Assets/Scenes/Basic Mode/bm07.unity
+    guid: 2b7b09e2e6abe5542acda5b307644601
+  - enabled: 1
     path: Assets/Scenes/Basic Mode/bm13.unity
     guid: 30bb123e5014ed54ab5dd6961a408cf3
   - enabled: 1
-    path: Assets/Scenes/New Scene/4.unity
-    guid: 4191577d5d936a7448977ff4dee2fbfe
+    path: Assets/Scenes/bm152.unity
+    guid: 2441c640fd21c74428069d2c92038e21
   - enabled: 1
     path: Assets/Scenes/Basic Mode/bm21.unity
     guid: 9866eb53c8576b0449353a756c132571
@@ -114,8 +114,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Basic Mode/bm15.unity
     guid: a9ec70cfaaebd1d4bb320c67f24605a5
   - enabled: 1
-    path: Assets/Scenes/New Scene/8.unity
-    guid: 6d3116a02f150044085141f47f87f312
+    path: Assets/Scenes/bm153.unity
+    guid: a4c97b9b4b37c10429c4d9f953ffc17a
   - enabled: 1
     path: Assets/Scenes/New Scene/9.unity
     guid: 15751ea1f61dd4d4a925376c138e8824
@@ -126,11 +126,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Basic Mode/bm31.unity
     guid: 3da1854b1bab0874a8dd44eb3eedb7ba
   - enabled: 1
-    path: Assets/Scenes/Basic Mode/bm20.unity
-    guid: eeaa11457d95ee3439a3630246075224
+    path: Assets/Scenes/bm154.unity
+    guid: c2b40defda42396409901a2aaefbfe5a
   - enabled: 1
-    path: Assets/Scenes/Basic Mode/bm27.unity
-    guid: 844fdcc6560d847459ddfb68d00276d0
+    path: Assets/Scenes/bm155.unity
+    guid: d4386b3ba4d24bd478bdafcf2b94d4a5
   - enabled: 1
     path: Assets/Scenes/Basic Mode/bm30.unity
     guid: 8e696842442e9984dadf17ec1b7184ab

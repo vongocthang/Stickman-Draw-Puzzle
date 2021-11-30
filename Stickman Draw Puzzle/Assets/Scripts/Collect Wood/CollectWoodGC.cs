@@ -22,6 +22,13 @@ public class CollectWoodGC : MonoBehaviour
 
     GameObject phaoHoa;
 
+    public AudioSource countTimeAudio;
+    public AudioSource fireWork;
+    public AudioSource musicWin;
+    public AudioSource musicIngame;
+
+    public AudioSource truckIdling;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +52,8 @@ public class CollectWoodGC : MonoBehaviour
         {
             drawLine.enabled = false;
 
+            fireWork.Play();
+
             int a = PlayerPrefs.GetInt("SceneUnlockedCW");
             if (a < SceneManager.GetActiveScene().buildIndex + 1)
             {
@@ -57,6 +66,8 @@ public class CollectWoodGC : MonoBehaviour
             StartCoroutine(DisAtiveCountTime());
 
             StartCoroutine(ActiveWinGame());
+
+            StartCoroutine(EnableMusicIngame());
         }
     }
 
@@ -79,6 +90,8 @@ public class CollectWoodGC : MonoBehaviour
             if (threeSecond > 0)
             {
                 countTime.enabled = true;
+
+                countTimeAudio.enabled = true;
             }
         }
 
@@ -89,6 +102,8 @@ public class CollectWoodGC : MonoBehaviour
             threeSecond = 3;
             tempSecond = 0;
             countTime.text = 3.ToString();
+
+            countTimeAudio.enabled = false;
         }
     }
 
@@ -98,12 +113,27 @@ public class CollectWoodGC : MonoBehaviour
 
         countTime.enabled = false;
         phaoHoa.SetActive(true);
+
+        countTimeAudio.enabled = false;
+
+        truckIdling.Stop();
     }
 
     IEnumerator ActiveWinGame()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(4.8f);
 
         winGame.SetActive(true);
+
+        musicWin.Play();
+        fireWork.Stop();
+        musicIngame.enabled = false;
+    }
+
+    IEnumerator EnableMusicIngame()
+    {
+        yield return new WaitForSeconds(10f);
+
+        musicIngame.enabled = true;
     }
 }

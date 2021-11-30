@@ -7,11 +7,17 @@ public class WoodBlock : MonoBehaviour
     public CollectWoodGC collectWood;
     public int woodMax;
 
+    public GameObject woodAudios;
+
+    public float timeLine;
+
     // Start is called before the first frame update
     void Start()
     {
         collectWood = GameObject.Find("MainUI").GetComponent<CollectWoodGC>();
         woodMax = GameObject.FindGameObjectsWithTag("Wood").Length;
+
+        woodAudios = GameObject.Find("Wood Audios");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -58,6 +64,18 @@ public class WoodBlock : MonoBehaviour
                     collectWood.beginCountTime = false;
                 }
             }
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (timeLine + 0.5f < Time.time)
+        {
+            timeLine = Time.time;
+
+            int ran = Random.Range(1, 3);
+
+            woodAudios.transform.GetChild(ran).GetComponent<AudioSource>().Play();
         }
     }
 }

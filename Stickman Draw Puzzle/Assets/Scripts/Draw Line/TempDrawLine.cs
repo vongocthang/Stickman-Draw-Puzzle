@@ -73,34 +73,6 @@ public class TempDrawLine : MonoBehaviour
 
         //////////////////////////////////////////////////////////////////////////////////
 
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    if (hit)
-        //    {
-        //        blocked = true;
-        //    }
-        //    else
-        //    {
-        //        if (uiControl.stopDrawLine == false)
-        //        {
-        //            BeginDraw();
-        //        }
-        //    }
-        //}
-        //if (Input.GetMouseButton(0))
-        //{
-        //    if (uiControl.stopDrawLine == false)
-        //    {
-        //        Draw();
-        //    }
-        //}
-        //if (Input.GetMouseButtonUp(0))
-        //{
-        //    EndDraw();
-        //}
-
-        ////////////////////////////////////////////////////////////////////////////////
-
         if (Input.GetMouseButtonDown(0))
         {
             if (hit)
@@ -112,10 +84,12 @@ public class TempDrawLine : MonoBehaviour
                 if (uiControl.stopDrawLine == false)
                 {
                     BeginDraw();
+
+                    uiControl.drawingAudio.enabled = true;
                 }
             }
         }
-        if (Input.touchCount == 1)
+        if (Input.GetMouseButton(0))
         {
             if (uiControl.stopDrawLine == false)
             {
@@ -125,19 +99,53 @@ public class TempDrawLine : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             EndDraw();
+
+            uiControl.drawingAudio.enabled = false;
         }
+
+        ////////////////////////////////////////////////////////////////////////////////
+
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    if (hit)
+        //    {
+        //        blocked = true;
+        //    }
+        //    else
+        //    {
+        //        if (uiControl.stopDrawLine == false)
+        //        {
+        //            BeginDraw();
+
+        //            uiControl.drawingAudio.enabled = true;
+        //        }
+        //    }
+        //}
+        //if (Input.touchCount == 1)
+        //{
+        //    if (uiControl.stopDrawLine == false)
+        //    {
+        //        Draw();
+        //    }
+        //}
+        //if (Input.GetMouseButtonUp(0))
+        //{
+        //    EndDraw();
+
+        //    uiControl.drawingAudio.enabled = false;
+        //}
     }
 
     public void CheckBlockLayer()
     {
         //Dùng touch
-        if (Input.touchCount == 1)
-        {
-            mousePos = cam.ScreenToWorldPoint(Input.GetTouch(0).position);
-        }
+        //if (Input.touchCount == 1)
+        //{
+        //    mousePos = cam.ScreenToWorldPoint(Input.GetTouch(0).position);
+        //}
 
         //Dùng chuột
-        //mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
         hit = Physics2D.CircleCast(mousePos, lineWidth / 2f, Vector2.zero, 0f, blockLayer);
     }
@@ -194,6 +202,8 @@ public class TempDrawLine : MonoBehaviour
                 //Debug.Log("Bắt đầu vẽ khi đưa chuột khỏi vị trí bị chặn");
                 BeginDraw();
                 blocked = false;
+
+                uiControl.drawingAudio.enabled = true;
             }
             else
             {

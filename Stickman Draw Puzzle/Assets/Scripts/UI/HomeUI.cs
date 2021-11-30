@@ -14,11 +14,6 @@ public class HomeUI : MonoBehaviour
     public GameObject audioEffectsON;
 
     public TMP_Text showCoin;
-    //Hiển thị tổng số sao của tất cả các Level
-    public TMP_Text showSumStarM1;
-    public TMP_Text showSumStarM2;
-    public TMP_Text showSumStarM3;
-    public TMP_Text showSumStarM4;
 
     // Start is called before the first frame update
     void Start()
@@ -88,10 +83,23 @@ public class HomeUI : MonoBehaviour
 
         PlayerPrefs.SetInt("Pen0", 1);
 
-        //ShowSumStarM1();
-        //ShowSumStarM2();
-        //ShowSumStarM3();
-        //ShowSumStarM4();
+        if (PlayerPrefs.GetInt("AudioEffects") == 0)
+        {
+            audioEffectsON.SetActive(true);
+        }
+        else
+        {
+            audioEffectsON.SetActive(false);
+        }
+
+        if (PlayerPrefs.GetInt("Music") == 0)
+        {
+            musicON.SetActive(true);
+        }
+        else
+        {
+            musicON.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -134,50 +142,6 @@ public class HomeUI : MonoBehaviour
     public void ShowCoin()
     {
         showCoin.text = PlayerPrefs.GetInt("Coin").ToString();
-    }
-
-    public void ShowSumStarM1()
-    {
-        int sumStar = 0;
-        for(int i=1; i<=90; i++)
-        {
-            int a = PlayerPrefs.GetInt("M1StarLevel" + i.ToString());
-            sumStar += a;
-            showSumStarM1.text = sumStar.ToString();
-        }
-    }
-
-    public void ShowSumStarM2()
-    {
-        int sumStar = 0;
-        for (int i = 1; i <= 20; i++)
-        {
-            int a = PlayerPrefs.GetInt("M2StarLevel" + i.ToString());
-            sumStar += a;
-            showSumStarM2.text = sumStar.ToString();
-        }
-    }
-
-    public void ShowSumStarM3()
-    {
-        int sumStar = 0;
-        for (int i = 1; i <= 20; i++)
-        {
-            int a = PlayerPrefs.GetInt("M3StarLevel" + i.ToString());
-            sumStar += a;
-            showSumStarM3.text = sumStar.ToString();
-        }
-    }
-
-    public void ShowSumStarM4()
-    {
-        int sumStar = 0;
-        for (int i = 1; i <= 20; i++)
-        {
-            int a = PlayerPrefs.GetInt("M4StarLevel" + i.ToString());
-            sumStar += a;
-            showSumStarM4.text = sumStar.ToString();
-        }
     }
 
     public void GoShop()

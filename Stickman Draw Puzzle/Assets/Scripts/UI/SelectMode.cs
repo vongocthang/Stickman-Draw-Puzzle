@@ -19,6 +19,8 @@ public class SelectMode : MonoBehaviour
     public GameObject water;
     public GameObject gravity;
 
+    public AudioSource uiButton;
+
     // Start is called before the first frame update
     void Start()
     {

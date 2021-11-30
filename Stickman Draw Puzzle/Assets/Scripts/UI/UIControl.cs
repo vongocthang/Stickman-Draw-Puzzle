@@ -31,6 +31,10 @@ public class UIControl : MonoBehaviour
 
     public GameObject car;
 
+    public AudioSource drawingAudio;
+
+
+
     private void Start()
     {
         countStar = 3;
@@ -49,9 +53,6 @@ public class UIControl : MonoBehaviour
         }
 
         SetPenLoad();
-
-        //Temp
-        //ShowLevelNumber();
     }
 
     private void Update()
@@ -62,14 +63,6 @@ public class UIControl : MonoBehaviour
 
     public void CountLine()
     {
-        //if (tempCount == 0 && countStar >= 1)
-        //{
-        //    countStar--;
-        //    if (countStar >= 1)
-        //    {
-        //        tempCount = setupStar[countStar - 1];
-        //    }
-        //}
         if (countStar == 3)
         {
             if (tempCount - setupStar[2] - 1 == 0)
@@ -179,6 +172,13 @@ public class UIControl : MonoBehaviour
 
     public void Reset()
     {
+        StartCoroutine(WaitReset());
+    }
+
+    IEnumerator WaitReset()
+    {
+        yield return new WaitForSeconds(0.26f);
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

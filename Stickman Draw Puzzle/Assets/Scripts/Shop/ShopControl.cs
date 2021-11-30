@@ -9,6 +9,31 @@ public class ShopControl : MonoBehaviour
 {
     public TMP_Text showCoin;
 
+    //public Image scrollPage;
+    public GameObject musicON;
+    public GameObject audioEffectsON;
+
+    private void Start()
+    {
+        if (PlayerPrefs.GetInt("AudioEffects") == 0)
+        {
+            audioEffectsON.SetActive(true);
+        }
+        else
+        {
+            audioEffectsON.SetActive(false);
+        }
+
+        if (PlayerPrefs.GetInt("Music") == 0)
+        {
+            musicON.SetActive(true);
+        }
+        else
+        {
+            musicON.SetActive(false);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {

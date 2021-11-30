@@ -49,12 +49,6 @@ public class SetupAudio : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void MusicON()
     {
         PlayerPrefs.SetInt("Music", 0);

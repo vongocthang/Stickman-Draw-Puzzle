@@ -27,10 +27,13 @@ public class LoadPenClaim : MonoBehaviour
 
     bool beginLoad;
 
+    public AudioSource prizePopup;
+    public AudioSource musicWin;
+
     // Start is called before the first frame update
     void Start()
     {
-        //PlayerPrefs.SetInt("PenLoad", 90);
+        PlayerPrefs.SetInt("PenLoad", 90);
         //PlayerPrefs.SetInt("ClaimPen", 1);
 
         anim = GetComponent<Animator>();
@@ -73,6 +76,9 @@ public class LoadPenClaim : MonoBehaviour
 
         if (slider.value == 100)
         {
+            musicWin.enabled = false;
+            prizePopup.enabled = true;
+
             backgroundOFF.enabled = false;
             claimButton.SetActive(true);
             //this.transform.position = Vector2.MoveTowards(this.transform.position, center.position, 31.5f);
