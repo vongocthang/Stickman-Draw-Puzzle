@@ -33,7 +33,7 @@ public class LoadPenClaim : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.SetInt("PenLoad", 90);
+        //PlayerPrefs.SetInt("PenLoad", 90);
         //PlayerPrefs.SetInt("ClaimPen", 1);
 
         anim = GetComponent<Animator>();

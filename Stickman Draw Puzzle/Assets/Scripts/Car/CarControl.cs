@@ -26,13 +26,15 @@ public class CarControl : MonoBehaviour
 
     public int countAnim = 1;//Thứ tự Animation đang hiển thị
 
+    public AudioSource backLoop;
+
     // Start is called before the first frame update
     void Start()
     {
         uiControl = GameObject.Find("MainUI").GetComponent<UIControl>();
         targetJoint = this.GetComponent<TargetJoint2D>();
 
-        //Test();
+        backLoop = GameObject.Find("Truck_back_loop").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -54,10 +56,12 @@ public class CarControl : MonoBehaviour
             if (this.name == "CarLeft")
             {
                 skeletonAnim.AnimationName = "Forward";
+                backLoop.enabled = false;
             }
             else
             {
                 skeletonAnim.AnimationName = "Backward";
+                backLoop.enabled = true;
             }
 
             if (zRotation > 0.02)
@@ -84,10 +88,12 @@ public class CarControl : MonoBehaviour
             if (this.name == "CarLeft")
             {
                 skeletonAnim.AnimationName = "Backward";
+                backLoop.enabled = true;
             }
             else
             {
                 skeletonAnim.AnimationName = "Forward";
+                backLoop.enabled = false;
             }
 
             if (zRotation < -0.02)
@@ -133,6 +139,8 @@ public class CarControl : MonoBehaviour
                 countAnim++;
                 countTime = Time.time;
             }
+
+            backLoop.enabled = false;
         }
     }
 }

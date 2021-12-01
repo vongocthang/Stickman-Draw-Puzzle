@@ -287,7 +287,7 @@ public class UIControl : MonoBehaviour
     //Tạm thời cho Video Editor
     public void LoadToVideoEditor()
     {
-        SceneManager.LoadSceneAsync("ToVideoEditor");
+        //SceneManager.LoadSceneAsync("ToVideoEditor");
     }
 
     //Hiện tên level ở mỗi màn chơi tạm thời

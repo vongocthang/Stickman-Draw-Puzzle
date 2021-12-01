@@ -66,6 +66,8 @@ public class BasicModeGC : MonoBehaviour
 
             StartCoroutine(ActiveWinGame());
 
+            StartCoroutine(AudioFireWork());
+
             StartCoroutine(EnableMusicIngame());
         }
     }
@@ -117,18 +119,24 @@ public class BasicModeGC : MonoBehaviour
 
     IEnumerator ActiveWinGame()
     {
-        yield return new WaitForSeconds(4.8f);
+        yield return new WaitForSeconds(1.5f);
 
         winGame.SetActive(true);
 
         musicWin.Play();
-        fireWork.Stop();
         musicIngame.enabled = false;
+    }
+
+    IEnumerator AudioFireWork()
+    {
+        yield return new WaitForSeconds(4.8f);
+
+        fireWork.Stop();
     }
 
     IEnumerator EnableMusicIngame()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(7f);
 
         musicIngame.enabled = true;
     }

@@ -67,6 +67,8 @@ public class CollectWoodGC : MonoBehaviour
 
             StartCoroutine(ActiveWinGame());
 
+            StartCoroutine(AudioFireWork());
+
             StartCoroutine(EnableMusicIngame());
         }
     }
@@ -98,10 +100,10 @@ public class CollectWoodGC : MonoBehaviour
         //Nếu đang đếm mà điều kiện không thỏa mãn nữa thì
         if (beginCountTime == false)
         {
-            countTime.enabled = false;
+            countTime.text = 3.ToString();
             threeSecond = 3;
             tempSecond = 0;
-            countTime.text = 3.ToString();
+            countTime.enabled = false;
 
             countTimeAudio.enabled = false;
         }
@@ -121,18 +123,24 @@ public class CollectWoodGC : MonoBehaviour
 
     IEnumerator ActiveWinGame()
     {
-        yield return new WaitForSeconds(4.8f);
+        yield return new WaitForSeconds(1.5f);
 
         winGame.SetActive(true);
 
         musicWin.Play();
-        fireWork.Stop();
         musicIngame.enabled = false;
+    }
+
+    IEnumerator AudioFireWork()
+    {
+        yield return new WaitForSeconds(4.8f);
+
+        fireWork.Stop();
     }
 
     IEnumerator EnableMusicIngame()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(7f);
 
         musicIngame.enabled = true;
     }

@@ -152,6 +152,6 @@ public class HomeUI : MonoBehaviour
     //Tạm thời cho Video Editor
     public void LoadToVideoEditor()
     {
-        SceneManager.LoadSceneAsync("ToVideoEditor");
+        //SceneManager.LoadSceneAsync("ToVideoEditor");
     }
 }

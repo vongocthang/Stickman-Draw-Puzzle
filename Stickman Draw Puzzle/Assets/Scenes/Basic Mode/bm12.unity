@@ -280,6 +280,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 434673567}
+  - component: {fileID: 434673568}
   m_Layer: 0
   m_Name: ' Dashed line'
   m_TagString: Untagged
@@ -304,6 +305,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &434673568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434673566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c52af316bca4ca54e901a7b67267397f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tuto:
+  - {fileID: 5904534923429492580}
+  noOFF:
+  - {fileID: 434673566}
+  win: {fileID: 1526873942}
 --- !u!1001 &808098623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -614,7 +632,7 @@ PrefabInstance:
     - target: {fileID: 611067451893981513, guid: 0e0a6713f61b5a84996e2a174f6aa516,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2738631636999246484, guid: 0e0a6713f61b5a84996e2a174f6aa516,
         type: 3}
@@ -758,6 +776,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e0a6713f61b5a84996e2a174f6aa516, type: 3}
+--- !u!1 &1526873942 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4690605233477801119, guid: 0e0a6713f61b5a84996e2a174f6aa516,
+    type: 3}
+  m_PrefabInstance: {fileID: 1526873941}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1562251821
 GameObject:
   m_ObjectHideFlags: 0
